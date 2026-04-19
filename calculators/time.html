@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Time Calculator – Hours Between Dates & Time Addition | CalcVerse</title>
+  <meta name="description" content="Free time calculator. Calculate hours between two times, add or subtract time, and convert hours to minutes and seconds."/>
+  <meta name="keywords" content="time calculator, hours calculator, time between two dates, add time calculator, hours minutes seconds calculator"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/time"/>
+  <meta property="og:title" content="Time Calculator – Hours Between Times"/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Time Calculator","url":"https://calcverse.vercel.app/calculators/time","description":"Calculate hours between times or add/subtract time.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Tools</span><span class="breadcrumb-sep">›</span><span>Time Calculator</span></nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Utility Calculator</div>
+      <h1>Time Calculator</h1>
+      <p>Calculate hours and minutes between two times, or add/subtract time from a given time.</p>
+    </div>
+    <div class="calculator-widget">
+      <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
+        <button class="calc-btn active-tab" id="tab1" style="flex:1;padding:10px;font-size:0.9rem">Time Difference</button>
+        <button class="calc-btn" id="tab2" style="flex:1;padding:10px;font-size:0.9rem;background:var(--surface);border:1px solid var(--border2)">Add / Subtract</button>
+      </div>
+      <div id="sec1">
+        <div class="calc-inputs two-col">
+          <div class="input-group">
+            <label for="startDate">Start Date & Time</label>
+            <input type="datetime-local" id="startDate" class="input-field"/>
+          </div>
+          <div class="input-group">
+            <label for="endDate">End Date & Time</label>
+            <input type="datetime-local" id="endDate" class="input-field"/>
+          </div>
+        </div>
+        <button type="button" class="calc-btn" id="calcDiff">⏱ Calculate Difference</button>
+        <div class="result-panel" id="diffResult" style="display:none" aria-live="polite">
+          <div class="result-label">Time Difference</div>
+          <div class="result-main" id="diffMain">—</div>
+          <div class="result-grid" id="diffGrid" style="margin-top:1.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem;text-align:center"></div>
+        </div>
+      </div>
+      <div id="sec2" style="display:none">
+        <div class="calc-inputs two-col">
+          <div class="input-group">
+            <label for="baseTime">Start Time</label>
+            <input type="time" id="baseTime" class="input-field" value="09:00"/>
+          </div>
+          <div class="input-group">
+            <label for="addOp">Operation</label>
+            <select id="addOp" class="input-field"><option value="add">Add</option><option value="sub">Subtract</option></select>
+          </div>
+          <div class="input-group">
+            <label for="addHours">Hours</label>
+            <input type="number" id="addHours" class="input-field" value="0" min="0"/>
+          </div>
+          <div class="input-group">
+            <label for="addMins">Minutes</label>
+            <input type="number" id="addMins" class="input-field" value="30" min="0" max="59"/>
+          </div>
+        </div>
+        <button type="button" class="calc-btn" id="calcAdd">⏱ Calculate</button>
+        <div class="result-panel" id="addResult" style="display:none" aria-live="polite">
+          <div class="result-label">Result Time</div>
+          <div class="result-main" id="addMain">—</div>
+          <div class="result-sub" id="addSub">—</div>
+        </div>
+      </div>
+    </div>
+    <section class="seo-section">
+      <h2>Time Calculator Uses</h2>
+      <p>This time calculator helps with work hour tracking, project time management, shift scheduling, meeting duration calculation, and travel time planning. Calculate exact time differences down to seconds, or add hours and minutes to any start time.</p>
+    </section>
+    <div class="related-calcs">
+      <h3>Related Calculators</h3>
+      <div class="related-grid">
+        <a href="age.html" class="related-card">🎂 Age Calculator</a>
+        <a href="due-date.html" class="related-card">📅 Due Date</a>
+        <a href="basic.html" class="related-card">🔢 Basic Calculator</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
+    <p class="footer-copy">© 2025 CalcVerse</p>
+    <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+const now = new Date();
+const pad=n=>String(n).padStart(2,'0');
+const fmt=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+document.getElementById('startDate').value=fmt(now);
+const later=new Date(now.getTime()+3600000);
+document.getElementById('endDate').value=fmt(later);
+document.getElementById('tab1').addEventListener('click',()=>{document.getElementById('sec1').style.display='block';document.getElementById('sec2').style.display='none';});
+document.getElementById('tab2').addEventListener('click',()=>{document.getElementById('sec1').style.display='none';document.getElementById('sec2').style.display='block';});
+document.getElementById('calcDiff').addEventListener('click',function(){
+  const s=new Date(document.getElementById('startDate').value);
+  const e=new Date(document.getElementById('endDate').value);
+  if(!s||!e){alert('Enter both dates.');return;}
+  const diff=Math.abs(e-s);
+  const totalSec=Math.floor(diff/1000);
+  const days=Math.floor(totalSec/86400);
+  const hrs=Math.floor((totalSec%86400)/3600);
+  const mins=Math.floor((totalSec%3600)/60);
+  const secs=totalSec%60;
+  document.getElementById('diffMain').textContent=`${days}d ${hrs}h ${mins}m ${secs}s`;
+  document.getElementById('diffGrid').innerHTML=`
+    <div style="background:var(--surface);padding:0.8rem;border-radius:10px"><div style="color:var(--text2);font-size:0.75rem">Days</div><div style="color:var(--cyan);font-weight:700;font-size:1.2rem">${days}</div></div>
+    <div style="background:var(--surface);padding:0.8rem;border-radius:10px"><div style="color:var(--text2);font-size:0.75rem">Hours</div><div style="color:var(--violet2);font-weight:700;font-size:1.2rem">${hrs}</div></div>
+    <div style="background:var(--surface);padding:0.8rem;border-radius:10px"><div style="color:var(--text2);font-size:0.75rem">Minutes</div><div style="color:var(--green);font-weight:700;font-size:1.2rem">${mins}</div></div>
+    <div style="background:var(--surface);padding:0.8rem;border-radius:10px"><div style="color:var(--text2);font-size:0.75rem">Seconds</div><div style="color:var(--amber);font-weight:700;font-size:1.2rem">${secs}</div></div>
+  `;
+  document.getElementById('diffResult').style.display='block';
+});
+document.getElementById('calcAdd').addEventListener('click',function(){
+  const base=document.getElementById('baseTime').value;
+  const op=document.getElementById('addOp').value;
+  const h=parseInt(document.getElementById('addHours').value)||0;
+  const m=parseInt(document.getElementById('addMins').value)||0;
+  if(!base){alert('Enter a start time.');return;}
+  const[bh,bm]=base.split(':').map(Number);
+  let totalMins=bh*60+bm+(op==='add'?1:-1)*(h*60+m);
+  totalMins=((totalMins%1440)+1440)%1440;
+  const rh=Math.floor(totalMins/60),rm=totalMins%60;
+  const r12=rh%12||12,ampm=rh<12?'AM':'PM';
+  document.getElementById('addMain').textContent=`${pad(rh)}:${pad(rm)}`;
+  document.getElementById('addSub').textContent=`${r12}:${pad(rm)} ${ampm}`;
+  document.getElementById('addResult').style.display='block';
+});
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

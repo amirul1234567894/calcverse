@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Unit Conversion Calculator – Length, Weight, Temperature | CalcVerse</title>
+  <meta name="description" content="Free unit conversion calculator. Convert length, weight, temperature, area, volume, and speed units instantly. Supports metric and imperial."/>
+  <meta name="keywords" content="unit conversion calculator, length converter, weight converter, temperature converter, metric to imperial, km to miles, kg to pounds"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/unit-conversion"/>
+  <meta property="og:title" content="Unit Conversion Calculator – Length, Weight, Temperature"/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Unit Conversion Calculator","url":"https://calcverse.vercel.app/calculators/unit-conversion","description":"Free unit converter for length, weight, temperature and more.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Tools</span><span class="breadcrumb-sep">›</span><span>Unit Conversion</span></nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Utility Calculator</div>
+      <h1>Unit Conversion Calculator</h1>
+      <p>Convert between any units of length, weight, temperature, area, volume, and speed. Instant results.</p>
+    </div>
+    <div class="calculator-widget">
+      <div class="calc-inputs">
+        <div class="input-group">
+          <label for="category">Category</label>
+          <select id="category" class="input-field" style="cursor:pointer"></select>
+        </div>
+      </div>
+      <div class="calc-inputs two-col" style="margin-top:1rem">
+        <div class="input-group">
+          <label for="fromVal">Value</label>
+          <input type="number" id="fromVal" class="input-field" placeholder="Enter value" step="any"/>
+        </div>
+        <div class="input-group">
+          <label for="fromUnit">From Unit</label>
+          <select id="fromUnit" class="input-field" style="cursor:pointer"></select>
+        </div>
+        <div class="input-group" style="display:flex;align-items:flex-end;justify-content:center">
+          <button id="swapBtn" style="padding:10px 20px;background:var(--surface);border:1px solid var(--border2);color:var(--cyan);border-radius:8px;cursor:pointer;font-size:1.2rem" title="Swap units">⇄</button>
+        </div>
+        <div class="input-group">
+          <label for="toUnit">To Unit</label>
+          <select id="toUnit" class="input-field" style="cursor:pointer"></select>
+        </div>
+      </div>
+      <button type="button" class="calc-btn" id="convertBtn">⚡ Convert</button>
+      <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
+        <div class="result-label">Result</div>
+        <div class="result-main" id="resultVal">—</div>
+        <div class="result-sub" id="resultFormula">—</div>
+        <div id="quickRef" style="margin-top:1.5rem"></div>
+      </div>
+    </div>
+    <section class="seo-section">
+      <h2>Common Unit Conversions</h2>
+      <p>Our unit converter supports the most commonly used conversions: kilometers to miles, kilograms to pounds, Celsius to Fahrenheit, meters to feet, liters to gallons, and many more. The calculator covers metric (SI) and imperial (US/UK) systems.</p>
+      <h3>Length Quick Reference</h3>
+      <p>1 inch = 2.54 cm | 1 foot = 30.48 cm | 1 yard = 0.9144 m | 1 mile = 1.60934 km | 1 nautical mile = 1.852 km</p>
+      <h3>Weight Quick Reference</h3>
+      <p>1 pound = 0.453592 kg | 1 ounce = 28.3495 g | 1 stone = 6.35029 kg | 1 ton (short) = 907.185 kg</p>
+      <h3>Temperature Reference</h3>
+      <p>°F = °C × 9/5 + 32 | °C = (°F – 32) × 5/9 | K = °C + 273.15</p>
+    </section>
+    <section class="faq-section">
+      <h2>FAQs</h2>
+      <div class="faq-item"><h3>What is the difference between metric and imperial?</h3><p>Metric (SI) uses meters, kilograms, litres. Imperial uses feet, pounds, gallons. Most countries use metric; the US primarily uses imperial.</p></div>
+      <div class="faq-item"><h3>How do I convert temperature?</h3><p>Celsius to Fahrenheit: multiply by 9/5 and add 32. Celsius to Kelvin: add 273.15.</p></div>
+    </section>
+    <div class="related-calcs">
+      <h3>Related Calculators</h3>
+      <div class="related-grid">
+        <a href="basic.html" class="related-card">🔢 Basic Calculator</a>
+        <a href="percentage.html" class="related-card">% Percentage</a>
+        <a href="scientific.html" class="related-card">🔬 Scientific Calculator</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
+    <p class="footer-copy">© 2025 CalcVerse</p>
+    <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+const categories={
+  'Length':{units:['Millimeter','Centimeter','Meter','Kilometer','Inch','Foot','Yard','Mile','Nautical Mile'],
+    toBase:{Millimeter:0.001,Centimeter:0.01,Meter:1,Kilometer:1000,Inch:0.0254,Foot:0.3048,Yard:0.9144,Mile:1609.34,'Nautical Mile':1852}},
+  'Weight':{units:['Milligram','Gram','Kilogram','Tonne','Ounce','Pound','Stone'],
+    toBase:{Milligram:0.000001,Gram:0.001,Kilogram:1,Tonne:1000,Ounce:0.0283495,Pound:0.453592,Stone:6.35029}},
+  'Temperature':{units:['Celsius','Fahrenheit','Kelvin'],special:true},
+  'Area':{units:['Square Meter','Square Kilometer','Square Foot','Square Yard','Acre','Hectare'],
+    toBase:{'Square Meter':1,'Square Kilometer':1e6,'Square Foot':0.092903,'Square Yard':0.836127,'Acre':4046.86,'Hectare':10000}},
+  'Volume':{units:['Milliliter','Liter','Cubic Meter','Gallon (US)','Quart','Pint','Cup','Fluid Ounce'],
+    toBase:{Milliliter:0.001,Liter:1,'Cubic Meter':1000,'Gallon (US)':3.78541,Quart:0.946353,Pint:0.473176,Cup:0.236588,'Fluid Ounce':0.0295735}},
+  'Speed':{units:['m/s','km/h','mph','knot','ft/s'],
+    toBase:{'m/s':1,'km/h':0.277778,'mph':0.44704,'knot':0.514444,'ft/s':0.3048}}
+};
+const catSel=document.getElementById('category');
+const fromU=document.getElementById('fromUnit');
+const toU=document.getElementById('toUnit');
+Object.keys(categories).forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;catSel.appendChild(o);});
+function populateUnits(){
+  const cat=categories[catSel.value];
+  [fromU,toU].forEach((sel,i)=>{
+    const prev=sel.value;
+    sel.innerHTML='';
+    cat.units.forEach((u,idx)=>{const o=document.createElement('option');o.value=u;o.textContent=u;if(i===1&&idx===1)o.selected=true;sel.appendChild(o);});
+    if(cat.units.includes(prev))sel.value=prev;
+  });
+}
+catSel.addEventListener('change',populateUnits);
+populateUnits();
+document.getElementById('swapBtn').addEventListener('click',()=>{const t=fromU.value;fromU.value=toU.value;toU.value=t;});
+document.getElementById('convertBtn').addEventListener('click',function(){
+  const val=parseFloat(document.getElementById('fromVal').value);
+  if(isNaN(val)){alert('Enter a value.');return;}
+  const cat=catSel.value;
+  const from=fromU.value,to=toU.value;
+  let result;
+  if(cat==='Temperature'){
+    let base;
+    if(from==='Celsius')base=val;
+    else if(from==='Fahrenheit')base=(val-32)*5/9;
+    else base=val-273.15;
+    if(to==='Celsius')result=base;
+    else if(to==='Fahrenheit')result=base*9/5+32;
+    else result=base+273.15;
+  } else {
+    const tb=categories[cat].toBase;
+    result=val*tb[from]/tb[to];
+  }
+  const fmt=Math.abs(result)>=0.001&&Math.abs(result)<1e9?parseFloat(result.toPrecision(8)):result.toExponential(4);
+  document.getElementById('resultVal').textContent=`${fmt} ${to}`;
+  document.getElementById('resultFormula').textContent=`${val} ${from} = ${fmt} ${to}`;
+  document.getElementById('resultPanel').style.display='block';
+});
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

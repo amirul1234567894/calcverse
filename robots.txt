@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 1
+
+Disallow: /assets/indexnow-*.txt
+
+Sitemap: https://calcverse.vercel.app/sitemap.xml

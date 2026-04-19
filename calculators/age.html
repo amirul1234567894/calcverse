@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Free Age Calculator by Date of Birth – Years, Months & Days | CalcVerse</title>
+  <meta name="description" content="Calculate your exact age in years, months, days, hours, and minutes from your date of birth. Free age calculator online. Find out how many days until your next birthday too!"/>
+  <meta name="keywords" content="age calculator, age calculator by date of birth, how to calculate age in years months days, exact age calculator online free, birthday calculator, age in days"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/age"/>
+  <meta property="og:title" content="Free Age Calculator – Exact Age in Years, Months, Days"/>
+  <meta property="og:description" content="Calculate exact age from date of birth. Free, instant, no signup."/>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Age Calculator","url":"https://calcverse.vercel.app/calculators/age","description":"Free online age calculator. Calculate exact age in years, months, and days from date of birth.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate my exact age?","acceptedAnswer":{"@type":"Answer","text":"Enter your date of birth and the calculator computes the difference from today in years, months, and days, accounting for leap years and varying month lengths."}},{"@type":"Question","name":"How many days old am I?","acceptedAnswer":{"@type":"Answer","text":"Simply enter your birthdate and our calculator will show your exact age in total days, including all leap years."}},{"@type":"Question","name":"What is the formula for calculating age?","acceptedAnswer":{"@type":"Answer","text":"Age = Current Date − Date of Birth. The exact calculation accounts for leap years and the different number of days in each month."}}]}
+  </script>
+
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb">
+      <a href="../index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <a href="../index.html#calculators">Other Tools</a><span class="breadcrumb-sep">›</span>
+      <span>Age Calculator</span>
+    </nav>
+
+    <div class="tool-header">
+      <div class="tool-category-tag">🎂 Life Calculator</div>
+      <h1>Age Calculator</h1>
+      <p>Find your exact age in years, months, days, hours, and even minutes. Enter any date of birth to get a complete age breakdown.</p>
+    </div>
+
+    <div class="calculator-widget">
+      <div class="calc-inputs two-col">
+        <div class="input-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" class="input-field" max="" aria-label="Date of birth"/>
+        </div>
+        <div class="input-group">
+          <label for="calcDate">Calculate Age On</label>
+          <input type="date" id="calcDate" class="input-field" aria-label="Calculate age on date"/>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="calcBtn">
+        <span class="spinner" id="spinner"></span>
+        <span id="btnText">🎂 Calculate My Age</span>
+      </button>
+
+      <div class="result-panel" id="resultPanel">
+        <div class="result-label">Your Exact Age</div>
+        <div class="result-main" id="ageMain">—</div>
+        <div class="result-sub" id="ageSub">years old</div>
+        <div class="result-breakdown" id="ageBreakdown"></div>
+      </div>
+    </div>
+
+    <div class="seo-section">
+      <h2>How to Calculate Your Exact Age</h2>
+      <p>Calculating your age sounds simple — just subtract your birth year from the current year. But for a truly precise result, you need to account for whether your birthday has passed yet this year, how many days are in each month, and leap years (which occur every 4 years, adding an extra day to February).</p>
+
+      <h3>Age Calculation Formula</h3>
+      <div class="formula-box">Age = Current Date − Date of Birth (accounting for leap years)</div>
+      <p>For example, if you were born on <strong>15 March 1995</strong> and today is <strong>19 April 2026</strong>, your age is <strong>31 years, 1 month, 4 days</strong>.</p>
+
+      <h3>Why Your Age in Days Is Fascinating</h3>
+      <p>Most people are surprised to learn how many days old they are. The average 30-year-old has lived over <strong>10,950 days</strong>. A 25th birthday marks approximately <strong>9,132 days</strong> of life. These numbers help put time in perspective and are often used in retirement planning, insurance calculations, and legal age determinations.</p>
+
+      <h3>Leap Year Considerations</h3>
+      <p>A leap year occurs every 4 years (with exceptions for century years not divisible by 400). This means people born on 29 February only have a "true" birthday once every 4 years — their legal age in most countries is counted as either 28 February or 1 March in non-leap years.</p>
+
+      <h3>Age Calculation in Different Cultures</h3>
+      <ul>
+        <li><strong>Western system:</strong> Age starts at 0 and increments on each birthday — used in most countries.</li>
+        <li><strong>East Asian (traditional):</strong> A child is considered 1 year old at birth, and everyone ages a year on New Year's Day — common in Korea, China, and Vietnam.</li>
+        <li><strong>Legal age:</strong> For legal purposes (driving, voting, contracts), age is typically calculated in whole years under the Western system.</li>
+      </ul>
+    </div>
+
+    <div class="seo-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>How many days old am I?</summary>
+          <div class="faq-body">Enter your date of birth above and the calculator shows your total age in days. The average person in their 30s has lived over 10,000 days. The calculation accounts for all leap years in your lifetime.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I calculate someone else's age?</summary>
+          <div class="faq-body">Use the "Calculate Age On" field to enter any target date. This lets you find someone's age on a specific past or future date — useful for birthdays, anniversaries, or legal age verification.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How many days until my next birthday?</summary>
+          <div class="faq-body">The calculator automatically shows the number of days remaining until your next birthday in the result breakdown.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is this age calculator accurate for legal purposes?</summary>
+          <div class="faq-body">The calculator uses the standard Western calendar method accurate to the day. For official legal documents, always verify with official identification documents.</div>
+        </details>
+      </div>
+    </div>
+
+    <div class="seo-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a href="due-date.html" class="related-card"><span class="related-icon">📅</span><div><div class="related-name">Due Date Calculator</div><div class="related-desc">Baby's expected date</div></div></a>
+        <a href="time.html" class="related-card"><span class="related-icon">⏱️</span><div><div class="related-name">Time Calculator</div><div class="related-desc">Hours between two times</div></div></a>
+        <a href="bmi.html" class="related-card"><span class="related-icon">⚖️</span><div><div class="related-name">BMI Calculator</div><div class="related-desc">Body mass index</div></div></a>
+        <a href="gpa.html" class="related-card"><span class="related-icon">📚</span><div><div class="related-name">GPA Calculator</div><div class="related-desc">Grade point average</div></div></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a><p>Free calculators for health, finance, and everyday life.</p></div>
+    <div class="footer-col"><h4>Other Tools</h4><a href="age.html">Age Calculator</a><a href="time.html">Time Calculator</a><a href="gpa.html">GPA Calculator</a><a href="unit-conversion.html">Unit Converter</a></div>
+    <div class="footer-col"><h4>Health</h4><a href="bmi.html">BMI Calculator</a><a href="bmr.html">BMR Calculator</a><a href="pregnancy.html">Pregnancy</a></div>
+    <div class="footer-col"><h4>Site</h4><a href="../index.html">All Calculators</a><a href="../blog/index.html">Blog</a><a href="../privacy.html">Privacy</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 CalcVerse</span></div>
+</footer>
+
+<script>
+(function(){
+  // Set defaults: today for calcDate, sensible max for dob
+  const today = new Date();
+  const todayStr = today.toISOString().split('T')[0];
+  document.getElementById('calcDate').value = todayStr;
+  document.getElementById('calcDate').max = todayStr;
+  document.getElementById('dob').max = todayStr;
+
+  document.getElementById('calcBtn').addEventListener('click', function(){
+    const dobVal = document.getElementById('dob').value;
+    const onVal = document.getElementById('calcDate').value;
+    if(!dobVal){alert('Please enter your date of birth.');return;}
+
+    const dob = new Date(dobVal);
+    const onDate = onVal ? new Date(onVal) : today;
+
+    if(dob >= onDate){alert('Date of birth must be before the calculation date.');return;}
+
+    let years = onDate.getFullYear() - dob.getFullYear();
+    let months = onDate.getMonth() - dob.getMonth();
+    let days = onDate.getDate() - dob.getDate();
+
+    if(days < 0){
+      months--;
+      const prevMonth = new Date(onDate.getFullYear(), onDate.getMonth(), 0);
+      days += prevMonth.getDate();
+    }
+    if(months < 0){years--;months+=12;}
+
+    // Total days
+    const totalDays = Math.floor((onDate - dob) / 86400000);
+    const totalHours = totalDays * 24;
+    const totalWeeks = Math.floor(totalDays / 7);
+
+    // Next birthday
+    let nextBday = new Date(onDate.getFullYear(), dob.getMonth(), dob.getDate());
+    if(nextBday <= onDate) nextBday.setFullYear(onDate.getFullYear()+1);
+    const daysToNextBday = Math.ceil((nextBday-onDate)/86400000);
+
+    // Day of week born
+    const days_w = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const birthDay = days_w[dob.getDay()];
+
+    document.getElementById('ageMain').textContent = `${years} years`;
+    document.getElementById('ageSub').textContent = `${months} months, ${days} days`;
+
+    document.getElementById('ageBreakdown').innerHTML = `
+      <div class="result-row"><span class="result-row-label">Years</span><span class="result-row-value">${years}</span></div>
+      <div class="result-row"><span class="result-row-label">Months</span><span class="result-row-value">${years*12+months}</span></div>
+      <div class="result-row"><span class="result-row-label">Weeks</span><span class="result-row-value">${totalWeeks.toLocaleString()}</span></div>
+      <div class="result-row"><span class="result-row-label">Total Days</span><span class="result-row-value">${totalDays.toLocaleString()}</span></div>
+      <div class="result-row"><span class="result-row-label">Total Hours</span><span class="result-row-value">${totalHours.toLocaleString()}</span></div>
+      <div class="result-row"><span class="result-row-label">Born On (Day)</span><span class="result-row-value">${birthDay}</span></div>
+      <div class="result-row"><span class="result-row-label">🎂 Next Birthday In</span><span class="result-row-value" style="color:var(--cyan)">${daysToNextBday} days</span></div>
+    `;
+
+    document.getElementById('resultPanel').classList.add('show');
+    document.getElementById('resultPanel').scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+})();
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Mortgage Calculator – Monthly Payment & Amortization | CalcVerse</title>
+  <meta name="description" content="Free mortgage calculator. Calculate your monthly mortgage payment, total interest paid, and view full amortization schedule. Supports any loan term."/>
+  <meta name="keywords" content="mortgage calculator, home loan calculator, monthly mortgage payment, mortgage amortization, home loan EMI calculator, house payment calculator"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/mortgage"/>
+  <meta property="og:title" content="Mortgage Calculator – Monthly Payment & Amortization"/>
+  <meta property="og:description" content="Calculate monthly mortgage payments and see full amortization schedule."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://calcverse.vercel.app/calculators/mortgage"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Mortgage Calculator","url":"https://calcverse.vercel.app/calculators/mortgage","description":"Free mortgage payment and amortization calculator.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is mortgage payment calculated?","acceptedAnswer":{"@type":"Answer","text":"Monthly payment = P × [r(1+r)^n] / [(1+r)^n – 1], where P = loan amount, r = monthly rate, n = total months."}},{"@type":"Question","name":"What is amortization?","acceptedAnswer":{"@type":"Answer","text":"Amortization is the process of paying off a loan with regular payments. Early payments are mostly interest; later payments are mostly principal."}},{"@type":"Question","name":"Does this include taxes and insurance?","acceptedAnswer":{"@type":"Answer","text":"This calculator shows principal and interest only (P&I). Property taxes and insurance (escrow) are separate costs."}},{"@type":"Question","name":"What is a good mortgage rate?","acceptedAnswer":{"@type":"Answer","text":"Rates vary by country and economic conditions. In India, home loan rates typically range from 8–10% p.a. In the US, they range from 6–8% currently."}}]}</script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo" aria-label="CalcVerse Home"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Finance</span><span class="breadcrumb-sep">›</span><span aria-current="page">Mortgage Calculator</span></nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Finance Calculator</div>
+      <h1>Mortgage Calculator</h1>
+      <p>Calculate your monthly mortgage payment and view a complete amortization schedule for any home loan.</p>
+    </div>
+    <div class="calculator-widget">
+      <div class="calc-inputs two-col">
+        <div class="input-group">
+          <label for="loanAmt">Loan Amount (₹ / $)</label>
+          <input type="number" id="loanAmt" class="input-field" placeholder="e.g. 5000000" min="10000" step="1000"/>
+        </div>
+        <div class="input-group">
+          <label for="annualRate">Annual Interest Rate (%)</label>
+          <input type="number" id="annualRate" class="input-field" placeholder="e.g. 8.5" min="0.1" max="30" step="0.05"/>
+        </div>
+        <div class="input-group">
+          <label for="loanYears">Loan Term (Years)</label>
+          <input type="number" id="loanYears" class="input-field" placeholder="e.g. 20" min="1" max="30" step="1"/>
+        </div>
+        <div class="input-group">
+          <label for="downPayment">Down Payment (optional)</label>
+          <input type="number" id="downPayment" class="input-field" placeholder="e.g. 500000" min="0" step="1000"/>
+        </div>
+      </div>
+      <button type="button" class="calc-btn" id="calcBtn">🏠 Calculate Mortgage</button>
+      <div class="result-panel" id="resultPanel" aria-live="polite" style="display:none">
+        <div class="result-label">Monthly Payment</div>
+        <div class="result-main" id="monthlyPayment">—</div>
+        <div class="result-grid" id="resultGrid" style="margin-top:1.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;text-align:center"></div>
+        <div style="margin-top:2rem">
+          <h3 style="color:var(--text2);font-size:1rem;margin-bottom:1rem">Amortization Schedule</h3>
+          <div style="overflow-x:auto">
+            <table id="scheduleTable" style="width:100%;border-collapse:collapse;font-size:0.85rem">
+              <thead><tr style="color:var(--text2)"><th style="padding:8px;text-align:left">Year</th><th style="padding:8px">Principal</th><th style="padding:8px">Interest</th><th style="padding:8px">Balance</th></tr></thead>
+              <tbody id="scheduleBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="seo-section">
+      <h2>How to Use the Mortgage Calculator</h2>
+      <p>Enter your home loan amount, annual interest rate, and loan term in years. Optionally add your down payment to calculate on the net loan amount. Click Calculate to see your exact monthly EMI, total interest paid, and year-by-year amortization table.</p>
+      <h3>Mortgage Payment Formula</h3>
+      <p>The standard formula for monthly mortgage payment is: <strong>M = P × [r(1+r)^n] / [(1+r)^n – 1]</strong>, where P is principal, r is the monthly interest rate (annual rate ÷ 12), and n is the total number of months.</p>
+      <h3>Understanding Amortization</h3>
+      <p>In the early years of a mortgage, most of your payment goes toward interest. Over time, as the principal reduces, more of each payment goes toward the principal. This is called negative amortization front-loading. The amortization table above shows exactly how much goes where, year by year.</p>
+      <h3>Tips to Reduce Your Mortgage</h3>
+      <ul style="padding-left:1.5rem;margin-top:0.5rem;color:var(--text2)">
+        <li>Make a larger down payment to reduce principal</li>
+        <li>Opt for a shorter loan term to save on total interest</li>
+        <li>Make one extra payment per year to shorten your term</li>
+        <li>Refinance when rates drop significantly</li>
+      </ul>
+    </section>
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><h3>How is mortgage payment calculated?</h3><p>Monthly payment = P × [r(1+r)^n] / [(1+r)^n – 1], where P = loan amount, r = monthly rate, n = total months.</p></div>
+      <div class="faq-item"><h3>What is amortization?</h3><p>Amortization is paying off a loan with regular payments. Early payments are mostly interest; later ones are mostly principal.</p></div>
+      <div class="faq-item"><h3>Does this include taxes and insurance?</h3><p>No. This shows principal & interest only. Property taxes and insurance (escrow) are additional.</p></div>
+      <div class="faq-item"><h3>What is a good mortgage rate?</h3><p>In India, home loan rates range 8–10% p.a. In the US, currently 6–8%. Always compare multiple lenders.</p></div>
+    </section>
+    <div class="related-calcs">
+      <h3>Related Calculators</h3>
+      <div class="related-grid">
+        <a href="emi.html" class="related-card">📅 EMI Calculator</a>
+        <a href="loan.html" class="related-card">💳 Loan Calculator</a>
+        <a href="interest.html" class="related-card">📈 Interest Calculator</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
+    <p class="footer-copy">© 2025 CalcVerse · For informational purposes only</p>
+    <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a><a href="../blog/index.html">Blog</a></div>
+  </div>
+</footer>
+<script>
+document.getElementById('calcBtn').addEventListener('click', function(){
+  const P = parseFloat(document.getElementById('loanAmt').value) - (parseFloat(document.getElementById('downPayment').value)||0);
+  const annualR = parseFloat(document.getElementById('annualRate').value);
+  const years = parseInt(document.getElementById('loanYears').value);
+  if(!P||P<=0||!annualR||!years){alert('Please fill all required fields.');return;}
+  const r = annualR/100/12;
+  const n = years*12;
+  const M = P*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+  const totalPay = M*n;
+  const totalInt = totalPay-P;
+  document.getElementById('monthlyPayment').textContent = '₹'+M.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',');
+  const grid = document.getElementById('resultGrid');
+  grid.innerHTML = `
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Principal</div><div style="color:var(--cyan);font-weight:700">₹${P.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Total Interest</div><div style="color:var(--pink);font-weight:700">₹${totalInt.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Total Payment</div><div style="color:var(--green);font-weight:700">₹${totalPay.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</div></div>
+  `;
+  const tbody = document.getElementById('scheduleBody');
+  tbody.innerHTML='';
+  let balance=P;
+  for(let y=1;y<=years;y++){
+    let yPrincipal=0,yInterest=0;
+    for(let m=0;m<12;m++){
+      const intPay=balance*r;
+      const prinPay=M-intPay;
+      yInterest+=intPay;
+      yPrincipal+=prinPay;
+      balance-=prinPay;
+    }
+    const row=`<tr style="border-top:1px solid var(--border)">
+      <td style="padding:8px;color:var(--text2)">Year ${y}</td>
+      <td style="padding:8px;text-align:center;color:var(--cyan)">₹${yPrincipal.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</td>
+      <td style="padding:8px;text-align:center;color:var(--pink)">₹${yInterest.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</td>
+      <td style="padding:8px;text-align:center">₹${Math.max(0,balance).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</td>
+    </tr>`;
+    tbody.insertAdjacentHTML('beforeend',row);
+  }
+  document.getElementById('resultPanel').style.display='block';
+});
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

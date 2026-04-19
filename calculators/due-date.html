@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Due Date Calculator – Estimate Baby's Arrival | CalcVerse</title>
+  <meta name="description" content="Free due date calculator. Enter your LMP or conception date to get your estimated due date, countdown, and pregnancy timeline."/>
+  <meta name="keywords" content="due date calculator, pregnancy due date, estimated due date, baby due date calculator, when will my baby arrive"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/due-date"/>
+  <meta property="og:title" content="Due Date Calculator – Estimate Baby's Arrival"/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Due Date Calculator","url":"https://calcverse.vercel.app/calculators/due-date","description":"Estimate your pregnancy due date from LMP or conception date.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Health</span><span class="breadcrumb-sep">›</span><span>Due Date Calculator</span></nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Health Calculator</div>
+      <h1>Due Date Calculator</h1>
+      <p>Calculate your estimated due date from your last menstrual period or conception date. Get your complete pregnancy timeline.</p>
+    </div>
+    <div class="calculator-widget">
+      <div class="notice info"><span>ℹ️</span><span>This is an estimate. Only 4% of babies arrive on their exact due date — most arrive within 2 weeks before or after.</span></div>
+      <div class="calc-inputs two-col">
+        <div class="input-group" style="grid-column:span 2">
+          <label>Calculate From</label>
+          <div style="display:flex;gap:1rem;margin-top:0.5rem">
+            <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer"><input type="radio" name="method" value="lmp" checked id="byLMP"/> Last Menstrual Period (LMP)</label>
+            <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer"><input type="radio" name="method" value="conception" id="byConception"/> Conception Date</label>
+          </div>
+        </div>
+        <div class="input-group" id="lmpField">
+          <label for="dateInput">First Day of Last Period</label>
+          <input type="date" id="dateInput" class="input-field"/>
+        </div>
+        <div class="input-group">
+          <label for="cycleLength">Cycle Length (days)</label>
+          <input type="number" id="cycleLength" class="input-field" value="28" min="21" max="35"/>
+        </div>
+      </div>
+      <button type="button" class="calc-btn" id="calcBtn">📅 Calculate Due Date</button>
+      <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
+        <div class="result-label">Estimated Due Date</div>
+        <div class="result-main" id="dueDate">—</div>
+        <div class="result-sub" id="countdown">—</div>
+        <div id="timeline" style="margin-top:1.5rem"></div>
+      </div>
+    </div>
+    <section class="seo-section">
+      <h2>How Due Date is Calculated</h2>
+      <p>The most common method is Naegele's Rule: add 280 days (40 weeks) to the first day of your last menstrual period. This assumes a 28-day cycle. If your cycle is longer or shorter, the calculator adjusts accordingly.</p>
+      <h3>Methods of Calculation</h3>
+      <p><strong>From LMP:</strong> Due Date = LMP + 280 days + (cycle – 28) days adjustment.</p>
+      <p><strong>From Conception:</strong> Due Date = Conception Date + 266 days (38 weeks from fertilization).</p>
+      <h3>What if My Due Date Changes?</h3>
+      <p>Your doctor may adjust your due date after an early ultrasound (before 13 weeks), which is considered the most accurate method for dating a pregnancy.</p>
+    </section>
+    <section class="faq-section">
+      <h2>FAQs</h2>
+      <div class="faq-item"><h3>How accurate is the due date?</h3><p>Only about 4% of babies arrive on the exact due date. Most arrive within 2 weeks of the estimated date.</p></div>
+      <div class="faq-item"><h3>Can I go into labor before my due date?</h3><p>Yes. Anything from 37 weeks is considered full-term. Preterm birth is before 37 weeks.</p></div>
+      <div class="faq-item"><h3>What if I have irregular cycles?</h3><p>Use your best estimate of cycle length, or use a conception date if known. An early ultrasound gives the most accurate dating.</p></div>
+    </section>
+    <div class="related-calcs">
+      <h3>Related Calculators</h3>
+      <div class="related-grid">
+        <a href="pregnancy.html" class="related-card">🤰 Pregnancy Calculator</a>
+        <a href="conception.html" class="related-card">🌸 Conception Calculator</a>
+        <a href="age.html" class="related-card">🎂 Age Calculator</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
+    <p class="footer-copy">© 2025 CalcVerse · Not medical advice</p>
+    <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('input[name="method"]').forEach(r=>r.addEventListener('change',()=>{
+  document.getElementById('lmpField').querySelector('label').textContent = r.value==='lmp'?'First Day of Last Period':'Conception Date';
+}));
+document.getElementById('calcBtn').addEventListener('click', function(){
+  const val = document.getElementById('dateInput').value;
+  if(!val){alert('Please enter a date.');return;}
+  const method = document.querySelector('input[name="method"]:checked').value;
+  const cycle = parseInt(document.getElementById('cycleLength').value)||28;
+  const inputDate = new Date(val);
+  let dueDate;
+  if(method==='lmp') dueDate = new Date(inputDate.getTime()+(280+(cycle-28))*86400000);
+  else dueDate = new Date(inputDate.getTime()+266*86400000);
+  const today = new Date();
+  const daysLeft = Math.ceil((dueDate-today)/86400000);
+  const weeksLeft = Math.floor(Math.abs(daysLeft)/7);
+  const daysLeftExtra = Math.abs(daysLeft)%7;
+  document.getElementById('dueDate').textContent = dueDate.toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  const cdEl = document.getElementById('countdown');
+  if(daysLeft>0) cdEl.textContent = `${weeksLeft} weeks, ${daysLeftExtra} days to go`;
+  else cdEl.textContent = `Baby arrived ${Math.abs(daysLeft)} days ago! 🎉`;
+  cdEl.style.color = daysLeft>0?'var(--cyan)':'var(--green)';
+  
+  const first = new Date(method==='lmp'?inputDate.getTime():inputDate.getTime()-14*86400000);
+  const t2start = new Date(first.getTime()+91*86400000);
+  const t3start = new Date(first.getTime()+189*86400000);
+  
+  document.getElementById('timeline').innerHTML = `
+    <h4 style="color:var(--text2);margin-bottom:0.8rem;font-size:0.9rem">Pregnancy Timeline</h4>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;align-items:center;gap:1rem;padding:10px;background:var(--surface);border-radius:10px;border-left:3px solid var(--cyan)">
+        <span style="color:var(--cyan);font-size:1.2rem">1️⃣</span>
+        <div><div style="font-size:0.85rem;color:var(--text2)">1st Trimester ends</div><div style="font-weight:600">${t2start.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;padding:10px;background:var(--surface);border-radius:10px;border-left:3px solid var(--green)">
+        <span style="color:var(--green);font-size:1.2rem">2️⃣</span>
+        <div><div style="font-size:0.85rem;color:var(--text2)">2nd Trimester ends</div><div style="font-weight:600">${t3start.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;padding:10px;background:var(--surface);border-radius:10px;border-left:3px solid var(--violet2)">
+        <span style="color:var(--violet2);font-size:1.2rem">🎉</span>
+        <div><div style="font-size:0.85rem;color:var(--text2)">Estimated Due Date</div><div style="font-weight:600">${dueDate.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}</div></div>
+      </div>
+    </div>
+  `;
+  document.getElementById('resultPanel').style.display='block';
+});
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

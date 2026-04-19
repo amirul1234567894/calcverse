@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Free BMI Calculator Online – Instant Body Mass Index Check | CalcVerse</title>
+  <meta name="description" content="Use our free BMI calculator to instantly check your Body Mass Index. Enter height and weight to get your BMI score, health category, and personalized health tips."/>
+  <meta name="keywords" content="BMI calculator, body mass index calculator, BMI calculator for men and women, how to calculate BMI, ideal BMI range by age, BMI formula, free BMI calculator online"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/bmi"/>
+
+  <meta property="og:title" content="Free BMI Calculator – Instant Body Mass Index"/>
+  <meta property="og:description" content="Check your BMI instantly. Free, accurate, no signup needed."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://calcverse.vercel.app/calculators/bmi"/>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator","url":"https://calcverse.vercel.app/calculators/bmi","description":"Free online BMI calculator. Calculate Body Mass Index instantly.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a healthy BMI?","acceptedAnswer":{"@type":"Answer","text":"A healthy BMI for adults is between 18.5 and 24.9 according to WHO guidelines."}},{"@type":"Question","name":"How is BMI calculated?","acceptedAnswer":{"@type":"Answer","text":"BMI = weight(kg) / height(m)². For example, 70kg at 1.75m = 22.86 BMI."}},{"@type":"Question","name":"Is BMI the same for men and women?","acceptedAnswer":{"@type":"Answer","text":"The formula is the same, but body fat percentage differs. Women naturally carry more fat at the same BMI."}},{"@type":"Question","name":"Does BMI apply to children?","acceptedAnswer":{"@type":"Answer","text":"No. Children use BMI-for-age percentiles. This calculator is for adults aged 18+."}}]}
+  </script>
+
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo" aria-label="CalcVerse Home">
+      <div class="logo-mark">C</div>
+      <span class="logo-text">Calc<span>Verse</span></span>
+    </a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="tool-page">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="../index.html#calculators">Health</a>
+      <span class="breadcrumb-sep">›</span>
+      <span aria-current="page">BMI Calculator</span>
+    </nav>
+
+    <!-- Tool Header -->
+    <div class="tool-header">
+      <div class="tool-category-tag">Health Calculator</div>
+      <h1>BMI Calculator</h1>
+      <p>Calculate your Body Mass Index instantly. Enter your height and weight to see your BMI score and health category.</p>
+    </div>
+
+    <!-- Calculator Widget -->
+    <div class="calculator-widget" role="main" aria-label="BMI Calculator">
+      <div class="notice info" role="note">
+        <span>ℹ️</span>
+        <span>This calculator is for adults aged 18 and over. Results are for informational purposes only.</span>
+      </div>
+
+      <div class="calc-inputs two-col">
+        <div class="input-group">
+          <label for="heightInput">Height (cm)</label>
+          <input type="number" id="heightInput" class="input-field" placeholder="e.g. 175" min="50" max="300" step="0.1" autocomplete="off"/>
+          <span class="input-hint">Range: 50–300 cm</span>
+        </div>
+        <div class="input-group">
+          <label for="weightInput">Weight (kg)</label>
+          <input type="number" id="weightInput" class="input-field" placeholder="e.g. 70" min="10" max="300" step="0.1" autocomplete="off"/>
+          <span class="input-hint">Range: 10–300 kg</span>
+        </div>
+      </div>
+
+      <button type="button" class="calc-btn" id="calcBtn" aria-label="Calculate BMI">
+        <span class="spinner" id="spinner"></span>
+        <span id="btnText">⚖️ Calculate BMI</span>
+      </button>
+
+      <!-- Result -->
+      <div class="result-panel" id="resultPanel" aria-live="polite" role="region" aria-label="BMI Result">
+        <div class="result-label">Your BMI Result</div>
+        <div class="result-main" id="bmiValue">—</div>
+        <div class="result-sub" id="bmiCategory">—</div>
+
+        <div class="bmi-gauge" aria-hidden="true">
+          <div style="position:relative">
+            <div class="gauge-track">
+              <div class="gauge-seg uw" style="flex:1.85"></div>
+              <div class="gauge-seg nw" style="flex:2.1"></div>
+              <div class="gauge-seg ow" style="flex:1.5"></div>
+              <div class="gauge-seg ob" style="flex:4.55"></div>
+            </div>
+            <div class="gauge-needle-wrap">
+              <div class="gauge-needle" id="gaugeNeedle"></div>
+            </div>
+          </div>
+          <div class="gauge-labels">
+            <span>Underweight<br>&lt;18.5</span>
+            <span>Normal<br>18.5–24.9</span>
+            <span>Overweight<br>25–29.9</span>
+            <span>Obese<br>≥30</span>
+          </div>
+        </div>
+
+        <div class="result-breakdown" id="resultBreakdown"></div>
+      </div>
+    </div><!-- /.calculator-widget -->
+
+    <!-- SEO Content -->
+    <div class="seo-section">
+      <h2>What Is BMI and Why Does It Matter?</h2>
+      <p>Body Mass Index (BMI) is a simple screening tool used by healthcare professionals worldwide to assess whether a person's weight is appropriate for their height. Calculated using your weight in kilograms divided by the square of your height in metres, BMI provides a quick, cost-free estimate of body fatness that correlates with risk of chronic diseases.</p>
+
+      <h3>BMI Formula</h3>
+      <div class="formula-box">BMI = Weight (kg) ÷ Height (m)²</div>
+      <p><strong>Example:</strong> A person weighing 70 kg with a height of 1.75 m has a BMI of 70 ÷ (1.75 × 1.75) = <strong>22.86</strong> — squarely in the Normal range.</p>
+
+      <h3>BMI Categories (WHO Standard)</h3>
+      <ul>
+        <li><strong>Underweight (BMI &lt; 18.5):</strong> May indicate nutritional deficiency or underlying illness. A doctor's evaluation is recommended.</li>
+        <li><strong>Normal weight (18.5–24.9):</strong> Associated with the lowest risk of weight-related health problems.</li>
+        <li><strong>Overweight (25–29.9):</strong> Increased risk of cardiovascular disease, type 2 diabetes, and joint problems.</li>
+        <li><strong>Obese (≥30):</strong> Significantly elevated risk of serious conditions including heart disease, stroke, and certain cancers.</li>
+      </ul>
+
+      <h3>Limitations of BMI</h3>
+      <p>BMI does not distinguish between fat and muscle mass — highly trained athletes may register as overweight. It also doesn't account for age, sex, ethnicity, or fat distribution. Always interpret BMI alongside lifestyle factors and consult a qualified healthcare professional for personalized advice.</p>
+
+      <h3>Who Should Use This Calculator?</h3>
+      <p>This BMI calculator is designed for adults aged 18 and over. For children and teenagers, paediatricians use BMI-for-age percentile charts. Pregnant women should not use standard BMI calculations during pregnancy.</p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="seo-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What is a healthy BMI for adults?</summary>
+          <div class="faq-body">For most adults aged 18–65, a healthy BMI falls between 18.5 and 24.9. This range is associated with the lowest risk of weight-related health conditions according to WHO guidelines. Athletes or those with high muscle mass may have a higher BMI while still being in excellent health.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is BMI the same for men and women?</summary>
+          <div class="faq-body">The formula and category thresholds are identical for both sexes. However, women naturally carry a higher proportion of body fat at any given BMI. Some clinicians use sex-adjusted interpretations, but the WHO scale applies universally as a first-pass screening tool.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How often should I check my BMI?</summary>
+          <div class="faq-body">Most health professionals recommend checking BMI every 6–12 months as part of a regular health review. More frequent checks are useful when actively trying to lose or gain weight, ideally tracking alongside other metrics like waist circumference.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What should I do if my BMI is outside the healthy range?</summary>
+          <div class="faq-body">If your BMI is below 18.5 or above 24.9, consider consulting a GP or registered dietitian for personalized guidance. Small, sustainable changes to diet and physical activity are generally more effective than rapid interventions.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is this BMI calculator free?</summary>
+          <div class="faq-body">Yes — completely free with no account required. Your height and weight data is used only for the calculation and is never stored, logged, or shared.</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="seo-section">
+      <h2>Related Health Calculators</h2>
+      <div class="related-grid">
+        <a href="bmr.html" class="related-card">
+          <span class="related-icon">🔥</span>
+          <div><div class="related-name">BMR Calculator</div><div class="related-desc">Daily calorie needs</div></div>
+        </a>
+        <a href="pregnancy.html" class="related-card">
+          <span class="related-icon">🤱</span>
+          <div><div class="related-name">Pregnancy Calculator</div><div class="related-desc">Week-by-week tracking</div></div>
+        </a>
+        <a href="due-date.html" class="related-card">
+          <span class="related-icon">📅</span>
+          <div><div class="related-name">Due Date Calculator</div><div class="related-desc">Expected birth date</div></div>
+        </a>
+        <a href="age.html" class="related-card">
+          <span class="related-icon">🎂</span>
+          <div><div class="related-name">Age Calculator</div><div class="related-desc">Exact age in days</div></div>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /.tool-page -->
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+      <p>Free calculators for health, finance, math, and everyday life.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Health Tools</h4>
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="bmr.html">BMR Calculator</a>
+      <a href="pregnancy.html">Pregnancy Calculator</a>
+      <a href="due-date.html">Due Date Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h4>Finance Tools</h4>
+      <a href="emi.html">EMI Calculator</a>
+      <a href="loan.html">Loan Calculator</a>
+      <a href="mortgage.html">Mortgage Calculator</a>
+      <a href="interest.html">Interest Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <a href="../index.html">All Calculators</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 CalcVerse · Not medical advice · <a href="../index.html">Home</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const btn = document.getElementById('calcBtn');
+  const spinner = document.getElementById('spinner');
+  const panel = document.getElementById('resultPanel');
+  const bmiVal = document.getElementById('bmiValue');
+  const bmiCat = document.getElementById('bmiCategory');
+  const needle = document.getElementById('gaugeNeedle');
+  const breakdown = document.getElementById('resultBreakdown');
+
+  function calcBMI(){
+    const h = parseFloat(document.getElementById('heightInput').value);
+    const w = parseFloat(document.getElementById('weightInput').value);
+    if(!h||!w||h<50||h>300||w<10||w>300){alert('Please enter valid height (50–300 cm) and weight (10–300 kg).');return;}
+
+    spinner.classList.add('visible');
+    btn.disabled=true;
+
+    setTimeout(()=>{
+      const hm = h/100;
+      const bmi = +(w/(hm*hm)).toFixed(1);
+
+      let cat,color,msg;
+      if(bmi<18.5){cat='Underweight';color='#3b82f6';msg='Consider speaking with a healthcare provider about healthy weight gain strategies.';}
+      else if(bmi<25){cat='Normal Weight';color='#10d98c';msg='Great! Your BMI is in the healthy range. Maintain a balanced diet and regular exercise.';}
+      else if(bmi<30){cat='Overweight';color='#f5a623';msg='Your BMI is slightly elevated. Small lifestyle changes can make a significant difference.';}
+      else{cat='Obese';color='#ff4747';msg='Please consult a healthcare professional for personalized weight management advice.';}
+
+      bmiVal.textContent = bmi;
+      bmiVal.style.background = `linear-gradient(135deg, ${color}, #fff)`;
+      bmiVal.style.webkitBackgroundClip = 'text';
+      bmiVal.style.webkitTextFillColor = 'transparent';
+
+      bmiCat.textContent = cat;
+      bmiCat.style.color = color;
+
+      // Needle: map bmi 10–40+ to 0–100%
+      const pct = Math.min(Math.max(((bmi-10)/30)*100, 2), 98);
+      needle.style.left = pct+'%';
+
+      breakdown.innerHTML = `
+        <div class="result-row"><span class="result-row-label">Your BMI</span><span class="result-row-value" style="color:${color}">${bmi}</span></div>
+        <div class="result-row"><span class="result-row-label">Category</span><span class="result-row-value">${cat}</span></div>
+        <div class="result-row"><span class="result-row-label">Height</span><span class="result-row-value">${h} cm</span></div>
+        <div class="result-row"><span class="result-row-label">Weight</span><span class="result-row-value">${w} kg</span></div>
+        <div class="result-row" style="grid-column:1/-1"><span class="result-row-label">💡 Advice</span><span class="result-row-value" style="font-weight:400;font-size:.875rem">${msg}</span></div>
+      `;
+
+      panel.classList.add('show');
+      panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+      spinner.classList.remove('visible');
+      btn.disabled=false;
+    },400);
+  }
+
+  btn.addEventListener('click',calcBMI);
+  document.addEventListener('keydown',e=>{if(e.key==='Enter')calcBMI()});
+})();
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Concrete Calculator – Volume & Bags of Cement Needed | CalcVerse</title>
+  <meta name="description" content="Free concrete calculator. Calculate how many bags of cement you need for a slab, column, or footing. Supports rectangular, round, and tube shapes."/>
+  <meta name="keywords" content="concrete calculator, cement calculator, how many bags of concrete, concrete slab calculator, concrete volume calculator"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/concrete"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Concrete Calculator","url":"https://calcverse.vercel.app/calculators/concrete","description":"Calculate concrete volume and bags of cement needed.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Tools</span><span class="breadcrumb-sep">›</span><span>Concrete Calculator</span></nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Construction Calculator</div>
+      <h1>Concrete Calculator</h1>
+      <p>Calculate the volume of concrete needed and how many bags of cement to buy for your project.</p>
+    </div>
+    <div class="calculator-widget">
+      <div class="calc-inputs">
+        <div class="input-group">
+          <label for="shape">Shape</label>
+          <select id="shape" class="input-field" style="cursor:pointer">
+            <option value="rect">Rectangular Slab</option>
+            <option value="round">Round (Circular) Slab</option>
+            <option value="tube">Tube / Column</option>
+          </select>
+        </div>
+      </div>
+      <div id="rectFields" class="calc-inputs two-col">
+        <div class="input-group"><label for="length">Length (m)</label><input type="number" id="length" class="input-field" placeholder="e.g. 4" min="0" step="0.01"/></div>
+        <div class="input-group"><label for="width">Width (m)</label><input type="number" id="width" class="input-field" placeholder="e.g. 3" min="0" step="0.01"/></div>
+        <div class="input-group"><label for="depth">Depth / Thickness (m)</label><input type="number" id="depth" class="input-field" placeholder="e.g. 0.15" min="0" step="0.01"/></div>
+      </div>
+      <div id="roundFields" class="calc-inputs two-col" style="display:none">
+        <div class="input-group"><label for="diameter">Diameter (m)</label><input type="number" id="diameter" class="input-field" placeholder="e.g. 2" min="0" step="0.01"/></div>
+        <div class="input-group"><label for="rdepth">Depth (m)</label><input type="number" id="rdepth" class="input-field" placeholder="e.g. 0.15" min="0" step="0.01"/></div>
+      </div>
+      <div id="tubeFields" class="calc-inputs two-col" style="display:none">
+        <div class="input-group"><label for="outerD">Outer Diameter (m)</label><input type="number" id="outerD" class="input-field" placeholder="e.g. 0.5" min="0" step="0.01"/></div>
+        <div class="input-group"><label for="innerD">Inner Diameter (m)</label><input type="number" id="innerD" class="input-field" placeholder="e.g. 0.3" min="0" step="0.01"/></div>
+        <div class="input-group"><label for="height">Height (m)</label><input type="number" id="height" class="input-field" placeholder="e.g. 3" min="0" step="0.01"/></div>
+      </div>
+      <div class="calc-inputs" style="margin-top:0.5rem">
+        <div class="input-group">
+          <label for="bagSize">Bag Size</label>
+          <select id="bagSize" class="input-field">
+            <option value="50">50 kg bag</option>
+            <option value="40">40 kg bag</option>
+            <option value="25">25 kg bag</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" class="calc-btn" id="calcBtn">🏗️ Calculate Concrete</button>
+      <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
+        <div class="result-label">Concrete Volume</div>
+        <div class="result-main" id="volume">—</div>
+        <div class="result-grid" id="resultGrid" style="margin-top:1.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;text-align:center"></div>
+      </div>
+    </div>
+    <section class="seo-section">
+      <h2>Concrete Mix Ratios</h2>
+      <p>Standard concrete mix (M20): 1 part cement : 1.5 parts sand : 3 parts aggregate. For M15: 1:2:4. For foundation work, M25 or higher is recommended. This calculator uses M20 as default.</p>
+      <h3>How Many Bags Do I Need?</h3>
+      <p>For M20 concrete: approximately 8 bags of 50 kg cement per cubic meter. Add 10–15% extra for wastage. For exact quantities, consult a structural engineer for large projects.</p>
+    </section>
+    <div class="related-calcs">
+      <h3>Related Calculators</h3>
+      <div class="related-grid">
+        <a href="unit-conversion.html" class="related-card">📐 Unit Conversion</a>
+        <a href="percentage.html" class="related-card">% Percentage</a>
+        <a href="basic.html" class="related-card">🔢 Basic Calculator</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
+    <p class="footer-copy">© 2025 CalcVerse</p>
+    <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+document.getElementById('shape').addEventListener('change',function(){
+  document.getElementById('rectFields').style.display=this.value==='rect'?'grid':'none';
+  document.getElementById('roundFields').style.display=this.value==='round'?'grid':'none';
+  document.getElementById('tubeFields').style.display=this.value==='tube'?'grid':'none';
+});
+document.getElementById('calcBtn').addEventListener('click',function(){
+  const shape=document.getElementById('shape').value;
+  const bagKg=parseInt(document.getElementById('bagSize').value);
+  let vol=0;
+  if(shape==='rect'){
+    const l=parseFloat(document.getElementById('length').value);
+    const w=parseFloat(document.getElementById('width').value);
+    const d=parseFloat(document.getElementById('depth').value);
+    if(!l||!w||!d){alert('Fill all fields.');return;}
+    vol=l*w*d;
+  } else if(shape==='round'){
+    const dia=parseFloat(document.getElementById('diameter').value);
+    const d=parseFloat(document.getElementById('rdepth').value);
+    if(!dia||!d){alert('Fill all fields.');return;}
+    vol=Math.PI*(dia/2)**2*d;
+  } else {
+    const od=parseFloat(document.getElementById('outerD').value);
+    const id=parseFloat(document.getElementById('innerD').value);
+    const h=parseFloat(document.getElementById('height').value);
+    if(!od||!id||!h){alert('Fill all fields.');return;}
+    vol=Math.PI*((od/2)**2-(id/2)**2)*h;
+  }
+  const bagsPerCubicM=8; // M20 approx with 50kg bags
+  const bags=Math.ceil(vol*bagsPerCubicM*(50/bagKg)*1.1); // +10% waste
+  const cement=vol*320; // kg of cement per m³ for M20
+  const weightKg=vol*2400; // approx density
+  document.getElementById('volume').textContent=vol.toFixed(3)+' m³';
+  document.getElementById('resultGrid').innerHTML=`
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Bags Needed (${bagKg}kg)</div><div style="color:var(--cyan);font-weight:700">${bags} bags</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Approx. Weight</div><div style="color:var(--violet2);font-weight:700">${(weightKg/1000).toFixed(1)} tonnes</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Cement (M20)</div><div style="color:var(--green);font-weight:700">${cement.toFixed(0)} kg</div></div>
+  `;
+  document.getElementById('resultPanel').style.display='block';
+});
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

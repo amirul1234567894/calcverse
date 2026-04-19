@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Grade Calculator – What Score Do I Need? | CalcVerse</title>
+  <meta name="description" content="Free grade calculator. Find out what score you need on your final exam to achieve your target grade. Weighted grade calculator included."/>
+  <meta name="keywords" content="grade calculator, final exam grade calculator, what grade do I need, weighted grade calculator, test score calculator"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/grade"/>
+  <meta property="og:title" content="Grade Calculator – What Score Do I Need?"/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Grade Calculator","url":"https://calcverse.vercel.app/calculators/grade","description":"Calculate what grade you need on your final exam.","applicationCategory":"EducationApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Education</span><span class="breadcrumb-sep">›</span><span>Grade Calculator</span></nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Education Calculator</div>
+      <h1>Grade Calculator</h1>
+      <p>Find out what score you need on your final exam to achieve your desired course grade.</p>
+    </div>
+    <div class="calculator-widget">
+      <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
+        <button class="calc-btn" id="tab1" style="flex:1;min-width:120px;padding:10px;font-size:0.9rem">Final Exam Score Needed</button>
+        <button class="calc-btn" id="tab2" style="flex:1;min-width:120px;padding:10px;font-size:0.9rem;background:var(--surface);border:1px solid var(--border2)">Weighted Average Grade</button>
+      </div>
+      <div id="section1">
+        <div class="calc-inputs two-col">
+          <div class="input-group">
+            <label for="currentGrade">Current Grade (%)</label>
+            <input type="number" id="currentGrade" class="input-field" placeholder="e.g. 78" min="0" max="100"/>
+          </div>
+          <div class="input-group">
+            <label for="finalWeight">Final Exam Weight (%)</label>
+            <input type="number" id="finalWeight" class="input-field" placeholder="e.g. 30" min="1" max="100"/>
+          </div>
+          <div class="input-group">
+            <label for="targetGrade">Target Course Grade (%)</label>
+            <input type="number" id="targetGrade" class="input-field" placeholder="e.g. 80" min="0" max="100"/>
+          </div>
+        </div>
+        <button type="button" class="calc-btn" id="calcFinal">📊 Calculate</button>
+        <div class="result-panel" id="finalResult" style="display:none" aria-live="polite">
+          <div class="result-label">Score Needed on Final</div>
+          <div class="result-main" id="finalScore">—</div>
+          <div class="result-sub" id="finalMsg">—</div>
+        </div>
+      </div>
+      <div id="section2" style="display:none">
+        <div id="wtRows"></div>
+        <button type="button" id="addWt" style="margin-top:8px;padding:8px 16px;background:var(--surface);border:1px dashed var(--border2);color:var(--cyan);border-radius:8px;cursor:pointer;font-size:0.85rem">+ Add Assignment</button>
+        <button type="button" class="calc-btn" id="calcWt" style="margin-top:1rem">📊 Calculate Weighted Grade</button>
+        <div class="result-panel" id="wtResult" style="display:none" aria-live="polite">
+          <div class="result-label">Weighted Average</div>
+          <div class="result-main" id="wtGrade">—</div>
+          <div class="result-sub" id="wtLetter">—</div>
+        </div>
+      </div>
+    </div>
+    <section class="seo-section">
+      <h2>How to Calculate What Grade You Need</h2>
+      <p>Use the formula: <strong>Required Final Score = (Target Grade – Current Grade × (1 – Final Weight)) / Final Weight</strong>. This tells you exactly what percentage you need on your final exam to achieve your desired course grade.</p>
+      <h3>Example</h3>
+      <p>If your current grade is 78%, your final is worth 30%, and you want an 80% final grade:<br>Required = (0.80 – 0.78 × 0.70) / 0.30 = (0.80 – 0.546) / 0.30 = 84.7%</p>
+    </section>
+    <section class="faq-section">
+      <h2>FAQs</h2>
+      <div class="faq-item"><h3>What if the required score is over 100%?</h3><p>It means you cannot reach your target grade with the remaining assignments. Consider your realistic options or speak to your professor.</p></div>
+      <div class="faq-item"><h3>What is a weighted grade?</h3><p>Different assignments contribute different percentages to your final grade. Weighted average accounts for these different weights.</p></div>
+    </section>
+    <div class="related-calcs">
+      <h3>Related Calculators</h3>
+      <div class="related-grid">
+        <a href="gpa.html" class="related-card">🎓 GPA Calculator</a>
+        <a href="percentage.html" class="related-card">% Percentage</a>
+        <a href="basic.html" class="related-card">🔢 Basic Calculator</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
+    <p class="footer-copy">© 2025 CalcVerse</p>
+    <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+document.getElementById('tab1').addEventListener('click',()=>{document.getElementById('section1').style.display='block';document.getElementById('section2').style.display='none';});
+document.getElementById('tab2').addEventListener('click',()=>{document.getElementById('section1').style.display='none';document.getElementById('section2').style.display='block';if(!document.getElementById('wtRows').children.length)addWtRow();});
+document.getElementById('calcFinal').addEventListener('click',function(){
+  const cur=parseFloat(document.getElementById('currentGrade').value)/100;
+  const fw=parseFloat(document.getElementById('finalWeight').value)/100;
+  const tg=parseFloat(document.getElementById('targetGrade').value)/100;
+  if(isNaN(cur)||isNaN(fw)||isNaN(tg)){alert('Fill all fields.');return;}
+  const needed=((tg-cur*(1-fw))/fw)*100;
+  const el=document.getElementById('finalScore');
+  const msg=document.getElementById('finalMsg');
+  if(needed>100){el.textContent=needed.toFixed(1)+'%';el.style.color='var(--pink)';msg.textContent='⚠️ This score exceeds 100% — target grade may not be achievable.';}
+  else if(needed<0){el.textContent='0%';el.style.color='var(--green)';msg.textContent='🎉 You\'ve already achieved your target grade!';}
+  else{el.textContent=needed.toFixed(1)+'%';el.style.color=needed>=90?'var(--pink)':needed>=70?'var(--amber)':'var(--green)';msg.textContent=`You need ${needed.toFixed(1)}% on the final to achieve ${(tg*100)}%.`;}
+  document.getElementById('finalResult').style.display='block';
+});
+function addWtRow(){
+  const div=document.createElement('div');
+  div.style.cssText='display:grid;grid-template-columns:1fr auto auto;gap:8px;margin-bottom:8px;align-items:end';
+  div.innerHTML=`<input type="text" class="input-field wt-name" placeholder="Assignment" style="margin-bottom:0"/><input type="number" class="input-field wt-score" placeholder="Score %" min="0" max="100" style="width:80px;margin-bottom:0"/><input type="number" class="input-field wt-weight" placeholder="Weight %" min="0" max="100" style="width:80px;margin-bottom:0"/>`;
+  document.getElementById('wtRows').appendChild(div);
+}
+document.getElementById('addWt').addEventListener('click',addWtRow);
+document.getElementById('calcWt').addEventListener('click',function(){
+  const scores=document.querySelectorAll('.wt-score');
+  const weights=document.querySelectorAll('.wt-weight');
+  let total=0,wSum=0;
+  scores.forEach((s,i)=>{const sc=parseFloat(s.value);const w=parseFloat(weights[i].value);if(!isNaN(sc)&&!isNaN(w)){total+=sc*w;wSum+=w;}});
+  if(!wSum){alert('Add assignments first.');return;}
+  const avg=(total/wSum).toFixed(1);
+  let letter,color;
+  if(avg>=90){letter='A (Excellent)';color='var(--green)';}
+  else if(avg>=80){letter='B (Good)';color='var(--cyan)';}
+  else if(avg>=70){letter='C (Average)';color='var(--amber)';}
+  else if(avg>=60){letter='D (Below Average)';color='var(--pink)';}
+  else{letter='F (Failing)';color='var(--red)';}
+  document.getElementById('wtGrade').textContent=avg+'%';
+  const le=document.getElementById('wtLetter');le.textContent=letter;le.style.color=color;
+  document.getElementById('wtResult').style.display='block';
+});
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

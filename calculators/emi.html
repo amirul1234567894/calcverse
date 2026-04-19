@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Free EMI Calculator Online – Monthly Loan EMI with Amortization | CalcVerse</title>
+  <meta name="description" content="Calculate your monthly EMI for home loan, car loan, or personal loan instantly. Get full amortization table, total interest paid, and principal breakdown. Free, accurate EMI calculator."/>
+  <meta name="keywords" content="EMI calculator, EMI calculator for home loan India, loan EMI calculator, monthly EMI calculator, car loan EMI, personal loan EMI, amortization calculator"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/emi"/>
+  <meta property="og:title" content="Free EMI Calculator – Monthly Loan EMI Calculator"/>
+  <meta property="og:description" content="Calculate loan EMI instantly with full amortization table."/>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"EMI Calculator","url":"https://calcverse.vercel.app/calculators/emi","description":"Free online EMI calculator with amortization schedule.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is EMI?","acceptedAnswer":{"@type":"Answer","text":"EMI (Equated Monthly Installment) is the fixed monthly payment a borrower makes to repay a loan. It includes both principal and interest components."}},{"@type":"Question","name":"How is EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"EMI = P × r × (1+r)^n / ((1+r)^n - 1), where P is principal, r is monthly interest rate, and n is loan tenure in months."}},{"@type":"Question","name":"Can I reduce my EMI?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can reduce EMI by increasing the loan tenure, making a larger down payment, or negotiating a lower interest rate with your bank."}}]}
+  </script>
+
+  <link rel="stylesheet" href="../style.css"/>
+  <style>
+    .amort-table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:20px}
+    .amort-table th{background:var(--bg);padding:10px 12px;text-align:left;color:var(--text2);font-weight:600;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--border)}
+    .amort-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text2)}
+    .amort-table tr:hover td{background:var(--surface)}
+    .amort-wrap{max-height:320px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--radius);margin-top:16px}
+    .pie-wrap{display:flex;align-items:center;gap:24px;margin-top:20px;flex-wrap:wrap}
+    .pie-canvas{width:140px;height:140px;flex-shrink:0}
+    .pie-legend{display:flex;flex-direction:column;gap:10px}
+    .pie-row{display:flex;align-items:center;gap:10px;font-size:.875rem}
+    .pie-dot{width:12px;height:12px;border-radius:3px;flex-shrink:0}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb">
+      <a href="../index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <a href="../index.html#calculators">Finance</a><span class="breadcrumb-sep">›</span>
+      <span>EMI Calculator</span>
+    </nav>
+
+    <div class="tool-header">
+      <div class="tool-category-tag">Finance Calculator</div>
+      <h1>EMI Calculator</h1>
+      <p>Calculate your monthly loan EMI instantly. Get complete amortization schedule, total interest paid, and principal breakdown for home, car, or personal loans.</p>
+    </div>
+
+    <div class="calculator-widget">
+      <div class="calc-inputs">
+        <div class="input-group">
+          <label for="principal">Loan Amount (₹)</label>
+          <input type="number" id="principal" class="input-field" placeholder="e.g. 1000000" min="1000" step="1000"/>
+        </div>
+        <div class="calc-inputs two-col" style="margin:0">
+          <div class="input-group">
+            <label for="rate">Annual Interest Rate (%)</label>
+            <input type="number" id="rate" class="input-field" placeholder="e.g. 8.5" min="0.1" max="50" step="0.1"/>
+          </div>
+          <div class="input-group">
+            <label for="tenure">Loan Tenure (Years)</label>
+            <input type="number" id="tenure" class="input-field" placeholder="e.g. 20" min="1" max="30" step="1"/>
+          </div>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="calcBtn">
+        <span class="spinner" id="spinner"></span>
+        <span id="btnText">💳 Calculate EMI</span>
+      </button>
+
+      <div class="result-panel" id="resultPanel">
+        <div class="result-label">Monthly EMI</div>
+        <div class="result-main" id="emiResult">—</div>
+
+        <div class="result-breakdown" id="emiBreakdown"></div>
+
+        <div class="pie-wrap" id="pieWrap">
+          <canvas class="pie-canvas" id="pieChart" width="140" height="140"></canvas>
+          <div class="pie-legend">
+            <div class="pie-row"><div class="pie-dot" style="background:#7c3aed"></div><span>Principal: <strong id="legendP">—</strong></span></div>
+            <div class="pie-row"><div class="pie-dot" style="background:#00e5ff"></div><span>Total Interest: <strong id="legendI">—</strong></span></div>
+          </div>
+        </div>
+
+        <details style="margin-top:16px">
+          <summary style="cursor:pointer;font-weight:600;color:var(--text2);padding:10px 0">View Full Amortization Schedule ▾</summary>
+          <div class="amort-wrap">
+            <table class="amort-table">
+              <thead><tr><th>#</th><th>EMI</th><th>Principal</th><th>Interest</th><th>Balance</th></tr></thead>
+              <tbody id="amortBody"></tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="seo-section">
+      <h2>What Is EMI and How Is It Calculated?</h2>
+      <p>EMI stands for <strong>Equated Monthly Installment</strong> — the fixed amount you pay every month to repay a loan over a set period. Every EMI payment consists of two parts: a portion that reduces the principal (the amount you borrowed) and a portion that covers the interest charged by the lender.</p>
+
+      <h3>The EMI Formula</h3>
+      <div class="formula-box">EMI = P × r × (1 + r)ⁿ / [(1 + r)ⁿ − 1]</div>
+      <p>Where: <strong>P</strong> = Principal loan amount, <strong>r</strong> = Monthly interest rate (annual rate ÷ 12 ÷ 100), <strong>n</strong> = Loan tenure in months.</p>
+      <p><strong>Example:</strong> For a ₹10,00,000 loan at 8.5% p.a. for 20 years: r = 8.5/12/100 = 0.007083, n = 240. EMI ≈ ₹8,678 per month.</p>
+
+      <h3>Types of Loans You Can Calculate</h3>
+      <ul>
+        <li><strong>Home Loan EMI:</strong> Typically 10–30 years tenure, 7–9% interest in India</li>
+        <li><strong>Car Loan EMI:</strong> Usually 3–7 years, 8–11% interest</li>
+        <li><strong>Personal Loan EMI:</strong> 1–5 years, 10–24% interest</li>
+        <li><strong>Education Loan EMI:</strong> 5–15 years with moratorium period</li>
+      </ul>
+
+      <h3>How to Reduce Your EMI</h3>
+      <ul>
+        <li>Make a larger down payment to reduce the principal</li>
+        <li>Negotiate a lower interest rate or choose a bank with better rates</li>
+        <li>Increase loan tenure (note: this increases total interest paid)</li>
+        <li>Make prepayments whenever possible to reduce outstanding principal</li>
+      </ul>
+
+      <h3>Understanding the Amortization Table</h3>
+      <p>The amortization schedule shows exactly how each EMI payment is split between principal and interest. In early months, most of the EMI goes toward interest. As the loan matures, the principal component increases. This is why prepayments made early in a loan have the biggest impact on total interest paid.</p>
+    </div>
+
+    <div class="seo-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What happens if I miss an EMI payment?</summary>
+          <div class="faq-body">Missing an EMI payment typically results in a late payment penalty (usually 1–2% of EMI amount), a negative mark on your credit score (CIBIL score in India), and potential legal action after repeated defaults. Always inform your bank in advance if you anticipate difficulties.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I prepay my loan to save on interest?</summary>
+          <div class="faq-body">Yes. Making partial prepayments reduces your outstanding principal, which means future EMIs pay less interest. Some lenders charge a prepayment penalty (usually 1–3%) on fixed-rate loans; floating-rate home loans in India have no prepayment charges per RBI guidelines.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Does a longer tenure reduce my EMI?</summary>
+          <div class="faq-body">Yes, a longer tenure reduces your monthly EMI, but you end up paying significantly more in total interest. Use this calculator to compare 15-year vs 20-year options to see the trade-off clearly.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is this EMI calculator accurate for Indian banks?</summary>
+          <div class="faq-body">Yes. The formula used (reducing balance method) is the standard method used by all major Indian banks including SBI, HDFC, ICICI, and Axis Bank. Results match within a few rupees of actual bank calculations.</div>
+        </details>
+      </div>
+    </div>
+
+    <div class="seo-section">
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a href="loan.html" class="related-card"><span class="related-icon">🏦</span><div><div class="related-name">Loan Calculator</div><div class="related-desc">Compare loan options</div></div></a>
+        <a href="mortgage.html" class="related-card"><span class="related-icon">🏠</span><div><div class="related-name">Mortgage Calculator</div><div class="related-desc">Home loan payments</div></div></a>
+        <a href="interest.html" class="related-card"><span class="related-icon">📈</span><div><div class="related-name">Interest Calculator</div><div class="related-desc">Simple & compound interest</div></div></a>
+        <a href="income-tax.html" class="related-card"><span class="related-icon">📋</span><div><div class="related-name">Income Tax Calc</div><div class="related-desc">Tax liability estimate</div></div></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a><p>Free calculators for finance, health, and more.</p></div>
+    <div class="footer-col"><h4>Finance</h4><a href="emi.html">EMI Calculator</a><a href="loan.html">Loan Calculator</a><a href="mortgage.html">Mortgage</a><a href="interest.html">Interest</a></div>
+    <div class="footer-col"><h4>Health</h4><a href="bmi.html">BMI Calculator</a><a href="bmr.html">BMR Calculator</a><a href="pregnancy.html">Pregnancy</a></div>
+    <div class="footer-col"><h4>Site</h4><a href="../index.html">All Calculators</a><a href="../blog/index.html">Blog</a><a href="../privacy.html">Privacy</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 CalcVerse · Not financial advice</span></div>
+</footer>
+
+<script>
+(function(){
+  const fmt = n => '₹'+n.toLocaleString('en-IN',{maximumFractionDigits:0});
+
+  document.getElementById('calcBtn').addEventListener('click', function(){
+    const P = parseFloat(document.getElementById('principal').value);
+    const annualRate = parseFloat(document.getElementById('rate').value);
+    const years = parseFloat(document.getElementById('tenure').value);
+    if(!P||!annualRate||!years||P<1000||annualRate<0.1||years<1){alert('Please enter valid loan details.');return;}
+
+    const r = annualRate/12/100;
+    const n = years*12;
+    const emi = P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+    const totalPayment = emi*n;
+    const totalInterest = totalPayment-P;
+
+    document.getElementById('emiResult').textContent = fmt(Math.round(emi));
+    document.getElementById('legendP').textContent = fmt(Math.round(P));
+    document.getElementById('legendI').textContent = fmt(Math.round(totalInterest));
+
+    document.getElementById('emiBreakdown').innerHTML = `
+      <div class="result-row"><span class="result-row-label">Monthly EMI</span><span class="result-row-value">${fmt(Math.round(emi))}</span></div>
+      <div class="result-row"><span class="result-row-label">Total Payment</span><span class="result-row-value">${fmt(Math.round(totalPayment))}</span></div>
+      <div class="result-row"><span class="result-row-label">Total Interest</span><span class="result-row-value" style="color:var(--amber)">${fmt(Math.round(totalInterest))}</span></div>
+      <div class="result-row"><span class="result-row-label">Principal Amount</span><span class="result-row-value">${fmt(Math.round(P))}</span></div>
+      <div class="result-row"><span class="result-row-label">Interest %</span><span class="result-row-value">${((totalInterest/P)*100).toFixed(1)}% of principal</span></div>
+    `;
+
+    // Pie chart
+    const canvas = document.getElementById('pieChart');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0,0,140,140);
+    const pRatio = P/totalPayment;
+    const iRatio = totalInterest/totalPayment;
+    const cx=70,cy=70,rad=60;
+    const startA = -Math.PI/2;
+    // Principal slice
+    ctx.beginPath();ctx.moveTo(cx,cy);
+    ctx.arc(cx,cy,rad,startA,startA+2*Math.PI*pRatio);
+    ctx.closePath();ctx.fillStyle='#7c3aed';ctx.fill();
+    // Interest slice
+    ctx.beginPath();ctx.moveTo(cx,cy);
+    ctx.arc(cx,cy,rad,startA+2*Math.PI*pRatio,startA+2*Math.PI);
+    ctx.closePath();ctx.fillStyle='#00e5ff';ctx.fill();
+    // Center hole
+    ctx.beginPath();ctx.arc(cx,cy,30,0,2*Math.PI);ctx.fillStyle='#161820';ctx.fill();
+
+    // Amortization
+    let balance = P;
+    let tbody = '';
+    for(let i=1;i<=n;i++){
+      const intPart = balance*r;
+      const prinPart = emi-intPart;
+      balance -= prinPart;
+      tbody += `<tr><td>${i}</td><td>${fmt(Math.round(emi))}</td><td>${fmt(Math.round(prinPart))}</td><td>${fmt(Math.round(intPart))}</td><td>${fmt(Math.max(0,Math.round(balance)))}</td></tr>`;
+    }
+    document.getElementById('amortBody').innerHTML = tbody;
+
+    document.getElementById('resultPanel').classList.add('show');
+    document.getElementById('resultPanel').scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+})();
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Basic Calculator Online – Free Simple Calculator | CalcVerse</title>
+  <meta name="description" content="Free online basic calculator. Add, subtract, multiply, and divide instantly. Clean, fast, works on all devices."/>
+  <meta name="keywords" content="basic calculator online, simple calculator, free calculator, online calculator, arithmetic calculator"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/basic"/>
+  <meta property="og:title" content="Basic Calculator Online – Free Simple Calculator"/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Basic Calculator","url":"https://calcverse.vercel.app/calculators/basic","description":"Free simple online calculator for basic arithmetic.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+  <style>
+    .basic-calc{max-width:340px;margin:0 auto}
+    .basic-display{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius);padding:1.2rem;margin-bottom:1rem;text-align:right}
+    .basic-expr{color:var(--text2);font-size:0.85rem;min-height:1.2em;margin-bottom:4px}
+    .basic-result{color:var(--text);font-size:2.5rem;font-weight:700;font-family:var(--font-body)}
+    .basic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .basic-btn{padding:18px 8px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:12px;font-size:1.1rem;font-family:var(--font-body);cursor:pointer;transition:var(--trans)}
+    .basic-btn:hover{background:var(--surface2)}
+    .basic-btn:active{transform:scale(0.95)}
+    .basic-btn.op{color:var(--cyan)}
+    .basic-btn.eq{background:var(--grad-main);border:none;color:#fff;font-weight:700;font-size:1.3rem}
+    .basic-btn.clr{color:var(--pink)}
+    .basic-btn.zero{grid-column:span 2}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Math</span><span class="breadcrumb-sep">›</span><span>Basic Calculator</span></nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Math Calculator</div>
+      <h1>Basic Calculator</h1>
+      <p>A clean, fast basic calculator for everyday arithmetic. Addition, subtraction, multiplication, and division.</p>
+    </div>
+    <div class="calculator-widget">
+      <div class="basic-calc">
+        <div class="basic-display">
+          <div class="basic-expr" id="expr"></div>
+          <div class="basic-result" id="display">0</div>
+        </div>
+        <div class="basic-grid">
+          <button class="basic-btn clr" id="ac">AC</button>
+          <button class="basic-btn clr" id="neg">±</button>
+          <button class="basic-btn op" data-op="pct">%</button>
+          <button class="basic-btn op" data-op="/">÷</button>
+          <button class="basic-btn" data-n="7">7</button>
+          <button class="basic-btn" data-n="8">8</button>
+          <button class="basic-btn" data-n="9">9</button>
+          <button class="basic-btn op" data-op="*">×</button>
+          <button class="basic-btn" data-n="4">4</button>
+          <button class="basic-btn" data-n="5">5</button>
+          <button class="basic-btn" data-n="6">6</button>
+          <button class="basic-btn op" data-op="-">−</button>
+          <button class="basic-btn" data-n="1">1</button>
+          <button class="basic-btn" data-n="2">2</button>
+          <button class="basic-btn" data-n="3">3</button>
+          <button class="basic-btn op" data-op="+">+</button>
+          <button class="basic-btn zero" data-n="0">0</button>
+          <button class="basic-btn" data-n=".">.</button>
+          <button class="basic-btn eq" id="eq">=</button>
+        </div>
+      </div>
+    </div>
+    <section class="seo-section">
+      <h2>About This Calculator</h2>
+      <p>This free online basic calculator is designed for quick everyday calculations. It supports the four fundamental arithmetic operations: addition (+), subtraction (−), multiplication (×), and division (÷), as well as percentage calculations.</p>
+      <h3>Keyboard Shortcuts</h3>
+      <p>Type numbers directly, use + - * / for operators, Enter or = to calculate, Escape to clear, and Backspace to delete the last digit. Works exactly like a physical calculator.</p>
+    </section>
+    <div class="related-calcs">
+      <h3>Related Calculators</h3>
+      <div class="related-grid">
+        <a href="scientific.html" class="related-card">🔬 Scientific Calculator</a>
+        <a href="percentage.html" class="related-card">% Percentage</a>
+        <a href="unit-conversion.html" class="related-card">📐 Unit Conversion</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
+    <p class="footer-copy">© 2025 CalcVerse</p>
+    <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+let cur='0', prev='', op=null, newInput=true;
+const disp=document.getElementById('display');
+const exprEl=document.getElementById('expr');
+function upd(){disp.textContent=parseFloat(cur).toLocaleString('en-US',{maximumFractionDigits:10});}
+function appendN(n){
+  if(newInput){cur=String(n);newInput=false;}
+  else if(cur==='0'&&n!=='.')cur=String(n);
+  else if(n==='.'&&cur.includes('.'))return;
+  else cur+=String(n);
+  upd();
+}
+function setOp(o){
+  if(op&&!newInput){calc();}
+  prev=cur;op=o;newInput=true;
+  exprEl.textContent=prev+' '+{'+':'+','-':'−','*':'×','/':'÷'}[op]+' ';
+}
+function calc(){
+  if(!op||!prev)return;
+  const a=parseFloat(prev),b=parseFloat(cur);
+  let r;
+  if(op==='+')r=a+b;
+  else if(op==='-')r=a-b;
+  else if(op==='*')r=a*b;
+  else if(op==='/')r=b===0?'Error':a/b;
+  exprEl.textContent=prev+' '+{'+':'+','-':'−','*':'×','/':'÷'}[op]+' '+cur+' =';
+  cur=String(r);op=null;prev='';newInput=true;upd();
+}
+document.querySelectorAll('[data-n]').forEach(b=>b.addEventListener('click',()=>appendN(b.dataset.n)));
+document.querySelectorAll('[data-op]').forEach(b=>b.addEventListener('click',()=>{
+  if(b.dataset.op==='pct'){cur=String(parseFloat(cur)/100);upd();}
+  else setOp(b.dataset.op);
+}));
+document.getElementById('eq').addEventListener('click',calc);
+document.getElementById('ac').addEventListener('click',()=>{cur='0';prev='';op=null;newInput=true;exprEl.textContent='';upd();});
+document.getElementById('neg').addEventListener('click',()=>{cur=String(-parseFloat(cur));upd();});
+document.addEventListener('keydown',e=>{
+  if(e.key>='0'&&e.key<='9'||e.key==='.')appendN(e.key);
+  else if(['+','-','*','/'].includes(e.key))setOp(e.key);
+  else if(e.key==='Enter'||e.key==='=')calc();
+  else if(e.key==='Escape'){cur='0';prev='';op=null;newInput=true;exprEl.textContent='';upd();}
+  else if(e.key==='Backspace'){if(!newInput){cur=cur.length>1?cur.slice(0,-1):'0';upd();}}
+  else if(e.key==='%'){cur=String(parseFloat(cur)/100);upd();}
+});
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

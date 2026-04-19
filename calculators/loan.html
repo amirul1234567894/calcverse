@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Free Loan Calculator – Compare Loan Options & Total Cost | CalcVerse</title>
+  <meta name="description" content="Calculate loan repayment amounts, total interest paid, and compare different loan scenarios. Free online loan calculator for personal, home, and car loans."/>
+  <meta name="keywords" content="loan calculator, loan repayment calculator, personal loan calculator, loan interest calculator, compare loans"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/loan"/>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+<div class="tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><a href="../index.html#calculators">Finance</a><span class="breadcrumb-sep">›</span><span>Loan Calculator</span></nav>
+  <div class="tool-header">
+    <div class="tool-category-tag">Finance Calculator</div>
+    <h1>Loan Calculator</h1>
+    <p>Calculate exact loan repayments and total interest for any loan type. Compare two loan scenarios side by side.</p>
+  </div>
+  <div class="calculator-widget">
+    <div class="calc-inputs">
+      <div class="input-group"><label for="loanAmt">Loan Amount (₹)</label><input type="number" id="loanAmt" class="input-field" placeholder="e.g. 500000"/></div>
+      <div class="calc-inputs two-col" style="margin:0">
+        <div class="input-group"><label for="loanRate">Interest Rate (% p.a.)</label><input type="number" id="loanRate" class="input-field" placeholder="e.g. 9.5" step="0.1"/></div>
+        <div class="input-group"><label for="loanYears">Tenure (Years)</label><input type="number" id="loanYears" class="input-field" placeholder="e.g. 5" min="1" max="30"/></div>
+      </div>
+    </div>
+    <button class="calc-btn" id="calcBtn">🏦 Calculate Loan</button>
+    <div class="result-panel" id="resultPanel">
+      <div class="result-label">Monthly Payment</div>
+      <div class="result-main" id="loanEmi">—</div>
+      <div class="result-breakdown" id="loanBreakdown"></div>
+    </div>
+  </div>
+  <div class="seo-section">
+    <h2>How to Use a Loan Calculator</h2>
+    <p>A loan calculator helps you understand the true cost of borrowing before you commit. By entering the loan amount, interest rate, and repayment period, you can see exactly what your monthly payment will be and how much total interest you'll pay over the life of the loan.</p>
+    <h3>Key Loan Terms to Know</h3>
+    <ul>
+      <li><strong>Principal:</strong> The amount you borrow</li>
+      <li><strong>Interest rate:</strong> The cost of borrowing, expressed as a percentage per year</li>
+      <li><strong>Tenure/Term:</strong> How long you have to repay the loan</li>
+      <li><strong>EMI:</strong> Equated Monthly Installment — your fixed monthly payment</li>
+    </ul>
+    <h3>Tips for Getting a Better Loan Rate</h3>
+    <ul>
+      <li>Maintain a high credit score (750+ in India)</li>
+      <li>Compare rates from multiple lenders before accepting</li>
+      <li>Consider a shorter tenure to pay less total interest</li>
+      <li>A larger down payment reduces principal and monthly EMI</li>
+    </ul>
+  </div>
+  <div class="seo-section">
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="emi.html" class="related-card"><span class="related-icon">💳</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">With amortization table</div></div></a>
+      <a href="mortgage.html" class="related-card"><span class="related-icon">🏠</span><div><div class="related-name">Mortgage Calculator</div><div class="related-desc">Home loan payments</div></div></a>
+      <a href="interest.html" class="related-card"><span class="related-icon">📈</span><div><div class="related-name">Interest Calculator</div><div class="related-desc">Simple & compound</div></div></a>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a></div>
+    <div class="footer-col"><h4>Finance</h4><a href="emi.html">EMI Calculator</a><a href="loan.html">Loan Calculator</a><a href="mortgage.html">Mortgage</a></div>
+    <div class="footer-col"><h4>Site</h4><a href="../index.html">All Calculators</a><a href="../blog/index.html">Blog</a><a href="../privacy.html">Privacy</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 CalcVerse</span></div>
+</footer>
+<script>
+const fmt=n=>'₹'+parseFloat(n).toLocaleString('en-IN',{maximumFractionDigits:0});
+document.getElementById('calcBtn').addEventListener('click',function(){
+  const P=parseFloat(document.getElementById('loanAmt').value);
+  const r=parseFloat(document.getElementById('loanRate').value)/12/100;
+  const n=parseFloat(document.getElementById('loanYears').value)*12;
+  if(!P||!r||!n){alert('Please fill all fields.');return;}
+  const emi=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  const total=emi*n; const interest=total-P;
+  document.getElementById('loanEmi').textContent=fmt(Math.round(emi));
+  document.getElementById('loanBreakdown').innerHTML=`
+    <div class="result-row"><span class="result-row-label">Monthly EMI</span><span class="result-row-value">${fmt(Math.round(emi))}</span></div>
+    <div class="result-row"><span class="result-row-label">Total Repayment</span><span class="result-row-value">${fmt(Math.round(total))}</span></div>
+    <div class="result-row"><span class="result-row-label">Total Interest</span><span class="result-row-value" style="color:var(--amber)">${fmt(Math.round(interest))}</span></div>
+    <div class="result-row"><span class="result-row-label">Interest-to-Principal Ratio</span><span class="result-row-value">${((interest/P)*100).toFixed(1)}%</span></div>
+  `;
+  document.getElementById('resultPanel').classList.add('show');
+});
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

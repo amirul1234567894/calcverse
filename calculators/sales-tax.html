@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Sales Tax Calculator – GST & VAT Calculator | CalcVerse</title>
+  <meta name="description" content="Free sales tax calculator. Calculate GST, VAT, or any sales tax. Add tax to a price or remove tax from an inclusive price."/>
+  <meta name="keywords" content="sales tax calculator, GST calculator, VAT calculator, add tax to price, remove tax from price, tax inclusive calculator"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/sales-tax"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Sales Tax Calculator","url":"https://calcverse.vercel.app/calculators/sales-tax","description":"Calculate GST, VAT or sales tax for any price.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Finance</span><span class="breadcrumb-sep">›</span><span>Sales Tax Calculator</span></nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Finance Calculator</div>
+      <h1>Sales Tax / GST / VAT Calculator</h1>
+      <p>Add tax to a price or reverse-calculate the pre-tax amount from a tax-inclusive price.</p>
+    </div>
+    <div class="calculator-widget">
+      <div class="calc-inputs two-col">
+        <div class="input-group">
+          <label for="price">Price (₹ / $)</label>
+          <input type="number" id="price" class="input-field" placeholder="e.g. 1000" min="0" step="0.01"/>
+        </div>
+        <div class="input-group">
+          <label for="taxRate">Tax Rate (%)</label>
+          <input type="number" id="taxRate" class="input-field" placeholder="e.g. 18" min="0" max="100" step="0.01"/>
+          <span class="input-hint">GST India: 5%, 12%, 18%, 28%</span>
+        </div>
+        <div class="input-group" style="grid-column:span 2">
+          <label>Price is</label>
+          <div style="display:flex;gap:1rem;margin-top:0.5rem">
+            <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer"><input type="radio" name="priceType" value="exclusive" checked/> Tax Exclusive (add tax)</label>
+            <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer"><input type="radio" name="priceType" value="inclusive"/> Tax Inclusive (remove tax)</label>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="calc-btn" id="calcBtn">🧾 Calculate Tax</button>
+      <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
+        <div class="result-label">Total Amount</div>
+        <div class="result-main" id="totalAmt">—</div>
+        <div class="result-grid" id="resultGrid" style="margin-top:1.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;text-align:center"></div>
+      </div>
+    </div>
+    <section class="seo-section">
+      <h2>About GST & Sales Tax</h2>
+      <p>India's GST (Goods and Services Tax) has four main slabs: 5%, 12%, 18%, and 28%. Essential goods like food grains attract 0%, while luxury items attract 28%. Use this calculator for both B2C and B2B GST calculations.</p>
+      <h3>Tax Exclusive vs Tax Inclusive</h3>
+      <p><strong>Tax Exclusive:</strong> The listed price doesn't include tax. Tax is added on top. Final price = Price × (1 + Rate).</p>
+      <p><strong>Tax Inclusive:</strong> The listed price already includes tax. Pre-tax price = Inclusive Price / (1 + Rate).</p>
+    </section>
+    <div class="related-calcs">
+      <h3>Related Calculators</h3>
+      <div class="related-grid">
+        <a href="percentage.html" class="related-card">% Percentage</a>
+        <a href="income-tax.html" class="related-card">📋 Income Tax</a>
+        <a href="loan.html" class="related-card">💳 Loan Calculator</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
+    <p class="footer-copy">© 2025 CalcVerse</p>
+    <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+document.getElementById('calcBtn').addEventListener('click',function(){
+  const p=parseFloat(document.getElementById('price').value);
+  const r=parseFloat(document.getElementById('taxRate').value)/100;
+  const incl=document.querySelector('input[name="priceType"]:checked').value==='inclusive';
+  if(isNaN(p)||isNaN(r)){alert('Enter price and tax rate.');return;}
+  let preTax,taxAmt,total;
+  if(incl){total=p;preTax=p/(1+r);taxAmt=p-preTax;}
+  else{preTax=p;taxAmt=p*r;total=p+taxAmt;}
+  document.getElementById('totalAmt').textContent='₹'+total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',');
+  document.getElementById('resultGrid').innerHTML=`
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Pre-Tax Price</div><div style="color:var(--cyan);font-weight:700">₹${preTax.toFixed(2)}</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Tax Amount</div><div style="color:var(--pink);font-weight:700">₹${taxAmt.toFixed(2)}</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Total Price</div><div style="color:var(--green);font-weight:700">₹${total.toFixed(2)}</div></div>
+  `;
+  document.getElementById('resultPanel').style.display='block';
+});
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

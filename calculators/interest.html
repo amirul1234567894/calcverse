@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Free Interest Calculator – Simple & Compound Interest Online | CalcVerse</title>
+  <meta name="description" content="Calculate simple interest and compound interest on savings or loans. See interest earned over any period, with year-by-year growth breakdown."/>
+  <meta name="keywords" content="interest calculator, compound interest calculator, simple interest calculator, savings interest calculator, interest rate calculator"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/interest"/>
+  <meta property="og:title" content="Interest Calculator"/>
+  <meta property="og:description" content="Calculate simple interest and compound interest on savings or loans. See interest earned over any period, with year-by-year growth breakdown."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Interest Calculator","url":"https://calcverse.vercel.app/calculators/interest","description":"Calculate simple interest and compound interest on savings or loans. See interest earned over any period, with year-by-year growth breakdown.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+<div class="tool-page">
+  <nav class="breadcrumb">
+    <a href="../index.html">Home</a><span class="breadcrumb-sep">›</span>
+    <a href="../index.html#calculators">Finance</a><span class="breadcrumb-sep">›</span>
+    <span>Interest Calculator</span>
+  </nav>
+  <div class="tool-header">
+    <div class="tool-category-tag">Finance Calculator</div>
+    <h1>Interest Calculator</h1>
+    <p>Calculate simple or compound interest for any principal amount, rate, and time period. See exactly how your money grows.</p>
+  </div>
+
+<div class="calculator-widget">
+  <div class="calc-inputs">
+    <div class="calc-inputs two-col" style="margin:0">
+      <div class="input-group">
+        <label for="principal">Principal Amount (₹)</label>
+        <input type="number" id="principal" class="input-field" placeholder="e.g. 100000" min="1"/>
+      </div>
+      <div class="input-group">
+        <label for="rate">Annual Rate (%)</label>
+        <input type="number" id="rate" class="input-field" placeholder="e.g. 7.5" min="0.01" max="100" step="0.01"/>
+      </div>
+    </div>
+    <div class="calc-inputs two-col" style="margin:0">
+      <div class="input-group">
+        <label for="years">Time (years)</label>
+        <input type="number" id="years" class="input-field" placeholder="e.g. 5" min="0.1" max="50" step="0.5"/>
+      </div>
+      <div class="input-group">
+        <label for="type">Interest Type</label>
+        <select id="type" class="input-field">
+          <option value="compound">Compound Interest</option>
+          <option value="simple">Simple Interest</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-group" id="compoundFreqWrap">
+      <label for="freq">Compounding Frequency</label>
+      <select id="freq" class="input-field">
+        <option value="12">Monthly</option>
+        <option value="4">Quarterly</option>
+        <option value="2">Semi-annually</option>
+        <option value="1" selected>Annually</option>
+      </select>
+    </div>
+  </div>
+  <button class="calc-btn" id="calcBtn">📈 Calculate Interest</button>
+  <div class="result-panel" id="resultPanel">
+    <div class="result-label">Total Interest Earned</div>
+    <div class="result-main" id="intResult">—</div>
+    <div class="result-breakdown" id="intBreakdown"></div>
+  </div>
+</div>
+<script>
+const fmt=n=>'₹'+parseFloat(n).toLocaleString('en-IN',{maximumFractionDigits:2});
+document.getElementById('type').addEventListener('change',function(){
+  document.getElementById('compoundFreqWrap').style.display=this.value==='compound'?'flex':'none';
+});
+document.getElementById('calcBtn').addEventListener('click',function(){
+  const P=parseFloat(document.getElementById('principal').value);
+  const r=parseFloat(document.getElementById('rate').value)/100;
+  const t=parseFloat(document.getElementById('years').value);
+  const type=document.getElementById('type').value;
+  if(!P||!r||!t){alert('Please fill all fields.');return;}
+  let A,I;
+  if(type==='simple'){I=P*r*t;A=P+I;}
+  else{const n=parseInt(document.getElementById('freq').value);A=P*Math.pow(1+r/n,n*t);I=A-P;}
+  document.getElementById('intResult').textContent=fmt(I.toFixed(2));
+  document.getElementById('intBreakdown').innerHTML=`
+    <div class="result-row"><span class="result-row-label">Principal</span><span class="result-row-value">${fmt(P)}</span></div>
+    <div class="result-row"><span class="result-row-label">Interest Earned</span><span class="result-row-value" style="color:var(--green)">${fmt(I.toFixed(2))}</span></div>
+    <div class="result-row"><span class="result-row-label">Total Amount</span><span class="result-row-value">${fmt(A.toFixed(2))}</span></div>
+    <div class="result-row"><span class="result-row-label">Interest %</span><span class="result-row-value">${((I/P)*100).toFixed(2)}% return</span></div>
+  `;
+  document.getElementById('resultPanel').classList.add('show');
+});
+</script>
+
+<div class="seo-section">
+  <h2>Simple vs Compound Interest: What's the Difference?</h2>
+  <p>Interest is the cost of borrowing money, or the reward for saving it. The key distinction is whether interest is calculated on the original principal alone (simple) or on the growing balance including previously earned interest (compound).</p>
+  <h3>Simple Interest Formula</h3>
+  <div class="formula-box">I = P × r × t</div>
+  <p>Where P = Principal, r = Annual rate (decimal), t = Time in years.</p>
+  <h3>Compound Interest Formula</h3>
+  <div class="formula-box">A = P × (1 + r/n)^(n×t)</div>
+  <p>Where n = compounding frequency per year (12 for monthly, 4 for quarterly, etc.).</p>
+  <h3>The Power of Compound Interest</h3>
+  <p>Einstein reportedly called compound interest "the eighth wonder of the world." A ₹1,00,000 investment at 8% compounded annually for 20 years grows to ₹4,66,096 — that's ₹3,66,096 in interest alone.</p>
+</div>
+<div class="seo-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Which is better: simple or compound interest?</summary><div class="faq-body">For savings and investments, compound interest is always better for the investor. For loans, compound interest means you pay more, so simple interest is preferable as a borrower.</div></details>
+    <details class="faq-item"><summary>What is the Rule of 72?</summary><div class="faq-body">The Rule of 72 is a quick mental formula: divide 72 by your interest rate to estimate how many years it takes to double your money. At 8% annual return, money doubles in about 9 years (72/8=9).</div></details>
+  </div>
+</div>
+<div class="seo-section">
+  <h2>Related Calculators</h2>
+  <div class="related-grid">
+    <a href="emi.html" class="related-card"><span class="related-icon">💳</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">Monthly loan payment</div></div></a>
+    <a href="loan.html" class="related-card"><span class="related-icon">🏦</span><div><div class="related-name">Loan Calculator</div><div class="related-desc">Compare loan options</div></div></a>
+  </div>
+</div>
+
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a><p>Free calculators for health, finance, and more.</p></div>
+    <div class="footer-col"><h4>Finance</h4><a href="emi.html">EMI Calculator</a><a href="loan.html">Loan Calculator</a><a href="interest.html">Interest</a></div>
+    <div class="footer-col"><h4>Health</h4><a href="bmi.html">BMI Calculator</a><a href="bmr.html">BMR Calculator</a><a href="pregnancy.html">Pregnancy</a></div>
+    <div class="footer-col"><h4>Site</h4><a href="../index.html">All Calculators</a><a href="../blog/index.html">Blog</a><a href="../privacy.html">Privacy</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 CalcVerse</span></div>
+</footer>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>

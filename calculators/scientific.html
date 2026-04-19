@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Scientific Calculator Online – Free Advanced Math | CalcVerse</title>
+  <meta name="description" content="Free online scientific calculator with trigonometry, logarithms, square roots, powers, and more. Works on mobile and desktop."/>
+  <meta name="keywords" content="scientific calculator online, free scientific calculator, advanced calculator, trigonometry calculator, log calculator online"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/calculators/scientific"/>
+  <meta property="og:title" content="Scientific Calculator Online – Free Advanced Math"/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Scientific Calculator","url":"https://calcverse.vercel.app/calculators/scientific","description":"Free online scientific calculator with advanced math functions.","applicationCategory":"EducationApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+  <style>
+    .sci-calc{max-width:420px;margin:0 auto}
+    .sci-display{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:1rem;text-align:right}
+    .sci-expr{color:var(--text2);font-size:0.85rem;min-height:1.2em;margin-bottom:4px;word-break:break-all}
+    .sci-result{color:var(--text);font-size:2rem;font-weight:700;font-family:var(--font-body);min-height:2.5rem}
+    .sci-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+    .sci-btn{padding:12px 6px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:10px;font-size:0.85rem;font-family:var(--font-body);cursor:pointer;transition:var(--trans);text-align:center}
+    .sci-btn:hover{background:var(--surface2);border-color:var(--border2)}
+    .sci-btn.fn{color:var(--cyan)}
+    .sci-btn.op{color:var(--violet2)}
+    .sci-btn.eq{background:var(--grad-main);border:none;color:#fff;font-weight:700;font-size:1.1rem}
+    .sci-btn.clr{color:var(--pink)}
+    .sci-btn.num{color:var(--text)}
+    .sci-btn.zero{grid-column:span 2}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Math</span><span class="breadcrumb-sep">›</span><span>Scientific Calculator</span></nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Math Calculator</div>
+      <h1>Scientific Calculator</h1>
+      <p>Advanced scientific calculator with trigonometry, logarithms, powers, and more. Works instantly in your browser.</p>
+    </div>
+    <div class="calculator-widget">
+      <div class="sci-calc">
+        <div class="sci-display">
+          <div class="sci-expr" id="expr"></div>
+          <div class="sci-result" id="display">0</div>
+        </div>
+        <div class="sci-grid">
+          <button class="sci-btn fn" data-fn="sin">sin</button>
+          <button class="sci-btn fn" data-fn="cos">cos</button>
+          <button class="sci-btn fn" data-fn="tan">tan</button>
+          <button class="sci-btn fn" data-fn="log">log</button>
+          <button class="sci-btn fn" data-fn="ln">ln</button>
+          <button class="sci-btn fn" data-fn="sqrt">√</button>
+          <button class="sci-btn fn" data-fn="sq">x²</button>
+          <button class="sci-btn fn" data-fn="pow">xʸ</button>
+          <button class="sci-btn fn" data-fn="pi">π</button>
+          <button class="sci-btn fn" data-fn="e">e</button>
+          <button class="sci-btn fn" data-fn="lparen">(</button>
+          <button class="sci-btn fn" data-fn="rparen">)</button>
+          <button class="sci-btn fn" data-fn="inv">1/x</button>
+          <button class="sci-btn fn" data-fn="fact">n!</button>
+          <button class="sci-btn clr" data-fn="ac">AC</button>
+          <button class="sci-btn num" data-n="7">7</button>
+          <button class="sci-btn num" data-n="8">8</button>
+          <button class="sci-btn num" data-n="9">9</button>
+          <button class="sci-btn clr" data-fn="del">⌫</button>
+          <button class="sci-btn op" data-op="/">÷</button>
+          <button class="sci-btn num" data-n="4">4</button>
+          <button class="sci-btn num" data-n="5">5</button>
+          <button class="sci-btn num" data-n="6">6</button>
+          <button class="sci-btn fn" data-fn="pct">%</button>
+          <button class="sci-btn op" data-op="*">×</button>
+          <button class="sci-btn num" data-n="1">1</button>
+          <button class="sci-btn num" data-n="2">2</button>
+          <button class="sci-btn num" data-n="3">3</button>
+          <button class="sci-btn fn" data-fn="neg">±</button>
+          <button class="sci-btn op" data-op="-">−</button>
+          <button class="sci-btn num zero" data-n="0">0</button>
+          <button class="sci-btn num" data-n=".">.</button>
+          <button class="sci-btn eq" data-fn="eq">=</button>
+          <button class="sci-btn op" data-op="+">+</button>
+        </div>
+      </div>
+    </div>
+    <section class="seo-section">
+      <h2>About This Scientific Calculator</h2>
+      <p>This free online scientific calculator handles everything from basic arithmetic to advanced mathematical functions. It supports trigonometric functions (sin, cos, tan), logarithms (log base 10 and natural log), square roots, powers, factorials, and mathematical constants like π and e.</p>
+      <h3>Available Functions</h3>
+      <p>Trigonometry: sin, cos, tan (in degrees). Logarithms: log (base 10), ln (natural). Powers: x², xʸ. Roots: √ (square root). Constants: π = 3.14159..., e = 2.71828. Other: 1/x (reciprocal), n! (factorial), % (percentage).</p>
+      <h3>Keyboard Support</h3>
+      <p>You can type numbers and operators directly. Press Enter for equals, Backspace to delete, and Escape to clear. All standard math operators (+, -, *, /) are supported via keyboard.</p>
+    </section>
+    <div class="related-calcs">
+      <h3>Related Calculators</h3>
+      <div class="related-grid">
+        <a href="basic.html" class="related-card">🔢 Basic Calculator</a>
+        <a href="percentage.html" class="related-card">% Percentage</a>
+        <a href="unit-conversion.html" class="related-card">📐 Unit Conversion</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
+    <p class="footer-copy">© 2025 CalcVerse</p>
+    <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+let expr='', result='0', waitingForOperand=false, pendingOp=null, memory=0;
+const display=document.getElementById('display');
+const exprEl=document.getElementById('expr');
+function deg2rad(d){return d*Math.PI/180;}
+function factorial(n){if(n<=1)return 1;let r=1;for(let i=2;i<=n;i++)r*=i;return r;}
+function updateDisplay(v){display.textContent=v;}
+function appendNum(n){
+  if(result==='0'||waitingForOperand){result=String(n);waitingForOperand=false;}
+  else result+=String(n);
+  updateDisplay(result);
+}
+function applyFn(fn){
+  const v=parseFloat(result);
+  let r;
+  switch(fn){
+    case 'sin': r=Math.sin(deg2rad(v)); break;
+    case 'cos': r=Math.cos(deg2rad(v)); break;
+    case 'tan': r=Math.tan(deg2rad(v)); break;
+    case 'log': r=Math.log10(v); break;
+    case 'ln': r=Math.log(v); break;
+    case 'sqrt': r=Math.sqrt(v); break;
+    case 'sq': r=v*v; break;
+    case 'inv': r=1/v; break;
+    case 'fact': r=factorial(Math.round(v)); break;
+    case 'pct': r=v/100; break;
+    case 'neg': r=-v; break;
+    case 'pi': r=Math.PI; break;
+    case 'e': r=Math.E; break;
+    case 'pow': pendingOp='pow'; exprEl.textContent=result+' ^ '; waitingForOperand=true; return;
+    case 'lparen': result+='('; updateDisplay(result); return;
+    case 'rparen': result+=')'; updateDisplay(result); return;
+    case 'ac': result='0';expr='';exprEl.textContent='';updateDisplay('0');pendingOp=null;return;
+    case 'del': result=result.length>1?result.slice(0,-1):'0';updateDisplay(result);return;
+    case 'eq':
+      if(pendingOp==='pow'){
+        const base=parseFloat(expr.split('^')[0]);
+        r=Math.pow(base,v);
+        exprEl.textContent='';pendingOp=null;
+      } else {
+        try{r=Function('"use strict";return('+result+')')();}catch(e){r='Error';}
+      }
+      break;
+    default: return;
+  }
+  if(typeof r==='number'&&!isFinite(r)) r='Error';
+  else if(typeof r==='number') r=parseFloat(r.toFixed(10));
+  result=String(r);
+  updateDisplay(result);
+  waitingForOperand=true;
+}
+document.querySelectorAll('.sci-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    if(btn.dataset.n!==undefined) appendNum(btn.dataset.n);
+    else if(btn.dataset.op){
+      exprEl.textContent=result+' '+btn.dataset.op+' ';
+      expr=result+btn.dataset.op;
+      waitingForOperand=true;
+    }
+    else if(btn.dataset.fn) applyFn(btn.dataset.fn);
+  });
+});
+document.addEventListener('keydown',e=>{
+  if(e.key>='0'&&e.key<='9'||e.key==='.') appendNum(e.key);
+  else if(['+','-','*','/'].includes(e.key)){exprEl.textContent=result+' '+e.key+' ';expr=result+e.key;waitingForOperand=true;}
+  else if(e.key==='Enter'||e.key==='=') applyFn('eq');
+  else if(e.key==='Backspace') applyFn('del');
+  else if(e.key==='Escape') applyFn('ac');
+});
+</script>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="emi.html">EMI Calculator</a>
+    <a href="age.html">Age Calculator</a>
+    <a href="income-tax.html">Income Tax</a>
+  </div>
+</div>
+<script>
+const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+function o(){n.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){n.classList.remove('open');document.body.style.overflow='';}
+h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+</script>
+</body>
+</html>
