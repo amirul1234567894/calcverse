@@ -63,7 +63,7 @@
       <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input type="text" class="search-input" id="searchInput" placeholder="Search calculators… e.g. BMI, EMI, Age" aria-label="Search calculators"/>
     </div>
-    <h1 id="hero-heading" style="margin-top:36px">Every Calculator<br><span>You'll Ever Need</span></h1>
+    <h1 id="hero-heading" style="margin-top:28px">Every Calculator<br><span style="display:inline-block;max-width:100%">You'll Ever Need</span></h1>
     <p>Free, fast, and accurate online calculators for health, finance, math, and everyday life. No signup. No ads in results. Just answers.</p>
 
     <div class="hero-stats" role="list">
@@ -327,41 +327,69 @@
 </footer>
 
 <script>
-// Category filter
-const tabs = document.querySelectorAll('.cat-tab');
-const cards = document.querySelectorAll('.calc-card');
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => {t.classList.remove('active');t.setAttribute('aria-selected','false')});
-    tab.classList.add('active');tab.setAttribute('aria-selected','true');
-    const cat = tab.dataset.cat;
-    cards.forEach(c => {
-      c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'block' : 'none';
+(function(){
+  // --- Category filter + Search ---
+  var tabs = Array.from(document.querySelectorAll('.cat-tab'));
+  var cards = Array.from(document.querySelectorAll('.calc-card'));
+  var searchInput = document.getElementById('searchInput');
+  var currentCat = 'all';
+
+  function filterCards(){
+    var q = (searchInput ? searchInput.value : '').toLowerCase().trim();
+    cards.forEach(function(c){
+      var catOk = currentCat === 'all' || c.dataset.cat === currentCat;
+      var searchOk = !q || c.textContent.toLowerCase().indexOf(q) > -1;
+      c.style.display = (catOk && searchOk) ? 'flex' : 'none';
+    });
+  }
+
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(e){
+      e.preventDefault();
+      tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      currentCat = tab.dataset.cat;
+      filterCards();
     });
   });
-});
 
-// Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobileNav');
-const mobileClose = document.getElementById('mobileClose');
-function openMenu(){mobileNav.classList.add('open');hamburger.setAttribute('aria-expanded','true');mobileNav.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
-function closeMenu(){mobileNav.classList.remove('open');hamburger.setAttribute('aria-expanded','false');mobileNav.setAttribute('aria-hidden','true');document.body.style.overflow='';}
-hamburger.addEventListener('click', openMenu);
-mobileClose.addEventListener('click', closeMenu);
-mobileNav.addEventListener('click', function(e){if(e.target===mobileNav)closeMenu();});
-
-// Search
-document.getElementById('searchInput').addEventListener('input', function(){
-  const q = this.value.toLowerCase().trim();
-  cards.forEach(c => {
-    const text = c.textContent.toLowerCase();
-    c.style.display = (!q || text.includes(q)) ? 'block' : 'none';
-  });
-  if(q){
-    tabs.forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});
+  if(searchInput){
+    searchInput.addEventListener('input', function(){
+      var q = this.value.trim();
+      if(q){
+        currentCat = 'all';
+        tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+        if(tabs[0]){ tabs[0].classList.add('active'); tabs[0].setAttribute('aria-selected','true'); }
+      }
+      filterCards();
+    });
+    searchInput.addEventListener('keydown', function(e){ if(e.key==='Escape'){ this.value=''; filterCards(); }});
   }
-});
+
+  // --- Hamburger menu ---
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobileNav');
+  var mobileClose = document.getElementById('mobileClose');
+  if(hamburger && mobileNav){
+    hamburger.addEventListener('click', function(){
+      mobileNav.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+    if(mobileClose) mobileClose.addEventListener('click', function(){
+      mobileNav.classList.remove('open');
+      document.body.style.overflow='';
+    });
+    mobileNav.addEventListener('click', function(e){
+      if(e.target === mobileNav){ mobileNav.classList.remove('open'); document.body.style.overflow=''; }
+    });
+  }
+
+  // --- Touch passive listeners for smooth scroll ---
+  document.addEventListener('touchstart', function(){}, {passive:true});
+  document.addEventListener('touchmove', function(){}, {passive:true});
+
+})();
 </script>
 
 <!-- Mobile Nav Overlay -->
