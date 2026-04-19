@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>EMI Calculator Explained: How Banks Calculate Your Monthly Payment | CalcVerse Blog</title>
+  <meta name="description" content="Understand exactly how EMI is calculated by banks. Learn the EMI formula, how amortization works, and tips to reduce your loan burden. With worked examples."/>
+  <meta name="keywords" content="EMI calculator explained, how to calculate EMI, EMI formula, loan EMI calculator India, home loan EMI calculation, amortization explained"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calcverse.vercel.app/blog/emi-calculator-explained"/>
+  <meta property="og:title" content="EMI Calculator Explained: How Banks Calculate Your Monthly Payment"/>
+  <meta property="og:type" content="article"/>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"EMI Calculator Explained: How Banks Calculate Your Monthly Payment","author":{"@type":"Organization","name":"CalcVerse"},"datePublished":"2026-04-10","dateModified":"2026-04-10"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is EMI in banking?","acceptedAnswer":{"@type":"Answer","text":"EMI stands for Equated Monthly Installment. It is the fixed amount paid to the lender every month until the loan is fully repaid. Each EMI contains both principal and interest components."}},{"@type":"Question","name":"How is EMI calculated by banks?","acceptedAnswer":{"@type":"Answer","text":"EMI = P × r × (1+r)^n / [(1+r)^n − 1], where P is loan amount, r is monthly interest rate (annual rate/12/100), and n is loan tenure in months."}},{"@type":"Question","name":"Can I reduce my EMI after taking a loan?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can make partial prepayments to reduce the outstanding principal, which either reduces your EMI or shortens the tenure (depending on your bank's policy)."}}]}
+  </script>
+
+  <link rel="stylesheet" href="../style.css"/>
+  <style>
+    .blog-post-page{max-width:760px;margin:0 auto;padding:40px 24px 80px}
+    .post-meta{display:flex;gap:20px;font-size:.85rem;color:var(--text3);margin-bottom:32px;flex-wrap:wrap}
+    .post-hero{font-size:5rem;text-align:center;margin-bottom:32px;background:linear-gradient(135deg,#0a1f2e,#0a4a3a);border-radius:var(--radius-xl);padding:40px;display:flex;align-items:center;justify-content:center}
+    article h2{font-family:var(--font-head);font-size:1.5rem;font-weight:700;letter-spacing:-.03em;margin:36px 0 14px}
+    article h3{font-family:var(--font-head);font-size:1.1rem;font-weight:600;margin:24px 0 10px}
+    article p{color:var(--text2);line-height:1.78;margin-bottom:16px}
+    article ul,article ol{padding-left:0;margin-bottom:16px}
+    article li{color:var(--text2);line-height:1.7;padding:5px 0 5px 22px;position:relative}
+    article li::before{content:'▸';position:absolute;left:0;color:var(--cyan);font-size:.8rem;top:8px}
+    .cta-box{background:var(--grad-cool);border-radius:var(--radius-lg);padding:28px;text-align:center;margin:32px 0}
+    .cta-box h3{color:#fff;font-family:var(--font-head);font-size:1.3rem;margin-bottom:8px}
+    .cta-box p{color:rgba(255,255,255,.8);margin-bottom:16px}
+    .cta-btn{display:inline-block;background:#fff;color:#059e6b;font-weight:700;padding:12px 28px;border-radius:30px;text-decoration:none;font-family:var(--font-head)}
+    .example-table{width:100%;border-collapse:collapse;font-size:.875rem;margin:16px 0}
+    .example-table th{background:var(--bg3);padding:10px 14px;text-align:left;color:var(--text2);font-weight:600;border-bottom:1px solid var(--border)}
+    .example-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text2)}
+    .example-table tr:hover td{background:var(--surface)}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+<div class="blog-post-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><a href="index.html">Blog</a><span class="breadcrumb-sep">›</span><span>EMI Calculator Explained</span></nav>
+
+  <div style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:12px">FINANCE</div>
+  <h1 style="font-family:var(--font-head);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-.04em;line-height:1.15;margin-bottom:20px">EMI Calculator Explained: How Banks Calculate Your Monthly Payment</h1>
+  <div class="post-meta">
+    <span>📅 April 10, 2026</span>
+    <span>⏱️ 8 min read</span>
+    <span>🏷️ Finance, Loans, EMI</span>
+  </div>
+
+  <div class="post-hero">💳</div>
+
+  <article>
+    <p>Every time you take a loan — whether for a home, car, or personal expense — your bank calculates a fixed monthly payment called an EMI (Equated Monthly Installment). Most borrowers accept this number without question. But understanding exactly how banks arrive at this figure can save you lakhs of rupees over the life of a loan.</p>
+    <p>This guide explains the EMI formula in plain language, walks through step-by-step examples, and gives you the knowledge to compare loan offers intelligently.</p>
+
+    <h2>What Is EMI?</h2>
+    <p>EMI stands for <strong>Equated Monthly Installment</strong>. It is the fixed monthly amount you pay to repay a loan over an agreed period. "Equated" means the payment amount stays the same every month (for fixed-rate loans). Each payment is a blend of:</p>
+    <ul>
+      <li><strong>Principal component:</strong> Reduces your outstanding loan balance</li>
+      <li><strong>Interest component:</strong> The bank's charge for lending you money</li>
+    </ul>
+    <p>In the early months of a loan, most of the EMI goes toward interest. As time passes, more and more of each payment chips away at the principal. This pattern is called amortization.</p>
+
+    <div class="cta-box">
+      <h3>Calculate Your Loan EMI Instantly</h3>
+      <p>Enter loan amount, interest rate, and tenure for a full amortization schedule.</p>
+      <a href="../calculators/emi.html" class="cta-btn">💳 Open EMI Calculator →</a>
+    </div>
+
+    <h2>The EMI Formula</h2>
+    <p>The formula banks use is based on the reducing balance method:</p>
+    <div class="formula-box">EMI = P × r × (1 + r)ⁿ / [(1 + r)ⁿ − 1]</div>
+    <p>Where:</p>
+    <ul>
+      <li><strong>P</strong> = Principal loan amount (the amount borrowed)</li>
+      <li><strong>r</strong> = Monthly interest rate = Annual interest rate ÷ 12 ÷ 100</li>
+      <li><strong>n</strong> = Loan tenure in months = Years × 12</li>
+    </ul>
+
+    <h3>Worked Example</h3>
+    <p>Let's say you take a home loan of <strong>₹50,00,000</strong> at <strong>8.5% per annum</strong> for <strong>20 years</strong>.</p>
+    <ul>
+      <li>P = 50,00,000</li>
+      <li>r = 8.5 ÷ 12 ÷ 100 = 0.007083</li>
+      <li>n = 20 × 12 = 240</li>
+    </ul>
+    <div class="formula-box">EMI = 50,00,000 × 0.007083 × (1.007083)^240 / [(1.007083)^240 − 1]<br>= 50,00,000 × 0.007083 × 5.229 / 4.229<br>≈ ₹43,391 per month</div>
+
+    <h2>Understanding Amortization</h2>
+    <p>Here's what your first few EMI payments look like (for the example above):</p>
+    <table class="example-table">
+      <thead><tr><th>Month</th><th>EMI</th><th>Interest</th><th>Principal</th><th>Balance</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>₹43,391</td><td>₹35,417</td><td>₹7,974</td><td>₹49,92,026</td></tr>
+        <tr><td>2</td><td>₹43,391</td><td>₹35,361</td><td>₹8,030</td><td>₹49,83,996</td></tr>
+        <tr><td>12</td><td>₹43,391</td><td>₹34,864</td><td>₹8,527</td><td>₹49,20,487</td></tr>
+        <tr><td>120</td><td>₹43,391</td><td>₹26,847</td><td>₹16,544</td><td>₹37,91,467</td></tr>
+        <tr><td>240</td><td>₹43,391</td><td>₹306</td><td>₹43,085</td><td>₹0</td></tr>
+      </tbody>
+    </table>
+    <p>Notice how in month 1, over ₹35,000 of the ₹43,391 payment goes to interest. By the final payment, almost all of it is principal. Over 20 years, you'll pay <strong>₹1,04,13,840 total</strong> — meaning <strong>₹54,13,840 in interest</strong> on a ₹50 lakh loan.</p>
+
+    <h2>How to Reduce Your Total Interest Paid</h2>
+    <ul>
+      <li><strong>Make partial prepayments:</strong> Even small extra payments early in the loan reduce the principal significantly, saving disproportionately large amounts in future interest. A ₹1 lakh prepayment in year 2 can save ₹3–5 lakh in total interest.</li>
+      <li><strong>Choose a shorter tenure:</strong> A 15-year loan vs 20-year loan at the same rate means higher monthly EMI but dramatically less total interest paid.</li>
+      <li><strong>Negotiate a lower rate:</strong> Even 0.25% less in interest rate can save significant amounts over a long tenure. Shop around before accepting the first offer.</li>
+      <li><strong>Pay on time:</strong> Late payments incur penalties and damage your CIBIL score, making future loans more expensive.</li>
+    </ul>
+
+    <h2>Comparing Home Loan Scenarios</h2>
+    <p>Here's a quick comparison for a ₹50 lakh loan to show how tenure affects total cost:</p>
+    <table class="example-table">
+      <thead><tr><th>Tenure</th><th>Rate</th><th>Monthly EMI</th><th>Total Interest</th><th>Total Paid</th></tr></thead>
+      <tbody>
+        <tr><td>10 years</td><td>8.5%</td><td>₹61,993</td><td>₹24,39,160</td><td>₹74,39,160</td></tr>
+        <tr><td>15 years</td><td>8.5%</td><td>₹49,237</td><td>₹38,62,660</td><td>₹88,62,660</td></tr>
+        <tr><td>20 years</td><td>8.5%</td><td>₹43,391</td><td>₹54,13,840</td><td>₹1,04,13,840</td></tr>
+      </tbody>
+    </table>
+    <p>The 20-year option costs ₹29,74,680 more in interest than the 10-year option — just for the privilege of paying ₹18,602 less per month.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is the difference between fixed and floating EMI?</summary>
+        <div class="faq-body">A fixed-rate loan has the same interest rate (and EMI) throughout the tenure. A floating-rate loan tracks a benchmark rate (like REPO rate in India), so your EMI can increase or decrease. Floating rates are often lower initially but carry interest rate risk.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What happens if I miss an EMI?</summary>
+        <div class="faq-body">Missing an EMI triggers a late payment charge (usually 1–2% of EMI), negatively impacts your CIBIL credit score, and can lead to the bank initiating recovery proceedings after repeated defaults. Always inform your bank in advance if you foresee difficulty.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I change my EMI amount after taking the loan?</summary>
+        <div class="faq-body">Most banks allow you to make partial prepayments which can either reduce your EMI (same tenure) or reduce your tenure (same EMI). Some banks allow formal tenure reduction or EMI restructuring — contact your bank directly for options.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is this EMI calculator accurate for SBI/HDFC/ICICI loans?</summary>
+        <div class="faq-body">Yes. The reducing balance EMI formula is standard across all major Indian banks. Results will match the bank's calculator within a few rupees (small rounding differences may occur).</div>
+      </details>
+    </div>
+  </article>
+
+  <div class="seo-section" style="margin-top:48px">
+    <h2>Related Articles & Tools</h2>
+    <div class="related-grid">
+      <a href="how-to-calculate-bmi-correctly.html" class="related-card"><span class="related-icon">⚖️</span><div><div class="related-name">How to Calculate BMI</div><div class="related-desc">Complete BMI guide</div></div></a>
+      <a href="age-calculator-by-date-of-birth.html" class="related-card"><span class="related-icon">🎂</span><div><div class="related-name">Age Calculator Guide</div><div class="related-desc">Exact age in days</div></div></a>
+      <a href="../calculators/loan.html" class="related-card"><span class="related-icon">🏦</span><div><div class="related-name">Loan Calculator</div><div class="related-desc">Compare loan options</div></div></a>
+      <a href="../calculators/interest.html" class="related-card"><span class="related-icon">📈</span><div><div class="related-name">Interest Calculator</div><div class="related-desc">Simple & compound</div></div></a>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h3>Calculate Your EMI Now</h3>
+    <p>Get your full amortization schedule with one click. Free, instant, no signup.</p>
+    <a href="../calculators/emi.html" class="cta-btn">💳 Open EMI Calculator →</a>
+  </div>
+
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a><p>Free calculators for finance and health.</p></div>
+    <div class="footer-col"><h4>Finance Tools</h4><a href="../calculators/emi.html">EMI Calculator</a><a href="../calculators/loan.html">Loan Calculator</a><a href="../calculators/mortgage.html">Mortgage Calculator</a><a href="../calculators/interest.html">Interest Calculator</a></div>
+    <div class="footer-col"><h4>Blog</h4><a href="index.html">All Posts</a><a href="how-to-calculate-bmi-correctly.html">BMI Guide</a><a href="age-calculator-by-date-of-birth.html">Age Guide</a></div>
+    <div class="footer-col"><h4>Site</h4><a href="../index.html">All Calculators</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 CalcVerse · Not financial advice</span></div>
+</footer>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="../calculators/bmi.html">BMI Calculator</a>
+    <a href="../calculators/emi.html">EMI Calculator</a>
+    <a href="../calculators/age.html">Age Calculator</a>
+  </div>
+</div>
+<script>
+(function(){
+var h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+if(!h||!n)return;
+h.addEventListener('click',function(){n.classList.add('open');document.body.style.overflow='hidden';});
+if(c)c.addEventListener('click',function(){n.classList.remove('open');document.body.style.overflow='';});
+n.addEventListener('click',function(e){if(e.target===n){n.classList.remove('open');document.body.style.overflow='';}});
+document.addEventListener('touchstart',function(){},{passive:true});
+})();
+</script>
+</body>
+</html>

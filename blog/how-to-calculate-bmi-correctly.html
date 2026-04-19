@@ -205,10 +205,14 @@
   </div>
 </div>
 <script>
-const h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
-function o(){n.classList.add('open');document.body.style.overflow='hidden';}
-function cl(){n.classList.remove('open');document.body.style.overflow='';}
-h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
+(function(){
+var h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+if(!h||!n)return;
+h.addEventListener('click',function(){n.classList.add('open');document.body.style.overflow='hidden';});
+if(c)c.addEventListener('click',function(){n.classList.remove('open');document.body.style.overflow='';});
+n.addEventListener('click',function(e){if(e.target===n){n.classList.remove('open');document.body.style.overflow='';}});
+document.addEventListener('touchstart',function(){},{passive:true});
+})();
 </script>
 </body>
 </html>
