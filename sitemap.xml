@@ -2,48 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Homepage -->
-  <url><loc>https://calcverse-two.vercel.app/</loc><lastmod>2026-04-19</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://calc.autoflowa.in/</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
   <!-- Blog -->
-  <url><loc>https://calcverse-two.vercel.app/blog</loc><lastmod>2026-04-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calc.autoflowa.in/blog</loc><lastmod>2026-05-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- Static pages -->
-  <url><loc>https://calcverse-two.vercel.app/contact</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/privacy</loc><lastmod>2026-04-19</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/terms</loc><lastmod>2026-04-19</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://calc.autoflowa.in/contact</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://calc.autoflowa.in/privacy</loc><lastmod>2026-05-07</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://calc.autoflowa.in/terms</loc><lastmod>2026-05-07</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
 
   <!-- Finance Calculators -->
-  <url><loc>https://calcverse-two.vercel.app/calculators/emi</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/bmi</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/loan</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/mortgage</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/interest</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/income-tax</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/sales-tax</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/percentage</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/emi</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/bmi</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/loan</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/mortgage</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/interest</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/income-tax</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/sales-tax</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/percentage</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Health Calculators -->
-  <url><loc>https://calcverse-two.vercel.app/calculators/bmr</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/pregnancy</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/due-date</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/conception</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/bmr</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/pregnancy</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/due-date</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/conception</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Math Calculators -->
-  <url><loc>https://calcverse-two.vercel.app/calculators/basic</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/scientific</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/basic</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/scientific</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Other Tools -->
-  <url><loc>https://calcverse-two.vercel.app/calculators/age</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/time</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/gpa</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/grade</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/unit-conversion</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/subnet</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/calculators/concrete</loc><lastmod>2026-04-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/age</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/time</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/gpa</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/grade</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/unit-conversion</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/subnet</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://calc.autoflowa.in/calculators/concrete</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Blog Posts -->
-  <url><loc>https://calcverse-two.vercel.app/blog/how-to-calculate-bmi-correctly</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/blog/emi-calculator-explained</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calcverse-two.vercel.app/blog/age-calculator-by-date-of-birth</loc><lastmod>2026-03-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/blog/how-to-calculate-bmi-correctly</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/blog/emi-calculator-explained</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calc.autoflowa.in/blog/age-calculator-by-date-of-birth</loc><lastmod>2026-03-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>

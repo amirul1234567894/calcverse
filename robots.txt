@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /assets/
 
-Sitemap: https://calcverse-two.vercel.app/sitemap.xml
+Sitemap: https://calc.autoflowa.in/sitemap.xml
