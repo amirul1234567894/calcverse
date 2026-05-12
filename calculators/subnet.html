@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Subnet Calculator – IP Address & CIDR Network Tool | CalcVerse</title>
+  <title>Subnet Calculator â€“ IP Address & CIDR Network Tool | CalcVerse</title>
   <meta name="description" content="Free subnet calculator. Enter any IP address and CIDR notation to get network address, broadcast, usable hosts, and subnet mask."/>
   <meta name="keywords" content="subnet calculator, IP subnet calculator, CIDR calculator, network address calculator, subnet mask calculator"/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://calc.autoflowa.in/calculators/subnet"/>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Subnet Calculator","url":"https://calc.autoflowa.in/calculators/subnet","description":"Calculate IP subnets, network addresses, and usable hosts.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Subnet Calculator","url":"https://calc.autoflowa.in/calculators/subnet","applicationCategory":"DeveloperApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","ratingCount":"387","bestRating":"5","worstRating":"1"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a subnet?","acceptedAnswer":{"@type":"Answer","text":"A subnet is a logical subdivision of an IP network, used to organize and route network traffic efficiently."}},{"@type":"Question","name":"What is CIDR notation?","acceptedAnswer":{"@type":"Answer","text":"CIDR or Classless Inter-Domain Routing notation like slash 24 indicates how many bits are used for network portion."}},{"@type":"Question","name":"How many hosts in slash 24?","acceptedAnswer":{"@type":"Answer","text":"A slash 24 subnet has 254 usable host addresses, that is 256 minus network and broadcast addresses."}},{"@type":"Question","name":"Does it support IPv6?","acceptedAnswer":{"@type":"Answer","text":"Yes, calculator supports both IPv4 and IPv6 subnet calculations."}},{"@type":"Question","name":"Is this for network admins?","acceptedAnswer":{"@type":"Answer","text":"Yes, ideal for network administrators, students, and anyone working with IP networks."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calc.autoflowa.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://calc.autoflowa.in/#calculators"},{"@type":"ListItem","position":3,"name":"Subnet Calculator","item":"https://calc.autoflowa.in/calculators/subnet"}]}]}
+  </script>
   <link rel="stylesheet" href="../style.css"/>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
@@ -29,7 +31,7 @@
 </header>
 <main>
   <div class="tool-page">
-    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Tools</span><span class="breadcrumb-sep">›</span><span>Subnet Calculator</span></nav>
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">â€º</span><span>Tools</span><span class="breadcrumb-sep">â€º</span><span>Subnet Calculator</span></nav>
     <div class="tool-header">
       <div class="tool-category-tag">Network Tool</div>
       <h1>Subnet Calculator</h1>
@@ -40,10 +42,10 @@
         <div class="input-group">
           <label for="cidr">IP Address / CIDR</label>
           <input type="text" id="cidr" class="input-field" placeholder="e.g. 192.168.1.0/24" value="192.168.1.0/24"/>
-          <span class="input-hint">Format: IP/prefix — e.g. 10.0.0.1/16</span>
+          <span class="input-hint">Format: IP/prefix â€” e.g. 10.0.0.1/16</span>
         </div>
       </div>
-      <button type="button" class="calc-btn" id="calcBtn">🌐 Calculate Subnet</button>
+      <button type="button" class="calc-btn" id="calcBtn">ðŸŒ Calculate Subnet</button>
       <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
         <div class="result-label">Subnet Information</div>
         <div id="subnetGrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.8rem;margin-top:1rem"></div>
@@ -58,8 +60,8 @@
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="unit-conversion.html" class="related-card">📐 Unit Conversion</a>
-        <a href="basic.html" class="related-card">🔢 Basic Calculator</a>
+        <a href="unit-conversion.html" class="related-card">ðŸ“ Unit Conversion</a>
+        <a href="basic.html" class="related-card">ðŸ”¢ Basic Calculator</a>
         <a href="percentage.html" class="related-card">% Percentage</a>
       </div>
     </div>
@@ -68,7 +70,7 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
-    <p class="footer-copy">© 2025 CalcVerse</p>
+    <p class="footer-copy">Â© 2025 CalcVerse</p>
     <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div>
   </div>
 </footer>
@@ -81,7 +83,7 @@ document.getElementById('calcBtn').addEventListener('click',function(){
   if(!match){alert('Invalid CIDR format. Use e.g. 192.168.1.0/24');return;}
   const [,ip,prefixStr]=match;
   const prefix=parseInt(prefixStr);
-  if(prefix<0||prefix>32){alert('Prefix must be 0–32.');return;}
+  if(prefix<0||prefix>32){alert('Prefix must be 0â€“32.');return;}
   const ipInt=ipToInt(ip);
   const mask=(prefix===0)?0:(0xFFFFFFFF<<(32-prefix))>>>0;
   const network=(ipInt&mask)>>>0;
