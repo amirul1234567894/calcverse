@@ -1,0 +1,9 @@
+
+# SEO migration files - keep local only
+calculators/_backups/
+calculators/_backups_dedup/
+calculators/_backups_final/
+calculators/*.backup
+*.ps1
+*.backup
+indexnow-key.txt
