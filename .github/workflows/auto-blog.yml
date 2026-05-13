@@ -1,0 +1,48 @@
+name: Auto Blog Publisher
+
+on:
+  schedule:
+    # Every Wednesday at 10:00 AM IST (4:30 AM UTC)
+    - cron: '30 4 * * 3'
+  workflow_dispatch:  # Manual trigger button in GitHub UI
+
+jobs:
+  publish-blog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write  # Required to commit blog files back to repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./scripts
+        run: npm install
+
+      - name: Generate and publish blog
+        working-directory: ./scripts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node auto-blog-publish.js
+
+      - name: Commit and push blog
+        run: |
+          git config user.name "CalcVerse Bot"
+          git config user.email "bot@calc.autoflowa.in"
+          git add blog/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "feat: Auto-publish blog post $(date +%Y-%m-%d)"
+            git push origin main
+          fi
