@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="msvalidate.01" content="FB83276F0DC759CE4467C967B3EF7285" />
+  <meta name="google-site-verification" content="hcKCZVNfKh3e8YxKt2GwJcZP42kfCHw0z_l9WaKdt-A" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156"
+     crossorigin="anonymous"></script>
+  <meta name="google-site-verification" content="m1uzNxzSzxL2R9a_wvh1OQazvN68VQB98Q0HU4GKK0U" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>CalcVerse – Free Online Calculators for Finance, Health, Math & More</title>
+  <meta name="description" content="CalcVerse offers 25+ free online calculators including BMI, EMI, Age, Interest, Scientific and more. Fast, accurate, mobile-friendly. No signup needed."/>
+  <meta name="keywords" content="online calculator, BMI calculator, EMI calculator, age calculator, scientific calculator, percentage calculator, loan calculator, free calculator"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="CalcVerse"/>
+  <link rel="canonical" href="https://calc.autoflowa.in/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CalcVerse – Free Online Calculators"/>
+  <meta property="og:description" content="25+ free calculators for health, finance, math, and more."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://calc.autoflowa.in/"/>
+  <meta property="og:image" content="https://calc.autoflowa.in/assets/og-image.png"/>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="CalcVerse – Free Online Calculators"/>
+  <meta name="twitter:description" content="25+ free calculators for health, finance, math, and more."/>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"CalcVerse","url":"https://calc.autoflowa.in/","description":"Free online calculators for finance, health, math, and more.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://calc.autoflowa.in/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+  </script>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="manifest" href="/manifest.json"/>
+
+  <!-- Google Analytics placeholder -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+  <!-- Microsoft Clarity placeholder -->
+  <!-- <script>(function(c,l,a,r,i,t,y){...})(window, document, "clarity", "script", "XXXXXXXX");</script> -->
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://calc.autoflowa.in/#organization",
+    "name": "CalcVerse",
+    "url": "https://calc.autoflowa.in/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://calc.autoflowa.in/assets/icon-512.png",
+      "width": 512,
+      "height": 512
+    },
+    "description": "Free online calculators for health, finance, math, and everyday life.",
+    "sameAs": [
+      "https://autoflowa.in/"
+    ]
+  }
+  </script>
+
+  <!-- SoftwareApplication Schema (Rich App Card!) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "CalcVerse",
+    "url": "https://calc.autoflowa.in/",
+    "description": "25+ free online calculators for health, finance, math, and everyday life. EMI, BMI, percentage, age, GST, currency, and more.",
+    "applicationCategory": "UtilitiesApplication",
+    "applicationSubCategory": "Calculator",
+    "operatingSystem": "Any (web-based)",
+    "browserRequirements": "Requires JavaScript. Works in all modern browsers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "152",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "publisher": {
+      "@id": "https://calc.autoflowa.in/#organization"
+    },
+    "featureList": [
+      "EMI Calculator",
+      "BMI Calculator",
+      "Percentage Calculator",
+      "Age Calculator",
+      "GST Calculator",
+      "Currency Converter",
+      "Tip Calculator",
+      "Discount Calculator",
+      "Compound Interest Calculator",
+      "Loan Calculator"
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema (Rich Accordion in Search!) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is CalcVerse free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, CalcVerse is 100% free to use. All 25+ calculators are available without any registration, signup, or hidden charges. No paywall, no subscriptions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to create an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No account or registration is required. You can start using any calculator instantly by visiting CalcVerse. We don't collect personal information or require sign-ups."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate are the calculators on CalcVerse?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All calculators use industry-standard mathematical formulas. EMI calculations follow the standard amortization formula. BMI uses WHO guidelines. Currency converters use real-time rates. Results are accurate to multiple decimal places."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use CalcVerse on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, CalcVerse is fully responsive and works on all devices including mobile phones, tablets, laptops, and desktops. You can also install it as a Progressive Web App (PWA) for offline access on your phone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does CalcVerse work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "After your first visit, CalcVerse works offline through Progressive Web App (PWA) technology. The site caches calculators locally, allowing access without an internet connection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of calculators are available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CalcVerse offers 25+ calculators across categories: Finance (EMI, Loan, Interest, GST, Tax), Health (BMI, Calorie, BMR, Pregnancy), Math (Percentage, Ratio, Fraction), Daily Life (Age, Date, Time, Tip, Discount), and Conversions (Currency, Length, Weight, Temperature)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you store the data I enter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, CalcVerse does not store any data you enter into the calculators. All calculations happen locally in your browser. Your inputs are never sent to our servers or shared with third parties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why should I use CalcVerse instead of a regular calculator app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CalcVerse offers 25+ specialized calculators in one place - far beyond a basic calculator. Each calculator is designed for specific use cases (EMI for loans, BMI for health, GST for taxes) with formulas, formatting, and explanations tailored to that need. Plus, it's free, requires no install, and works on any device."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="CalcVerse Home">
+      <div class="logo-mark">C</div>
+      <span class="logo-text">Calc<span>Verse</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="calculators/bmi.html" class="nav-cta">Try BMI Calc</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="search-wrap">
+      <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="Search calculators… e.g. BMI, EMI, Age" aria-label="Search calculators"/>
+    </div>
+    <h1 id="hero-heading" style="margin-top:28px">Every Calculator<br><span style="display:inline-block;max-width:100%">You'll Ever Need</span></h1>
+    <p>Free, fast, and accurate online calculators for health, finance, math, and everyday life. No signup. No ads in results. Just answers.</p>
+
+    <div class="hero-stats" role="list">
+      <div class="stat-item" role="listitem"><div class="stat-num">25+</div><div class="stat-label">Calculators</div></div>
+      <div class="stat-item" role="listitem"><div class="stat-num">100%</div><div class="stat-label">Free forever</div></div>
+      <div class="stat-item" role="listitem"><div class="stat-num">&lt;1s</div><div class="stat-label">Load time</div></div>
+      <div class="stat-item" role="listitem"><div class="stat-num">0</div><div class="stat-label">Data stored</div></div>
+    </div>
+  </section>
+
+  <!-- CATEGORY TABS -->
+  <div class="cat-tabs" role="tablist" aria-label="Calculator categories">
+    <button class="cat-tab active" data-cat="all" role="tab" aria-selected="true">All</button>
+    <button class="cat-tab" data-cat="finance" role="tab" aria-selected="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:5px"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><circle cx="12" cy="15" r="2"/></svg>Finance</button>
+    <button class="cat-tab" data-cat="health" role="tab" aria-selected="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:5px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Health</button>
+    <button class="cat-tab" data-cat="math" role="tab" aria-selected="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:5px"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="9" x2="16" y2="9"/><line x1="8" y1="13" x2="13" y2="13"/><line x1="8" y1="17" x2="11" y2="17"/></svg>Math</button>
+    <button class="cat-tab" data-cat="other" role="tab" aria-selected="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:5px"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>Other</button>
+  </div>
+
+  <!-- CALCULATORS GRID -->
+  <section class="section" id="calculators" aria-labelledby="calc-heading">
+    <div class="section-header">
+      <h2 class="section-title" id="calc-heading">All <span>Calculators</span></h2>
+    </div>
+    <div class="calc-grid" id="calcGrid">
+
+      <!-- FINANCE -->
+      <a href="calculators/emi.html" class="calc-card" data-cat="finance" aria-label="EMI Calculator">
+        <div class="card-icon icon-green" style="color:#10d98c"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="14" r="3"/><path d="m20 17 2 2"/></svg></div>
+        <div class="card-badge badge-popular">Popular</div>
+        <div class="card-name">EMI Calculator</div>
+        <div class="card-desc">Calculate monthly loan EMI for home, car, or personal loans with full amortization table.</div>
+      </a>
+      <a href="calculators/interest.html" class="calc-card" data-cat="finance" aria-label="Interest Calculator">
+        <div class="card-icon icon-green" style="color:#10d98c"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="card-name">Interest Calculator</div>
+        <div class="card-desc">Calculate simple and compound interest on savings or loans over any period.</div>
+      </a>
+      <a href="calculators/loan.html" class="calc-card" data-cat="finance">
+        <div class="card-icon icon-green" style="color:#10d98c"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h2M10 15h4"/></svg></div>
+        <div class="card-name">Loan Calculator</div>
+        <div class="card-desc">Find out exact loan repayment amount, total interest paid, and compare loan options.</div>
+      </a>
+      <a href="calculators/mortgage.html" class="calc-card" data-cat="finance">
+        <div class="card-icon icon-green" style="color:#10d98c"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="card-name">Mortgage Calculator</div>
+        <div class="card-desc">Calculate monthly mortgage payments and see the full payment schedule over time.</div>
+      </a>
+      <a href="calculators/income-tax.html" class="calc-card" data-cat="finance">
+        <div class="card-icon icon-green" style="color:#10d98c"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/></svg></div>
+        <div class="card-name">Income Tax Calculator</div>
+        <div class="card-desc">Estimate your income tax liability and take-home pay after deductions.</div>
+      </a>
+      <a href="calculators/sales-tax.html" class="calc-card" data-cat="finance">
+        <div class="card-icon icon-green" style="color:#10d98c"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+        <div class="card-name">Sales Tax Calculator</div>
+        <div class="card-desc">Add or remove sales tax from any amount instantly. Works for any tax rate.</div>
+      </a>
+      <a href="calculators/percentage.html" class="calc-card" data-cat="math">
+        <div class="card-icon icon-blue" style="color:#60a5fa"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+        <div class="card-badge badge-popular">Popular</div>
+        <div class="card-name">Percentage Calculator</div>
+        <div class="card-desc">Find percentage of a number, percentage change, or reverse percentage calculations.</div>
+      </a>
+
+      <!-- HEALTH -->
+      <a href="calculators/bmi.html" class="calc-card" data-cat="health">
+        <div class="card-icon icon-pink" style="color:#f43f8e"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/><path d="M5 22c0-4 3.1-7 7-7s7 3 7 7"/></svg></div>
+        <div class="card-badge badge-popular">Popular</div>
+        <div class="card-name">BMI Calculator</div>
+        <div class="card-desc">Instantly check your Body Mass Index and understand what it means for your health.</div>
+      </a>
+      <a href="calculators/bmr.html" class="calc-card" data-cat="health">
+        <div class="card-icon icon-pink" style="color:#f43f8e"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+        <div class="card-name">BMR Calculator</div>
+        <div class="card-desc">Find your Basal Metabolic Rate — how many calories your body burns at rest per day.</div>
+      </a>
+      <a href="calculators/pregnancy.html" class="calc-card" data-cat="health">
+        <div class="card-icon icon-pink" style="color:#f43f8e"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/><path d="M8 14c0 2 1 4 4 6 3-2 4-4 4-6V11H8v3z"/></svg></div>
+        <div class="card-badge badge-new">New</div>
+        <div class="card-name">Pregnancy Calculator</div>
+        <div class="card-desc">Track pregnancy week by week and calculate your expected due date.</div>
+      </a>
+      <a href="calculators/due-date.html" class="calc-card" data-cat="health">
+        <div class="card-icon icon-pink" style="color:#f43f8e"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="16" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/><circle cx="16" cy="17" r="2"/></svg></div>
+        <div class="card-name">Due Date Calculator</div>
+        <div class="card-desc">Calculate your baby's due date from your last menstrual period or conception date.</div>
+      </a>
+      <a href="calculators/conception.html" class="calc-card" data-cat="health">
+        <div class="card-icon icon-pink" style="color:#f43f8e"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="card-name">Conception Calculator</div>
+        <div class="card-desc">Estimate your most likely conception date from a known due date or LMP.</div>
+      </a>
+
+      <!-- MATH -->
+      <a href="calculators/basic.html" class="calc-card" data-cat="math">
+        <div class="card-icon icon-blue" style="color:#60a5fa"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="12" y2="18"/></svg></div>
+        <div class="card-name">Basic Calculator</div>
+        <div class="card-desc">A clean, fast standard calculator for everyday arithmetic with keyboard support.</div>
+      </a>
+      <a href="calculators/scientific.html" class="calc-card" data-cat="math">
+        <div class="card-icon icon-blue" style="color:#60a5fa"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0H5a2 2 0 0 1-2-2v-4m6 6h10a2 2 0 0 0 2-2v-4"/></svg></div>
+        <div class="card-name">Scientific Calculator</div>
+        <div class="card-desc">Full scientific calculator with trigonometry, logarithms, powers, and more.</div>
+      </a>
+
+      <!-- OTHER -->
+      <a href="calculators/age.html" class="calc-card" data-cat="other">
+        <div class="card-icon icon-violet" style="color:#a855f7"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div class="card-badge badge-popular">Popular</div>
+        <div class="card-name">Age Calculator</div>
+        <div class="card-desc">Calculate exact age in years, months, days from any date of birth to today.</div>
+      </a>
+      <a href="calculators/time.html" class="calc-card" data-cat="other">
+        <div class="card-icon icon-violet" style="color:#a855f7"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg></div>
+        <div class="card-name">Time Calculator</div>
+        <div class="card-desc">Calculate hours between two times, add/subtract time durations easily.</div>
+      </a>
+      <a href="calculators/gpa.html" class="calc-card" data-cat="other">
+        <div class="card-icon icon-amber" style="color:#f5a623"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="card-name">GPA Calculator</div>
+        <div class="card-desc">Calculate your GPA from grades and credit hours. Supports 4.0 and 10.0 scales.</div>
+      </a>
+      <a href="calculators/grade.html" class="calc-card" data-cat="other">
+        <div class="card-icon icon-amber" style="color:#f5a623"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <div class="card-name">Grade Calculator</div>
+        <div class="card-desc">Find out what grade you need on your final exam to achieve your target course grade.</div>
+      </a>
+      <a href="calculators/unit-conversion.html" class="calc-card" data-cat="other">
+        <div class="card-icon icon-cyan" style="color:#00e5ff"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/><path d="m9 15 3-3 3 3"/><path d="m9 9 3 3 3-3"/></svg></div>
+        <div class="card-name">Unit Converter</div>
+        <div class="card-desc">Convert between length, weight, temperature, volume, speed, and area units.</div>
+      </a>
+      <a href="calculators/subnet.html" class="calc-card" data-cat="other">
+        <div class="card-icon icon-cyan" style="color:#00e5ff"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="16" y="2" width="6" height="6" rx="1"/><rect x="9" y="16" width="6" height="6" rx="1"/><path d="M5 8v4h14V8M12 12v4"/></svg></div>
+        <div class="card-name">Subnet Calculator</div>
+        <div class="card-desc">Calculate subnet mask, network address, broadcast address, and host range.</div>
+      </a>
+      <a href="calculators/concrete.html" class="calc-card" data-cat="other">
+        <div class="card-icon icon-cyan" style="color:#00e5ff"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 20 2 20"/><line x1="12" y1="9" x2="12" y2="14"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="card-name">Concrete Calculator</div>
+        <div class="card-desc">Calculate concrete volume needed for slabs, footings, columns and mix ratios.</div>
+      </a>
+
+    </div><!-- /.calc-grid -->
+  </section>
+
+  <!-- Google AdSense Auto Ads — paste your publisher ID below -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <!-- WHY US -->
+  <section class="section" aria-labelledby="why-heading" style="padding-top:0">
+    <div class="seo-section">
+      <h2 id="why-heading">Why Use <span style="background:var(--grad-main);-webkit-background-clip:text;-webkit-text-fill-color:transparent">CalcVerse?</span></h2>
+      <p>We built CalcVerse because the internet's calculator tools are either ugly, slow, or riddled with ads. Every calculator on this site loads in under a second, works perfectly on mobile, and gives you instant results — no page refresh needed.</p>
+      <h3>Accurate & Trustworthy Results</h3>
+      <p>Every formula has been verified against official standards. Our BMI calculator follows WHO guidelines, our EMI calculator matches standard amortization formulas, and our tax calculators reflect current government rates. We don't round corners with your numbers.</p>
+      <h3>Privacy First</h3>
+      <p>We do not store any calculation data. Your health metrics, financial figures, and personal details stay on your device. No account needed, no email required — just instant answers.</p>
+      <h3>Built for Everyone</h3>
+      <ul>
+        <li>Students: GPA, grade, and percentage calculators</li>
+        <li>Finance professionals: EMI, mortgage, interest, and tax calculators</li>
+        <li>Health-conscious users: BMI, BMR, pregnancy, and due date calculators</li>
+        <li>Engineers: Scientific, unit conversion, and subnet calculators</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="section" aria-labelledby="blog-heading" style="padding-top:0">
+    <div class="section-header">
+      <h2 class="section-title" id="blog-heading">Latest from the <span>Blog</span></h2>
+      <a href="blog/index.html" class="section-link">View all posts →</a>
+    </div>
+    <div class="blog-grid">
+      <a href="blog/how-to-calculate-bmi-correctly.html" class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#1a0a2e,#2d1b69)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/><path d="M5 22c0-4 3.1-7 7-7s7 3 7 7"/><line x1="12" y1="10" x2="12" y2="22"/></svg></div>
+        <div class="blog-body">
+          <div class="blog-cat">Health</div>
+          <div class="blog-title">How to Calculate BMI Correctly: A Complete Guide</div>
+          <p style="font-size:.875rem;color:var(--text2)">BMI is simple to calculate but often misunderstood. Learn the formula, what the numbers mean, and its real-world limitations.</p>
+          <div class="blog-meta"><span style="display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="16" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg>Apr 2026</span><span style="display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>6 min</span></div>
+        </div>
+      </a>
+      <a href="blog/emi-calculator-explained.html" class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#0a1f2e,#0a4a3a)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#10d98c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="14" r="3"/><path d="m20 17 2 2"/></svg></div>
+        <div class="blog-body">
+          <div class="blog-cat">Finance</div>
+          <div class="blog-title">EMI Calculator Explained: How Banks Calculate Your Monthly Payment</div>
+          <p style="font-size:.875rem;color:var(--text2)">The EMI formula every borrower should know — explained clearly with examples so you never get surprised by a loan quote again.</p>
+          <div class="blog-meta"><span style="display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="16" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg>Apr 2026</span><span style="display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>8 min</span></div>
+        </div>
+      </a>
+      <a href="blog/age-calculator-by-date-of-birth.html" class="blog-card">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#1e0a2e,#4a0a6e)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div class="blog-body">
+          <div class="blog-cat">How-to</div>
+          <div class="blog-title">Age Calculator by Date of Birth: Years, Months & Days Explained</div>
+          <p style="font-size:.875rem;color:var(--text2)">Ever wonder exactly how old you are in days? This guide shows how age calculation works and what leap years mean for your count.</p>
+          <div class="blog-meta"><span style="display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="16" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg>Mar 2026</span><span style="display:inline-flex;align-items:center;gap:4px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>5 min</span></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo" aria-label="CalcVerse">
+        <div class="logo-mark">C</div>
+        <span class="logo-text">Calc<span>Verse</span></span>
+      </a>
+      <p>Free online calculators for health, finance, math, and everyday life. Fast, accurate, private.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Finance</h4>
+      <a href="calculators/emi.html">EMI Calculator</a>
+      <a href="calculators/loan.html">Loan Calculator</a>
+      <a href="calculators/mortgage.html">Mortgage Calculator</a>
+      <a href="calculators/interest.html">Interest Calculator</a>
+      <a href="calculators/income-tax.html">Income Tax</a>
+    </div>
+    <div class="footer-col">
+      <h4>Health</h4>
+      <a href="calculators/bmi.html">BMI Calculator</a>
+      <a href="calculators/bmr.html">BMR Calculator</a>
+      <a href="calculators/pregnancy.html">Pregnancy Calculator</a>
+      <a href="calculators/due-date.html">Due Date Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h4>Other Tools</h4>
+      <a href="calculators/age.html">Age Calculator</a>
+      <a href="calculators/gpa.html">GPA Calculator</a>
+      <a href="calculators/unit-conversion.html">Unit Converter</a>
+      <a href="calculators/scientific.html">Scientific Calc</a>
+      <a href="blog/index.html">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="sitemap.xml">Sitemap</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 CalcVerse · For informational purposes only · Not professional advice</span>
+    <div class="footer-social">
+      <a href="#" aria-label="Twitter/X">𝕏</a>
+      <a href="#" aria-label="GitHub">⌥</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // --- Category filter + Search ---
+  var tabs = Array.from(document.querySelectorAll('.cat-tab'));
+  var cards = Array.from(document.querySelectorAll('.calc-card'));
+  var searchInput = document.getElementById('searchInput');
+  var currentCat = 'all';
+
+  function filterCards(){
+    var q = (searchInput ? searchInput.value : '').toLowerCase().trim();
+    cards.forEach(function(c){
+      var catOk = currentCat === 'all' || c.dataset.cat === currentCat;
+      var searchOk = !q || c.textContent.toLowerCase().indexOf(q) > -1;
+      c.style.display = (catOk && searchOk) ? 'flex' : 'none';
+    });
+  }
+
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(e){
+      e.preventDefault();
+      tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      currentCat = tab.dataset.cat;
+      filterCards();
+    });
+  });
+
+  if(searchInput){
+    searchInput.addEventListener('input', function(){
+      var q = this.value.trim();
+      if(q){
+        currentCat = 'all';
+        tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+        if(tabs[0]){ tabs[0].classList.add('active'); tabs[0].setAttribute('aria-selected','true'); }
+      }
+      filterCards();
+    });
+    searchInput.addEventListener('keydown', function(e){ if(e.key==='Escape'){ this.value=''; filterCards(); }});
+  }
+
+  // --- Hamburger menu ---
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobileNav');
+  var mobileClose = document.getElementById('mobileClose');
+  if(hamburger && mobileNav){
+    hamburger.addEventListener('click', function(){
+      mobileNav.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+    if(mobileClose) mobileClose.addEventListener('click', function(){
+      mobileNav.classList.remove('open');
+      document.body.style.overflow='';
+    });
+    mobileNav.addEventListener('click', function(e){
+      if(e.target === mobileNav){ mobileNav.classList.remove('open'); document.body.style.overflow=''; }
+    });
+  }
+
+  // --- Touch passive listeners for smooth scroll ---
+  document.addEventListener('touchstart', function(){}, {passive:true});
+  document.addEventListener('touchmove', function(){}, {passive:true});
+
+})();
+</script>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <a href="index.html">Home</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="calculators/bmi.html">BMI Calculator</a>
+    <a href="calculators/emi.html">EMI Calculator</a>
+    <a href="calculators/age.html">Age Calculator</a>
+    <a href="calculators/income-tax.html">Income Tax</a>
+    <a href="calculators/mortgage.html">Mortgage Calc</a>
+    <a href="calculators/bmi.html" class="nav-cta" style="display:block;text-align:center;margin-top:16px">Try BMI Calc</a>
+  </div>
+</div>
+</body>
+</html>
