@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Subnet Calculator â€“ IP Address & CIDR Network Tool | CalcVerse</title>
+  <title>Subnet Calculator – IP Address & CIDR Network Tool | CalcVerse</title>
   <meta name="description" content="Free subnet calculator. Enter any IP address and CIDR notation to get network address, broadcast, usable hosts, and subnet mask."/>
   <meta name="keywords" content="subnet calculator, IP subnet calculator, CIDR calculator, network address calculator, subnet mask calculator"/>
   <meta name="robots" content="index, follow"/>
@@ -31,7 +31,7 @@
 </header>
 <main>
   <div class="tool-page">
-    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">â€º</span><span>Tools</span><span class="breadcrumb-sep">â€º</span><span>Subnet Calculator</span></nav>
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Tools</span><span class="breadcrumb-sep">›</span><span>Subnet Calculator</span></nav>
     <div class="tool-header">
       <div class="tool-category-tag">Network Tool</div>
       <h1>Subnet Calculator</h1>
@@ -42,10 +42,10 @@
         <div class="input-group">
           <label for="cidr">IP Address / CIDR</label>
           <input type="text" id="cidr" class="input-field" placeholder="e.g. 192.168.1.0/24" value="192.168.1.0/24"/>
-          <span class="input-hint">Format: IP/prefix â€” e.g. 10.0.0.1/16</span>
+          <span class="input-hint">Format: IP/prefix — e.g. 10.0.0.1/16</span>
         </div>
       </div>
-      <button type="button" class="calc-btn" id="calcBtn">ðŸŒ Calculate Subnet</button>
+      <button type="button" class="calc-btn" id="calcBtn">🌐 Calculate Subnet</button>
       <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
         <div class="result-label">Subnet Information</div>
         <div id="subnetGrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.8rem;margin-top:1rem"></div>
@@ -60,8 +60,8 @@
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="unit-conversion.html" class="related-card">ðŸ“ Unit Conversion</a>
-        <a href="basic.html" class="related-card">ðŸ”¢ Basic Calculator</a>
+        <a href="unit-conversion.html" class="related-card">📐 Unit Conversion</a>
+        <a href="basic.html" class="related-card">🔢 Basic Calculator</a>
         <a href="percentage.html" class="related-card">% Percentage</a>
       </div>
     </div>
@@ -70,7 +70,7 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand"><div class="logo-mark" style="width:32px;height:32px;font-size:1rem">C</div><span>CalcVerse</span></div>
-    <p class="footer-copy">Â© 2025 CalcVerse</p>
+    <p class="footer-copy">© 2025 CalcVerse</p>
     <div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div>
   </div>
 </footer>
@@ -83,7 +83,7 @@ document.getElementById('calcBtn').addEventListener('click',function(){
   if(!match){alert('Invalid CIDR format. Use e.g. 192.168.1.0/24');return;}
   const [,ip,prefixStr]=match;
   const prefix=parseInt(prefixStr);
-  if(prefix<0||prefix>32){alert('Prefix must be 0â€“32.');return;}
+  if(prefix<0||prefix>32){alert('Prefix must be 0–32.');return;}
   const ipInt=ipToInt(ip);
   const mask=(prefix===0)?0:(0xFFFFFFFF<<(32-prefix))>>>0;
   const network=(ipInt&mask)>>>0;

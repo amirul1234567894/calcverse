@@ -7,3 +7,11 @@ calculators/*.backup
 *.ps1
 *.backup
 indexnow-key.txt
+
+# Encoding fix backups - local only
+_backup_encoding_fix_*/
+_backups/
+_backups_dedup/
+_backups_final/
+*.before-*
+*.FIXED-TEST.*

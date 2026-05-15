@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Free Interest Calculator â€“ Simple & Compound Interest Online | CalcVerse</title>
+  <title>Free Interest Calculator – Simple & Compound Interest Online | CalcVerse</title>
   <meta name="description" content="Calculate simple interest and compound interest on savings or loans. See interest earned over any period, with year-by-year growth breakdown."/>
   <meta name="keywords" content="interest calculator, compound interest calculator, simple interest calculator, savings interest calculator, interest rate calculator"/>
   <meta name="robots" content="index, follow"/>
@@ -33,8 +33,8 @@
 <main>
 <div class="tool-page">
   <nav class="breadcrumb">
-    <a href="../index.html">Home</a><span class="breadcrumb-sep">â€º</span>
-    <a href="../index.html#calculators">Finance</a><span class="breadcrumb-sep">â€º</span>
+    <a href="../index.html">Home</a><span class="breadcrumb-sep">›</span>
+    <a href="../index.html#calculators">Finance</a><span class="breadcrumb-sep">›</span>
     <span>Interest Calculator</span>
   </nav>
   <div class="tool-header">
@@ -47,7 +47,7 @@
   <div class="calc-inputs">
     <div class="calc-inputs two-col" style="margin:0">
       <div class="input-group">
-        <label for="principal">Principal Amount (â‚¹)</label>
+        <label for="principal">Principal Amount (₹)</label>
         <input type="number" id="principal" class="input-field" placeholder="e.g. 100000" min="1"/>
       </div>
       <div class="input-group">
@@ -78,15 +78,15 @@
       </select>
     </div>
   </div>
-  <button class="calc-btn" id="calcBtn">ðŸ“ˆ Calculate Interest</button>
+  <button class="calc-btn" id="calcBtn">📈 Calculate Interest</button>
   <div class="result-panel" id="resultPanel">
     <div class="result-label">Total Interest Earned</div>
-    <div class="result-main" id="intResult">â€”</div>
+    <div class="result-main" id="intResult">—</div>
     <div class="result-breakdown" id="intBreakdown"></div>
   </div>
 </div>
 <script>
-const fmt=n=>'â‚¹'+parseFloat(n).toLocaleString('en-IN',{maximumFractionDigits:2});
+const fmt=n=>'₹'+parseFloat(n).toLocaleString('en-IN',{maximumFractionDigits:2});
 document.getElementById('type').addEventListener('change',function(){
   document.getElementById('compoundFreqWrap').style.display=this.value==='compound'?'flex':'none';
 });
@@ -114,13 +114,13 @@ document.getElementById('calcBtn').addEventListener('click',function(){
   <h2>Simple vs Compound Interest: What's the Difference?</h2>
   <p>Interest is the cost of borrowing money, or the reward for saving it. The key distinction is whether interest is calculated on the original principal alone (simple) or on the growing balance including previously earned interest (compound).</p>
   <h3>Simple Interest Formula</h3>
-  <div class="formula-box">I = P Ã— r Ã— t</div>
+  <div class="formula-box">I = P × r × t</div>
   <p>Where P = Principal, r = Annual rate (decimal), t = Time in years.</p>
   <h3>Compound Interest Formula</h3>
-  <div class="formula-box">A = P Ã— (1 + r/n)^(nÃ—t)</div>
+  <div class="formula-box">A = P × (1 + r/n)^(n×t)</div>
   <p>Where n = compounding frequency per year (12 for monthly, 4 for quarterly, etc.).</p>
   <h3>The Power of Compound Interest</h3>
-  <p>Einstein reportedly called compound interest "the eighth wonder of the world." A â‚¹1,00,000 investment at 8% compounded annually for 20 years grows to â‚¹4,66,096 â€” that's â‚¹3,66,096 in interest alone.</p>
+  <p>Einstein reportedly called compound interest "the eighth wonder of the world." A ₹1,00,000 investment at 8% compounded annually for 20 years grows to ₹4,66,096 — that's ₹3,66,096 in interest alone.</p>
 </div>
 <div class="seo-section">
   <h2>Frequently Asked Questions</h2>
@@ -132,8 +132,8 @@ document.getElementById('calcBtn').addEventListener('click',function(){
 <div class="seo-section">
   <h2>Related Calculators</h2>
   <div class="related-grid">
-    <a href="emi.html" class="related-card"><span class="related-icon">ðŸ’³</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">Monthly loan payment</div></div></a>
-    <a href="loan.html" class="related-card"><span class="related-icon">ðŸ¦</span><div><div class="related-name">Loan Calculator</div><div class="related-desc">Compare loan options</div></div></a>
+    <a href="emi.html" class="related-card"><span class="related-icon">💳</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">Monthly loan payment</div></div></a>
+    <a href="loan.html" class="related-card"><span class="related-icon">🏦</span><div><div class="related-name">Loan Calculator</div><div class="related-desc">Compare loan options</div></div></a>
   </div>
 </div>
 
@@ -146,7 +146,7 @@ document.getElementById('calcBtn').addEventListener('click',function(){
     <div class="footer-col"><h4>Health</h4><a href="bmi.html">BMI Calculator</a><a href="bmr.html">BMR Calculator</a><a href="pregnancy.html">Pregnancy</a></div>
     <div class="footer-col"><h4>Site</h4><a href="../index.html">All Calculators</a><a href="../blog/index.html">Blog</a><a href="../privacy.html">Privacy</a></div>
   </div>
-  <div class="footer-bottom"><span>Â© 2026 CalcVerse</span></div>
+  <div class="footer-bottom"><span>© 2026 CalcVerse</span></div>
 </footer>
 
 <div class="mobile-nav" id="mobileNav">
