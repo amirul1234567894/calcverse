@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Free Loan Calculator � Compare Loan Options & Total Cost | CalcVerse</title>
+  <title>Free Loan Calculator – Compare Loan Options & Total Cost | CalcVerse</title>
   <meta name="description" content="Calculate loan repayment amounts, total interest paid, and compare different loan scenarios. Free online loan calculator for personal, home, and car loans."/>
   <meta name="keywords" content="loan calculator, loan repayment calculator, personal loan calculator, loan interest calculator, compare loans"/>
   <meta name="robots" content="index, follow"/>
@@ -33,7 +33,7 @@
 </header>
 <main>
 <div class="tool-page">
-  <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">�</span><a href="../index.html#calculators">Finance</a><span class="breadcrumb-sep">�</span><span>Loan Calculator</span></nav>
+  <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><a href="../index.html#calculators">Finance</a><span class="breadcrumb-sep">›</span><span>Loan Calculator</span></nav>
   <div class="tool-header">
     <div class="tool-category-tag">Finance Calculator</div>
     <h1>Loan Calculator</h1>
@@ -47,10 +47,10 @@
         <div class="input-group"><label for="loanYears">Tenure (Years)</label><input type="number" id="loanYears" class="input-field" placeholder="e.g. 5" min="1" max="30"/></div>
       </div>
     </div>
-    <button class="calc-btn" id="calcBtn">?? Calculate Loan</button>
+    <button class="calc-btn" id="calcBtn">Calculate Loan</button>
     <div class="result-panel" id="resultPanel">
       <div class="result-label">Monthly Payment</div>
-      <div class="result-main" id="loanEmi">�</div>
+      <div class="result-main" id="loanEmi">₹</div>
       <div class="result-breakdown" id="loanBreakdown"></div>
     </div>
   </div>
@@ -62,7 +62,7 @@
       <li><strong>Principal:</strong> The amount you borrow</li>
       <li><strong>Interest rate:</strong> The cost of borrowing, expressed as a percentage per year</li>
       <li><strong>Tenure/Term:</strong> How long you have to repay the loan</li>
-      <li><strong>EMI:</strong> Equated Monthly Installment � your fixed monthly payment</li>
+      <li><strong>EMI:</strong> Equated Monthly Installment – your fixed monthly payment</li>
     </ul>
     <h3>Tips for Getting a Better Loan Rate</h3>
     <ul>
@@ -75,9 +75,9 @@
   <div class="seo-section">
     <h2>Related Calculators</h2>
     <div class="related-grid">
-      <a href="emi.html" class="related-card"><span class="related-icon">??</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">With amortization table</div></div></a>
-      <a href="mortgage.html" class="related-card"><span class="related-icon">??</span><div><div class="related-name">Mortgage Calculator</div><div class="related-desc">Home loan payments</div></div></a>
-      <a href="interest.html" class="related-card"><span class="related-icon">??</span><div><div class="related-name">Interest Calculator</div><div class="related-desc">Simple & compound</div></div></a>
+      <a href="emi.html" class="related-card"><span class="related-icon">💳</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">With amortization table</div></div></a>
+      <a href="mortgage.html" class="related-card"><span class="related-icon">🏠</span><div><div class="related-name">Mortgage Calculator</div><div class="related-desc">Home loan payments</div></div></a>
+      <a href="interest.html" class="related-card"><span class="related-icon">💵</span><div><div class="related-name">Interest Calculator</div><div class="related-desc">Simple & compound</div></div></a>
     </div>
   </div>
 </div>
@@ -88,10 +88,10 @@
     <div class="footer-col"><h4>Finance</h4><a href="emi.html">EMI Calculator</a><a href="loan.html">Loan Calculator</a><a href="mortgage.html">Mortgage</a></div>
     <div class="footer-col"><h4>Site</h4><a href="../index.html">All Calculators</a><a href="../blog/index.html">Blog</a><a href="../privacy.html">Privacy</a></div>
   </div>
-  <div class="footer-bottom"><span>� 2026 CalcVerse</span></div>
+  <div class="footer-bottom"><span>© 2026 CalcVerse</span></div>
 </footer>
 <script>
-const fmt=n=>'?'+parseFloat(n).toLocaleString('en-IN',{maximumFractionDigits:0});
+const fmt=n=>'₹'+parseFloat(n).toLocaleString('en-IN',{maximumFractionDigits:0});
 document.getElementById('calcBtn').addEventListener('click',function(){
   const P=parseFloat(document.getElementById('loanAmt').value);
   const r=parseFloat(document.getElementById('loanRate').value)/12/100;
