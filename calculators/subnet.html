@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Subnet Calculator | IP Address & CIDR Free Tool</title>
-  <meta name="description" content="Free subnet calculator. Enter any IP address and CIDR notation to get network address, broadcast, usable hosts, and subnet mask."/>
+  <meta name="description" content="Free subnet calculator with CIDR, IPv4 subnet mask, network address, broadcast, host range. For network admins, CCNA students, IT professionals. No signup."/>
   <meta name="keywords" content="subnet calculator, IP subnet calculator, CIDR calculator, network address calculator, subnet mask calculator"/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://calc.autoflowa.in/calculators/subnet"/>
@@ -56,12 +56,155 @@
       </div>
     </div>
     <section class="seo-section">
+      <h2>What Is a Subnet Calculator?</h2>
+      <p>A subnet calculator is a networking tool that helps IT professionals, network administrators, students, and CCNA/CCNP candidates compute IP subnet information from CIDR notation or subnet masks. It calculates network addresses, broadcast addresses, usable host ranges, subnet masks, and total number of available IP addresses for any given IPv4 subnet.</p>
+      <p>Whether you're designing a corporate network, configuring routers, studying for networking certifications, or troubleshooting connectivity issues, this free subnet calculator provides instant accurate results without signup. It supports both classful (Class A, B, C) and classless inter-domain routing (CIDR) calculations.</p>
+      <p>For other technical calculations, see our <a href="basic.html">Basic Calculator</a> for general math and <a href="scientific.html">Scientific Calculator</a> for advanced computations.</p>
+
       <h2>Understanding Subnets and CIDR Notation</h2>
-      <p>CIDR (Classless Inter-Domain Routing) notation represents an IP address with its network prefix length. For example, 192.168.1.0/24 means a 24-bit network prefix, giving 254 usable host addresses.</p>
-      <h3>Common CIDR References</h3>
-      <p>/8 = 16,777,214 hosts | /16 = 65,534 hosts | /24 = 254 hosts | /28 = 14 hosts | /30 = 2 hosts | /32 = single host</p>
-    </section>
-    <div class="related-calcs">
+      <p>Subnetting is the process of dividing a large network into smaller, manageable sub-networks (subnets). This improves security, reduces broadcast traffic, simplifies management, and enables efficient IP address allocation.</p>
+      <p>CIDR (Classless Inter-Domain Routing) notation expresses subnet masks as a prefix length after the IP address, like <strong>192.168.1.0/24</strong>. The number after the slash indicates how many bits are used for the network portion.</p>
+
+      <h3>How CIDR Works</h3>
+      <p>An IPv4 address has 32 bits. CIDR splits these between network bits and host bits:</p>
+      <p style="text-align:center;font-size:1.05em;padding:15px;background:rgba(255,255,255,0.05);border-radius:8px;margin:15px 0;"><strong>Total IPs = 2<sup>(32 &minus; CIDR)</sup></strong></p>
+      <p style="text-align:center;font-size:1.05em;padding:15px;background:rgba(255,255,255,0.05);border-radius:8px;margin:15px 0;"><strong>Usable Hosts = Total IPs &minus; 2 (network + broadcast)</strong></p>
+      <p><strong>Example:</strong> For 192.168.1.0/24:</p>
+      <ul>
+        <li>Network bits: 24, Host bits: 32 &minus; 24 = 8</li>
+        <li>Total IPs = 2<sup>8</sup> = 256</li>
+        <li>Usable hosts = 256 &minus; 2 = 254</li>
+        <li>Network address: 192.168.1.0</li>
+        <li>Broadcast address: 192.168.1.255</li>
+        <li>Usable range: 192.168.1.1 to 192.168.1.254</li>
+      </ul>
+
+      <h2>Common CIDR References Table</h2>
+      <table style="width:100%;border-collapse:collapse;margin:15px 0;">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.08);">
+            <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">CIDR</th>
+            <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Subnet Mask</th>
+            <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Total IPs</th>
+            <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Usable Hosts</th>
+            <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Use Case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/8</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.0.0.0</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">16,777,216</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">16,777,214</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Class A networks</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/16</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.0.0</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">65,536</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">65,534</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Class B networks</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/20</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.240.0</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">4,096</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">4,094</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Large enterprise</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/22</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.252.0</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">1,024</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">1,022</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Medium business</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/24</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.255.0</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">256</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">254</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Small office/Class C</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/25</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.255.128</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">128</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">126</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Half subnet</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/26</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.255.192</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">64</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">62</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Quarter subnet</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/27</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.255.224</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">32</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">30</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Department subnet</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/28</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.255.240</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">16</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">14</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Small team</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/29</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.255.248</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">8</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">6</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Point-to-point + hosts</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/30</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.255.252</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">4</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">2</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Router-to-router links</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/31</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.255.254</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">2</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">2 (RFC 3021)</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">P2P modern</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/32</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">255.255.255.255</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">1</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">1</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Single host route</td></tr>
+        </tbody>
+      </table>
+
+      <h2>IP Address Classes</h2>
+      <p>Before CIDR (introduced in 1993), IP addresses were divided into fixed classes:</p>
+      <table style="width:100%;border-collapse:collapse;margin:15px 0;">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.08);">
+            <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Class</th>
+            <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Range</th>
+            <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Default Mask</th>
+            <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Networks</th>
+            <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Hosts per Network</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Class A</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">1.0.0.0 to 126.255.255.255</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/8 (255.0.0.0)</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">126</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">16,777,214</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Class B</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">128.0.0.0 to 191.255.255.255</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/16 (255.255.0.0)</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">16,384</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">65,534</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Class C</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">192.0.0.0 to 223.255.255.255</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">/24 (255.255.255.0)</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">2,097,152</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">254</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Class D</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">224.0.0.0 to 239.255.255.255</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">N/A (Multicast)</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">N/A</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">N/A</td></tr>
+          <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Class E</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">240.0.0.0 to 255.255.255.255</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">N/A (Reserved)</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">N/A</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">N/A</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Private IP Address Ranges (RFC 1918)</h2>
+      <p>These ranges are reserved for internal networks and never routed on the public internet:</p>
+      <ul>
+        <li><strong>10.0.0.0/8</strong> (10.0.0.0 to 10.255.255.255) &mdash; Large enterprises, 16.7 million addresses</li>
+        <li><strong>172.16.0.0/12</strong> (172.16.0.0 to 172.31.255.255) &mdash; Medium networks, ~1 million addresses</li>
+        <li><strong>192.168.0.0/16</strong> (192.168.0.0 to 192.168.255.255) &mdash; Home/small office, 65,536 addresses</li>
+      </ul>
+      <p>The 192.168.1.0/24 subnet is the most common home router default, used by millions of households globally.</p>
+
+      <h2>How to Use This Subnet Calculator</h2>
+      <ol>
+        <li><strong>Enter the IP address</strong> &mdash; In dotted decimal notation (e.g., 192.168.1.0)</li>
+        <li><strong>Enter CIDR prefix or subnet mask</strong> &mdash; /24 or 255.255.255.0</li>
+        <li><strong>View results</strong>:
+          <ul>
+            <li>Network address</li>
+            <li>Broadcast address</li>
+            <li>First and last usable host IPs</li>
+            <li>Total number of hosts</li>
+            <li>Wildcard mask</li>
+            <li>Binary representation</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>VLSM (Variable Length Subnet Masking)</h2>
+      <p>VLSM allows different subnets within the same network to have different sizes, optimizing IP address usage. Instead of wasting addresses with uniform subnetting, you allocate exactly what each subnet needs.</p>
+      <p><strong>Example:</strong> A company has a 192.168.1.0/24 network and needs:</p>
+      <ul>
+        <li>50 hosts for Sales department</li>
+        <li>25 hosts for HR</li>
+        <li>10 hosts for Management</li>
+        <li>2 hosts for router-to-router link</li>
+      </ul>
+      <p>VLSM allocation (most efficient):</p>
+      <ul>
+        <li>Sales: 192.168.1.0/26 (62 usable hosts)</li>
+        <li>HR: 192.168.1.64/27 (30 usable hosts)</li>
+        <li>Management: 192.168.1.96/28 (14 usable hosts)</li>
+        <li>P2P link: 192.168.1.112/30 (2 usable hosts)</li>
+      </ul>
+      <p>Without VLSM, you'd waste hundreds of addresses by using uniform subnet sizes.</p>
+
+      <h2>Subnetting Best Practices</h2>
+      <ul>
+        <li><strong>Plan for growth:</strong> Allocate 20-30% extra capacity per subnet</li>
+        <li><strong>Document everything:</strong> Maintain subnet allocation tables and IP address management (IPAM) tools</li>
+        <li><strong>Use private ranges internally:</strong> Don't use public IPs for internal LAN</li>
+        <li><strong>Implement VLAN per subnet:</strong> Logical separation enhances security</li>
+        <li><strong>Reserve subnet zero:</strong> Some older equipment can't use subnet 0 or broadcast subnet</li>
+        <li><strong>Consider IPv6 migration:</strong> Eventually, all networks will move beyond IPv4</li>
+        <li><strong>Group by function/department:</strong> Easier to apply ACLs and policies</li>
+        <li><strong>Use /30 or /31 for P2P links:</strong> Don't waste full subnets on point-to-point connections</li>
+      </ul>
+
+      <h2>Common Subnetting Mistakes</h2>
+      <ul>
+        <li><strong>Forgetting reserved addresses:</strong> Network and broadcast addresses can't be assigned to hosts</li>
+        <li><strong>Overlapping subnets:</strong> Causes routing chaos and connectivity issues</li>
+        <li><strong>Using /31 incorrectly:</strong> Only works on RFC 3021 compliant devices for P2P</li>
+        <li><strong>Wrong default gateway:</strong> Must be in same subnet as host</li>
+        <li><strong>Confusing classful vs classless:</strong> Modern routing is all classless</li>
+        <li><strong>Inadequate planning:</strong> Running out of IPs forces difficult renumbering later</li>
+        <li><strong>Ignoring DHCP scope conflicts:</strong> Static and dynamic ranges must not overlap</li>
+      </ul>
+
+      <h2>IPv6 vs IPv4 Subnetting</h2>
+      <p>IPv6 dramatically changes subnetting:</p>
+      <ul>
+        <li><strong>IPv4:</strong> 32-bit addresses, 4.3 billion total</li>
+        <li><strong>IPv6:</strong> 128-bit addresses, 340 undecillion total (340 followed by 36 zeros)</li>
+        <li><strong>IPv6 standard subnet:</strong> /64 provides 18 quintillion addresses per subnet</li>
+        <li><strong>No NAT needed:</strong> Every device can have a public IP</li>
+        <li><strong>Simpler structure:</strong> First 64 bits = network, last 64 bits = host</li>
+      </ul>
+      <p>IPv4 still dominates today, but IPv6 adoption is growing as IPv4 address space depletes. Most modern operating systems support both.</p>
+
       <h3>Related Calculators</h3>
       <div class="related-grid">
         <a href="unit-conversion.html" class="related-card">?? Unit Conversion</a>
