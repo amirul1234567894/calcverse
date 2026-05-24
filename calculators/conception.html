@@ -42,7 +42,7 @@
       <p>Estimate when conception likely occurred based on your due date or last menstrual period.</p>
     </div>
     <div class="calculator-widget">
-      <div class="notice info"><span>??</span><span>Results are estimates. Actual conception may vary by a few days due to sperm survival and ovulation timing.</span></div>
+      <div class="notice info"><span>&#9888;&#65039;</span><span>Results are estimates. Actual conception may vary by a few days due to sperm survival and ovulation timing.</span></div>
       <div class="calc-inputs">
         <div class="input-group">
           <label>Calculate From</label>
@@ -56,7 +56,7 @@
           <input type="date" id="dateInput" class="input-field"/>
         </div>
       </div>
-      <button type="button" class="calc-btn" id="calcBtn">?? Calculate Conception Date</button>
+      <button type="button" class="calc-btn" id="calcBtn">&#128119; Calculate Conception Date</button>
       <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
         <div class="result-label">Estimated Conception Date</div>
         <div class="result-main" id="conceptionDate">—</div>
@@ -209,9 +209,9 @@
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="due-date.html" class="related-card">?? Due Date Calculator</a>
-        <a href="pregnancy.html" class="related-card">?? Pregnancy Calculator</a>
-        <a href="age.html" class="related-card">?? Age Calculator</a>
+        <a href="due-date.html" class="related-card">&#128119; Due Date Calculator</a>
+        <a href="pregnancy.html" class="related-card">&#129382; Pregnancy Calculator</a>
+        <a href="age.html" class="related-card">&#128197; Age Calculator</a>
       </div>
     </div>
   </div>
@@ -249,7 +249,7 @@ document.getElementById('calcBtn').addEventListener('click',function(){
   document.getElementById('conceptionDate').textContent=fmt(conception);
   document.getElementById('conceptionRange').textContent=`Possible range: ${fmt(early)} – ${fmt(late)}`;
   document.getElementById('ovulWindow').innerHTML=`
-    <strong style="color:var(--violet2)">?? Fertile Window</strong><br>
+    <strong style="color:var(--violet2)">&#127801; Fertile Window</strong><br>
     <span style="color:var(--text2);font-size:0.9rem">Ovulation likely occurred between <strong>${fmt(ovStart)}</strong> and <strong>${fmt(ovEnd)}</strong>.</span>
   `;
   document.getElementById('resultPanel').style.display='block';

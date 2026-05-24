@@ -63,7 +63,7 @@
             <input type="number" id="targetGrade" class="input-field" placeholder="e.g. 80" min="0" max="100"/>
           </div>
         </div>
-        <button type="button" class="calc-btn" id="calcFinal">?? Calculate</button>
+        <button type="button" class="calc-btn" id="calcFinal">&#128290; Calculate</button>
         <div class="result-panel" id="finalResult" style="display:none" aria-live="polite">
           <div class="result-label">Score Needed on Final</div>
           <div class="result-main" id="finalScore">—</div>
@@ -73,7 +73,7 @@
       <div id="section2" style="display:none">
         <div id="wtRows"></div>
         <button type="button" id="addWt" style="margin-top:8px;padding:8px 16px;background:var(--surface);border:1px dashed var(--border2);color:var(--cyan);border-radius:8px;cursor:pointer;font-size:0.85rem">+ Add Assignment</button>
-        <button type="button" class="calc-btn" id="calcWt" style="margin-top:1rem">?? Calculate Weighted Grade</button>
+        <button type="button" class="calc-btn" id="calcWt" style="margin-top:1rem">&#127891; Calculate Weighted Grade</button>
         <div class="result-panel" id="wtResult" style="display:none" aria-live="polite">
           <div class="result-label">Weighted Average</div>
           <div class="result-main" id="wtGrade">—</div>
@@ -246,9 +246,9 @@
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="gpa.html" class="related-card">?? GPA Calculator</a>
+        <a href="gpa.html" class="related-card">&#127891; GPA Calculator</a>
         <a href="percentage.html" class="related-card">% Percentage</a>
-        <a href="basic.html" class="related-card">?? Basic Calculator</a>
+        <a href="basic.html" class="related-card">&#128290; Basic Calculator</a>
       </div>
     </div>
   </div>
@@ -277,8 +277,8 @@ document.getElementById('calcFinal').addEventListener('click',function(){
   const needed=((tg-cur*(1-fw))/fw)*100;
   const el=document.getElementById('finalScore');
   const msg=document.getElementById('finalMsg');
-  if(needed>100){el.textContent=needed.toFixed(1)+'%';el.style.color='var(--pink)';msg.textContent='?? This score exceeds 100% — target grade may not be achievable.';}
-  else if(needed<0){el.textContent='0%';el.style.color='var(--green)';msg.textContent='?? You\'ve already achieved your target grade!';}
+  if(needed>100){el.textContent=needed.toFixed(1)+'%';el.style.color='var(--pink)';msg.textContent='&#9888;&#65039; This score exceeds 100% — target grade may not be achievable.';}
+  else if(needed<0){el.textContent='0%';el.style.color='var(--green)';msg.textContent='&#127881; You\'ve already achieved your target grade!';}
   else{el.textContent=needed.toFixed(1)+'%';el.style.color=needed>=90?'var(--pink)':needed>=70?'var(--amber)':'var(--green)';msg.textContent=`You need ${needed.toFixed(1)}% on the final to achieve ${(tg*100)}%.`;}
   document.getElementById('finalResult').style.display='block';
 });
