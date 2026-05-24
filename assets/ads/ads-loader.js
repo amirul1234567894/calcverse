@@ -1,4 +1,4 @@
-﻿/* Adsterra Ads Loader - CalcVerse */
+* Adsterra Ads Loader - CalcVerse */
 (function() {
   function loadAd(file) {
     var script = document.createElement('script');

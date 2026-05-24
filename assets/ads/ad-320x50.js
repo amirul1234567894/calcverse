@@ -1,4 +1,4 @@
-﻿(function() {
+function() {
   var container = document.getElementById('adsterra-320x50');
   if (!container || container.dataset.loaded === 'true') return;
   container.dataset.loaded = 'true';

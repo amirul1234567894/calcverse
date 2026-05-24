@@ -1,4 +1,4 @@
-﻿// ============================================
+/ ============================================
 // CalcVerse - IndexNow Ping + SEO Health Check
 // ============================================
 // Runs: Weekly (Monday 8am IST via GitHub Actions)
