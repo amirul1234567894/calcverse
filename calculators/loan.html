@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Free Loan Calculator – Compare Loan Options & Total Cost | CalcVerse</title>
+  <title>Loan Calculator | Free EMI & Total Cost Compare</title>
   <meta name="description" content="Calculate loan repayment amounts, total interest paid, and compare different loan scenarios. Free online loan calculator for personal, home, and car loans."/>
   <meta name="keywords" content="loan calculator, loan repayment calculator, personal loan calculator, loan interest calculator, compare loans"/>
   <meta name="robots" content="index, follow"/>
@@ -15,7 +15,6 @@
   {"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Loan Calculator","url":"https://calc.autoflowa.in/calculators/loan","description":"Free online loan calculator for personal, home, car and education loans.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which loans can I calculate?","acceptedAnswer":{"@type":"Answer","text":"You can calculate home loan, personal loan, car loan, education loan, and business loan EMI."}},{"@type":"Question","name":"How is loan EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"EMI = P x R x (1+R)^N / ((1+R)^N - 1), where P is principal, R is monthly rate, N is months."}},{"@type":"Question","name":"What is fixed vs floating interest rate?","acceptedAnswer":{"@type":"Answer","text":"Fixed rate stays same throughout tenure. Floating rate changes with market and bank policy."}},{"@type":"Question","name":"Can I prepay my loan?","acceptedAnswer":{"@type":"Answer","text":"Yes, most banks allow prepayment. It reduces principal, lowering EMI or tenure."}},{"@type":"Question","name":"Is this loan calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no signup required."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calc.autoflowa.in/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://calc.autoflowa.in/#calculators"},{"@type":"ListItem","position":3,"name":"Loan Calculator","item":"https://calc.autoflowa.in/calculators/loan"}]}]}
   </script>
   <link rel="stylesheet" href="../style.css"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-header">
@@ -31,6 +30,11 @@
     </button>
   </div>
 </header>
+<!-- Adsterra Top Banner (728x90 desktop) -->
+<div class="ad-container ad-728x90">
+  <div id="adsterra-728x90"></div>
+</div>
+
 <main>
 <div class="tool-page">
   <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><a href="../index.html#calculators">Finance</a><span class="breadcrumb-sep">›</span><span>Loan Calculator</span></nav>
@@ -50,7 +54,7 @@
     <button class="calc-btn" id="calcBtn">Calculate Loan</button>
     <div class="result-panel" id="resultPanel">
       <div class="result-label">Monthly Payment</div>
-      <div class="result-main" id="loanEmi">₹</div>
+      <div class="result-main" id="loanEmi">?</div>
       <div class="result-breakdown" id="loanBreakdown"></div>
     </div>
   </div>
@@ -75,11 +79,17 @@
   <div class="seo-section">
     <h2>Related Calculators</h2>
     <div class="related-grid">
-      <a href="emi.html" class="related-card"><span class="related-icon">💳</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">With amortization table</div></div></a>
-      <a href="mortgage.html" class="related-card"><span class="related-icon">🏠</span><div><div class="related-name">Mortgage Calculator</div><div class="related-desc">Home loan payments</div></div></a>
-      <a href="interest.html" class="related-card"><span class="related-icon">💵</span><div><div class="related-name">Interest Calculator</div><div class="related-desc">Simple & compound</div></div></a>
+      <a href="emi.html" class="related-card"><span class="related-icon">??</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">With amortization table</div></div></a>
+      <a href="mortgage.html" class="related-card"><span class="related-icon">??</span><div><div class="related-name">Mortgage Calculator</div><div class="related-desc">Home loan payments</div></div></a>
+      <a href="interest.html" class="related-card"><span class="related-icon">??</span><div><div class="related-name">Interest Calculator</div><div class="related-desc">Simple & compound</div></div></a>
     </div>
   </div>
+</div>
+
+<!-- Adsterra In-Content (300x250) -->
+<div class="ad-container ad-300x250">
+  <span class="ad-label">Advertisement</span>
+  <div id="adsterra-300x250"></div>
 </div>
 </main>
 <footer class="site-footer">
@@ -91,7 +101,7 @@
   <div class="footer-bottom"><span>© 2026 CalcVerse</span></div>
 </footer>
 <script>
-const fmt=n=>'₹'+parseFloat(n).toLocaleString('en-IN',{maximumFractionDigits:0});
+const fmt=n=>'?'+parseFloat(n).toLocaleString('en-IN',{maximumFractionDigits:0});
 document.getElementById('calcBtn').addEventListener('click',function(){
   const P=parseFloat(document.getElementById('loanAmt').value);
   const r=parseFloat(document.getElementById('loanRate').value)/12/100;
@@ -129,5 +139,11 @@ function o(){n.classList.add('open');document.body.style.overflow='hidden';}
 function cl(){n.classList.remove('open');document.body.style.overflow='';}
 h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
 </script>
+<script src="../assets/ads/ads-loader.js" defer></script>
+
+<!-- Adsterra Mobile Sticky (320x50) -->
+<div class="ad-container ad-320x50 ad-320x50-sticky ad-mobile-only">
+  <div id="adsterra-320x50"></div>
+</div>
 </body>
 </html>

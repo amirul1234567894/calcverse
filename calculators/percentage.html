@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Free Percentage Calculator Online – Find %, Increase & Decrease | CalcVerse</title>
+  <title>Percentage Calculator | Free % Increase & Decrease</title>
   <meta name="description" content="Calculate percentage of a number, percentage change, percentage increase or decrease, and reverse percentage instantly. Free and accurate online percentage calculator."/>
   <meta name="keywords" content="percentage calculator, percentage of a number, percentage change calculator, percentage increase calculator, how to calculate percentage"/>
   <meta name="robots" content="index, follow"/>
@@ -14,7 +14,6 @@
   {"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Percentage Calculator","url":"https://calc.autoflowa.in/calculators/percentage","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to calculate percentage?","acceptedAnswer":{"@type":"Answer","text":"Percentage equals part divided by whole multiplied by 100. For example 25 out of 50 is 50 percent."}},{"@type":"Question","name":"How to find percentage increase?","acceptedAnswer":{"@type":"Answer","text":"Percentage increase equals new value minus old value divided by old value multiplied by 100."}},{"@type":"Question","name":"What is percentage difference?","acceptedAnswer":{"@type":"Answer","text":"Percentage difference compares two values: difference divided by average of values, multiplied by 100."}},{"@type":"Question","name":"How to add tax percentage?","acceptedAnswer":{"@type":"Answer","text":"Multiply price by 1 plus tax rate divided by 100. For 18 percent tax on 100 rupees: 100 multiplied by 1.18 equals 118."}},{"@type":"Question","name":"Is this calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, free with multiple percentage calculation modes."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calc.autoflowa.in/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://calc.autoflowa.in/#calculators"},{"@type":"ListItem","position":3,"name":"Percentage Calculator","item":"https://calc.autoflowa.in/calculators/percentage"}]}]}
   </script>
   <link rel="stylesheet" href="../style.css"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-header">
@@ -30,6 +29,11 @@
     </button>
   </div>
 </header>
+<!-- Adsterra Top Banner (728x90 desktop) -->
+<div class="ad-container ad-728x90">
+  <div id="adsterra-728x90"></div>
+</div>
+
 <main>
 <div class="tool-page">
   <nav class="breadcrumb">
@@ -65,7 +69,7 @@ document.getElementById('calcBtn').addEventListener('click',function(){
   const to=parseFloat(document.getElementById('to').value);
   let html='';
   if(p && n){const r=(p/100)*n;html+=`<div class="result-row"><span class="result-row-label">${p}% of ${n}</span><span class="result-row-value" style="color:var(--cyan)">${r.toFixed(4).replace(/\.?0+$/,'')}</span></div>`;}
-  if(from && to){const chg=((to-from)/Math.abs(from))*100;html+=`<div class="result-row"><span class="result-row-label">% Change (${from} → ${to})</span><span class="result-row-value" style="color:${chg>=0?'var(--green)':'var(--red)'}">${chg>=0?'+':''}${chg.toFixed(2)}%</span></div>`;}
+  if(from && to){const chg=((to-from)/Math.abs(from))*100;html+=`<div class="result-row"><span class="result-row-label">% Change (${from} ? ${to})</span><span class="result-row-value" style="color:${chg>=0?'var(--green)':'var(--red)'}">${chg>=0?'+':''}${chg.toFixed(2)}%</span></div>`;}
   if(p && n){html+=`<div class="result-row"><span class="result-row-label">${n} is what % of ${p*n/p*100/n}?</span><span class="result-row-value">${((n/(p/100*n))*100).toFixed(2)}%... wait</span></div>`;}
   if(!html){alert('Enter at least one set of values.');return;}
   document.getElementById('pctBreakdown').innerHTML=html;
@@ -81,8 +85,8 @@ document.getElementById('calcBtn').addEventListener('click',function(){
   <h3>Common Percentage Calculations</h3>
   <ul>
     <li><strong>X% of Y:</strong> (X/100) × Y — e.g., 15% of 200 = 30</li>
-    <li><strong>Percentage change:</strong> ((New − Old) / |Old|) × 100</li>
-    <li><strong>Percentage increase:</strong> ((New − Old) / Old) × 100 when New > Old</li>
+    <li><strong>Percentage change:</strong> ((New - Old) / |Old|) × 100</li>
+    <li><strong>Percentage increase:</strong> ((New - Old) / Old) × 100 when New > Old</li>
     <li><strong>Reverse percentage:</strong> If Y is X% of Z, then Z = Y / (X/100)</li>
   </ul>
 </div>
@@ -94,6 +98,12 @@ document.getElementById('calcBtn').addEventListener('click',function(){
   </div>
 </div>
 
+</div>
+
+<!-- Adsterra In-Content (300x250) -->
+<div class="ad-container ad-300x250">
+  <span class="ad-label">Advertisement</span>
+  <div id="adsterra-300x250"></div>
 </div>
 </main>
 <footer class="site-footer">
@@ -125,5 +135,11 @@ function o(){n.classList.add('open');document.body.style.overflow='hidden';}
 function cl(){n.classList.remove('open');document.body.style.overflow='';}
 h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
 </script>
+<script src="../assets/ads/ads-loader.js" defer></script>
+
+<!-- Adsterra Mobile Sticky (320x50) -->
+<div class="ad-container ad-320x50 ad-320x50-sticky ad-mobile-only">
+  <div id="adsterra-320x50"></div>
+</div>
 </body>
 </html>

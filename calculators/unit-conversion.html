@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Unit Conversion Calculator – Length, Weight, Temperature | CalcVerse</title>
+  <title>Unit Converter | Length, Weight, Temperature Tool</title>
   <meta name="description" content="Free unit conversion calculator. Convert length, weight, temperature, area, volume, and speed units instantly. Supports metric and imperial."/>
   <meta name="keywords" content="unit conversion calculator, length converter, weight converter, temperature converter, metric to imperial, km to miles, kg to pounds"/>
   <meta name="robots" content="index, follow"/>
@@ -15,7 +15,6 @@
   </script>
   <link rel="stylesheet" href="../style.css"/>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-header">
@@ -31,6 +30,11 @@
     </button>
   </div>
 </header>
+<!-- Adsterra Top Banner (728x90 desktop) -->
+<div class="ad-container ad-728x90">
+  <div id="adsterra-728x90"></div>
+</div>
+
 <main>
   <div class="tool-page">
     <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Tools</span><span class="breadcrumb-sep">›</span><span>Unit Conversion</span></nav>
@@ -56,14 +60,14 @@
           <select id="fromUnit" class="input-field" style="cursor:pointer"></select>
         </div>
         <div class="input-group" style="display:flex;align-items:flex-end;justify-content:center">
-          <button id="swapBtn" style="padding:10px 20px;background:var(--surface);border:1px solid var(--border2);color:var(--cyan);border-radius:8px;cursor:pointer;font-size:1.2rem" title="Swap units">⇄</button>
+          <button id="swapBtn" style="padding:10px 20px;background:var(--surface);border:1px solid var(--border2);color:var(--cyan);border-radius:8px;cursor:pointer;font-size:1.2rem" title="Swap units">?</button>
         </div>
         <div class="input-group">
           <label for="toUnit">To Unit</label>
           <select id="toUnit" class="input-field" style="cursor:pointer"></select>
         </div>
       </div>
-      <button type="button" class="calc-btn" id="convertBtn">⚡ Convert</button>
+      <button type="button" class="calc-btn" id="convertBtn">? Convert</button>
       <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
         <div class="result-label">Result</div>
         <div class="result-main" id="resultVal">—</div>
@@ -89,12 +93,18 @@
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="basic.html" class="related-card">🔢 Basic Calculator</a>
+        <a href="basic.html" class="related-card">?? Basic Calculator</a>
         <a href="percentage.html" class="related-card">% Percentage</a>
-        <a href="scientific.html" class="related-card">🔬 Scientific Calculator</a>
+        <a href="scientific.html" class="related-card">?? Scientific Calculator</a>
       </div>
     </div>
   </div>
+
+<!-- Adsterra In-Content (300x250) -->
+<div class="ad-container ad-300x250">
+  <span class="ad-label">Advertisement</span>
+  <div id="adsterra-300x250"></div>
+</div>
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
@@ -177,5 +187,11 @@ function o(){n.classList.add('open');document.body.style.overflow='hidden';}
 function cl(){n.classList.remove('open');document.body.style.overflow='';}
 h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
 </script>
+<script src="../assets/ads/ads-loader.js" defer></script>
+
+<!-- Adsterra Mobile Sticky (320x50) -->
+<div class="ad-container ad-320x50 ad-320x50-sticky ad-mobile-only">
+  <div id="adsterra-320x50"></div>
+</div>
 </body>
 </html>

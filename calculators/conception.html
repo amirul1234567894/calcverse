@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Conception Date Calculator – When Did I Conceive? | CalcVerse</title>
+  <title>Conception Date Calculator | When Did I Conceive?</title>
   <meta name="description" content="Free conception date calculator. Find out when you likely conceived based on your due date or last period. Includes ovulation window."/>
   <meta name="keywords" content="conception date calculator, when did I conceive, conception calculator, ovulation calculator, conception date from due date"/>
   <meta name="robots" content="index, follow"/>
@@ -13,7 +13,6 @@
   </script>
   <link rel="stylesheet" href="../style.css"/>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-header">
@@ -29,6 +28,11 @@
     </button>
   </div>
 </header>
+<!-- Adsterra Top Banner (728x90 desktop) -->
+<div class="ad-container ad-728x90">
+  <div id="adsterra-728x90"></div>
+</div>
+
 <main>
   <div class="tool-page">
     <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Health</span><span class="breadcrumb-sep">›</span><span>Conception Calculator</span></nav>
@@ -38,7 +42,7 @@
       <p>Estimate when conception likely occurred based on your due date or last menstrual period.</p>
     </div>
     <div class="calculator-widget">
-      <div class="notice info"><span>ℹ️</span><span>Results are estimates. Actual conception may vary by a few days due to sperm survival and ovulation timing.</span></div>
+      <div class="notice info"><span>??</span><span>Results are estimates. Actual conception may vary by a few days due to sperm survival and ovulation timing.</span></div>
       <div class="calc-inputs">
         <div class="input-group">
           <label>Calculate From</label>
@@ -52,7 +56,7 @@
           <input type="date" id="dateInput" class="input-field"/>
         </div>
       </div>
-      <button type="button" class="calc-btn" id="calcBtn">🌸 Calculate Conception Date</button>
+      <button type="button" class="calc-btn" id="calcBtn">?? Calculate Conception Date</button>
       <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
         <div class="result-label">Estimated Conception Date</div>
         <div class="result-main" id="conceptionDate">—</div>
@@ -63,8 +67,8 @@
     <section class="seo-section">
       <h2>How Conception Date is Estimated</h2>
       <p>Conception occurs when a sperm fertilizes an egg, typically during the ovulation window — about 12–16 days after the first day of your last menstrual period in a 28-day cycle.</p>
-      <p><strong>From due date:</strong> Conception Date ≈ Due Date – 266 days (38 weeks)</p>
-      <p><strong>From LMP:</strong> Conception Date ≈ LMP + 14 days (for a 28-day cycle)</p>
+      <p><strong>From due date:</strong> Conception Date ˜ Due Date – 266 days (38 weeks)</p>
+      <p><strong>From LMP:</strong> Conception Date ˜ LMP + 14 days (for a 28-day cycle)</p>
       <p>Sperm can survive 3–5 days inside the female reproductive tract, so conception can occur a few days before or after the detected ovulation date.</p>
     </section>
     <section class="faq-section">
@@ -75,12 +79,18 @@
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="due-date.html" class="related-card">📅 Due Date Calculator</a>
-        <a href="pregnancy.html" class="related-card">🤰 Pregnancy Calculator</a>
-        <a href="age.html" class="related-card">🎂 Age Calculator</a>
+        <a href="due-date.html" class="related-card">?? Due Date Calculator</a>
+        <a href="pregnancy.html" class="related-card">?? Pregnancy Calculator</a>
+        <a href="age.html" class="related-card">?? Age Calculator</a>
       </div>
     </div>
   </div>
+
+<!-- Adsterra In-Content (300x250) -->
+<div class="ad-container ad-300x250">
+  <span class="ad-label">Advertisement</span>
+  <div id="adsterra-300x250"></div>
+</div>
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
@@ -109,7 +119,7 @@ document.getElementById('calcBtn').addEventListener('click',function(){
   document.getElementById('conceptionDate').textContent=fmt(conception);
   document.getElementById('conceptionRange').textContent=`Possible range: ${fmt(early)} – ${fmt(late)}`;
   document.getElementById('ovulWindow').innerHTML=`
-    <strong style="color:var(--violet2)">🌸 Fertile Window</strong><br>
+    <strong style="color:var(--violet2)">?? Fertile Window</strong><br>
     <span style="color:var(--text2);font-size:0.9rem">Ovulation likely occurred between <strong>${fmt(ovStart)}</strong> and <strong>${fmt(ovEnd)}</strong>.</span>
   `;
   document.getElementById('resultPanel').style.display='block';
@@ -135,5 +145,11 @@ function o(){n.classList.add('open');document.body.style.overflow='hidden';}
 function cl(){n.classList.remove('open');document.body.style.overflow='';}
 h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
 </script>
+<script src="../assets/ads/ads-loader.js" defer></script>
+
+<!-- Adsterra Mobile Sticky (320x50) -->
+<div class="ad-container ad-320x50 ad-320x50-sticky ad-mobile-only">
+  <div id="adsterra-320x50"></div>
+</div>
 </body>
 </html>

@@ -15,3 +15,7 @@ _backups_dedup/
 _backups_final/
 *.before-*
 *.FIXED-TEST.*
+
+# All backup folders (universal pattern)
+_backup_*/
+

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>GPA Calculator – Calculate Grade Point Average Online | CalcVerse</title>
+  <title>GPA Calculator | Free Grade Point Average Tool</title>
   <meta name="description" content="Free GPA calculator. Add your courses, grades, and credits to calculate your semester and cumulative GPA instantly."/>
   <meta name="keywords" content="GPA calculator, grade point average calculator, semester GPA calculator, cumulative GPA calculator, college GPA calculator"/>
   <meta name="robots" content="index, follow"/>
@@ -21,7 +21,6 @@
     .remove-btn:hover{background:rgba(244,63,142,0.25)}
     #coursesContainer .input-field{margin-bottom:0}
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-header">
@@ -37,6 +36,11 @@
     </button>
   </div>
 </header>
+<!-- Adsterra Top Banner (728x90 desktop) -->
+<div class="ad-container ad-728x90">
+  <div id="adsterra-728x90"></div>
+</div>
+
 <main>
   <div class="tool-page">
     <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Education</span><span class="breadcrumb-sep">›</span><span>GPA Calculator</span></nav>
@@ -54,7 +58,7 @@
       </div>
       <div id="coursesContainer"></div>
       <button type="button" id="addCourse" style="margin-top:8px;padding:8px 16px;background:var(--surface);border:1px dashed var(--border2);color:var(--cyan);border-radius:8px;cursor:pointer;font-size:0.85rem">+ Add Course</button>
-      <button type="button" class="calc-btn" id="calcBtn" style="margin-top:1rem">🎓 Calculate GPA</button>
+      <button type="button" class="calc-btn" id="calcBtn" style="margin-top:1rem">?? Calculate GPA</button>
       <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
         <div class="result-label">Semester GPA</div>
         <div class="result-main" id="gpaResult">—</div>
@@ -65,7 +69,7 @@
     <section class="seo-section">
       <h2>How GPA is Calculated</h2>
       <p>GPA (Grade Point Average) is calculated by multiplying each course's grade points by its credit hours, summing all those products, then dividing by total credit hours.</p>
-      <p>Formula: <strong>GPA = Σ(Grade Points × Credits) / Σ Credits</strong></p>
+      <p>Formula: <strong>GPA = S(Grade Points × Credits) / S Credits</strong></p>
       <h3>Standard Grade Scale (4.0)</h3>
       <p>A+/A = 4.0 | A- = 3.7 | B+ = 3.3 | B = 3.0 | B- = 2.7 | C+ = 2.3 | C = 2.0 | C- = 1.7 | D+ = 1.3 | D = 1.0 | D- = 0.7 | F = 0.0</p>
       <h3>What is a Good GPA?</h3>
@@ -80,12 +84,18 @@
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="grade.html" class="related-card">📝 Grade Calculator</a>
+        <a href="grade.html" class="related-card">?? Grade Calculator</a>
         <a href="percentage.html" class="related-card">% Percentage</a>
-        <a href="age.html" class="related-card">🎂 Age Calculator</a>
+        <a href="age.html" class="related-card">?? Age Calculator</a>
       </div>
     </div>
   </div>
+
+<!-- Adsterra In-Content (300x250) -->
+<div class="ad-container ad-300x250">
+  <span class="ad-label">Advertisement</span>
+  <div id="adsterra-300x250"></div>
+</div>
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
@@ -108,7 +118,7 @@ function addRow(name='',grade='A',cred=3){
     <input type="text" class="input-field course-name" placeholder="Course name" value="${name}"/>
     <select class="input-field course-grade" style="width:90px">${grades.map(g=>`<option value="${g}"${g===grade?' selected':''}>${g}</option>`).join('')}</select>
     <input type="number" class="input-field course-credits" style="width:70px" value="${cred}" min="0.5" max="6" step="0.5"/>
-    <button class="remove-btn" onclick="this.closest('.course-row').remove()">✕</button>
+    <button class="remove-btn" onclick="this.closest('.course-row').remove()">?</button>
   `;
   document.getElementById('coursesContainer').appendChild(div);
 }
@@ -161,5 +171,11 @@ function o(){n.classList.add('open');document.body.style.overflow='hidden';}
 function cl(){n.classList.remove('open');document.body.style.overflow='';}
 h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
 </script>
+<script src="../assets/ads/ads-loader.js" defer></script>
+
+<!-- Adsterra Mobile Sticky (320x50) -->
+<div class="ad-container ad-320x50 ad-320x50-sticky ad-mobile-only">
+  <div id="adsterra-320x50"></div>
+</div>
 </body>
 </html>

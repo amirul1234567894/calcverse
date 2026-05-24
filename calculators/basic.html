@@ -29,7 +29,6 @@
     .basic-btn.clr{color:var(--pink)}
     .basic-btn.zero{grid-column:span 2}
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-header">
@@ -45,6 +44,11 @@
     </button>
   </div>
 </header>
+<!-- Adsterra Top Banner (728x90 desktop) -->
+<div class="ad-container ad-728x90">
+  <div id="adsterra-728x90"></div>
+</div>
+
 <main>
   <div class="tool-page">
     <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Math</span><span class="breadcrumb-sep">›</span><span>Basic Calculator</span></nav>
@@ -71,7 +75,7 @@
           <button class="basic-btn" data-n="4">4</button>
           <button class="basic-btn" data-n="5">5</button>
           <button class="basic-btn" data-n="6">6</button>
-          <button class="basic-btn op" data-op="-">−</button>
+          <button class="basic-btn op" data-op="-">-</button>
           <button class="basic-btn" data-n="1">1</button>
           <button class="basic-btn" data-n="2">2</button>
           <button class="basic-btn" data-n="3">3</button>
@@ -84,19 +88,25 @@
     </div>
     <section class="seo-section">
       <h2>About This Calculator</h2>
-      <p>This free online basic calculator is designed for quick everyday calculations. It supports the four fundamental arithmetic operations: addition (+), subtraction (−), multiplication (×), and division (÷), as well as percentage calculations.</p>
+      <p>This free online basic calculator is designed for quick everyday calculations. It supports the four fundamental arithmetic operations: addition (+), subtraction (-), multiplication (×), and division (÷), as well as percentage calculations.</p>
       <h3>Keyboard Shortcuts</h3>
       <p>Type numbers directly, use + - * / for operators, Enter or = to calculate, Escape to clear, and Backspace to delete the last digit. Works exactly like a physical calculator.</p>
     </section>
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="scientific.html" class="related-card">🔬 Scientific Calculator</a>
+        <a href="scientific.html" class="related-card">?? Scientific Calculator</a>
         <a href="percentage.html" class="related-card">% Percentage</a>
-        <a href="unit-conversion.html" class="related-card">📐 Unit Conversion</a>
+        <a href="unit-conversion.html" class="related-card">?? Unit Conversion</a>
       </div>
     </div>
   </div>
+
+<!-- Adsterra In-Content (300x250) -->
+<div class="ad-container ad-300x250">
+  <span class="ad-label">Advertisement</span>
+  <div id="adsterra-300x250"></div>
+</div>
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
@@ -120,7 +130,7 @@ function appendN(n){
 function setOp(o){
   if(op&&!newInput){calc();}
   prev=cur;op=o;newInput=true;
-  exprEl.textContent=prev+' '+{'+':'+','-':'−','*':'×','/':'÷'}[op]+' ';
+  exprEl.textContent=prev+' '+{'+':'+','-':'-','*':'×','/':'÷'}[op]+' ';
 }
 function calc(){
   if(!op||!prev)return;
@@ -130,7 +140,7 @@ function calc(){
   else if(op==='-')r=a-b;
   else if(op==='*')r=a*b;
   else if(op==='/')r=b===0?'Error':a/b;
-  exprEl.textContent=prev+' '+{'+':'+','-':'−','*':'×','/':'÷'}[op]+' '+cur+' =';
+  exprEl.textContent=prev+' '+{'+':'+','-':'-','*':'×','/':'÷'}[op]+' '+cur+' =';
   cur=String(r);op=null;prev='';newInput=true;upd();
 }
 document.querySelectorAll('[data-n]').forEach(b=>b.addEventListener('click',()=>appendN(b.dataset.n)));
@@ -170,5 +180,11 @@ function o(){n.classList.add('open');document.body.style.overflow='hidden';}
 function cl(){n.classList.remove('open');document.body.style.overflow='';}
 h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
 </script>
+<script src="../assets/ads/ads-loader.js" defer></script>
+
+<!-- Adsterra Mobile Sticky (320x50) -->
+<div class="ad-container ad-320x50 ad-320x50-sticky ad-mobile-only">
+  <div id="adsterra-320x50"></div>
+</div>
 </body>
 </html>

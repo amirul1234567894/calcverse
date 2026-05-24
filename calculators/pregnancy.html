@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Pregnancy Calculator – Week by Week Guide & Due Date | CalcVerse</title>
+  <title>Pregnancy Calculator | Week by Week Due Date Tool</title>
   <meta name="description" content="Free pregnancy calculator. Find your current pregnancy week, trimester, and estimated due date. Week-by-week baby development milestones."/>
   <meta name="keywords" content="pregnancy calculator, pregnancy week calculator, how many weeks pregnant, pregnancy trimester calculator, due date calculator, pregnancy timeline"/>
   <meta name="robots" content="index, follow"/>
@@ -15,7 +15,6 @@
   </script>
   <link rel="stylesheet" href="../style.css"/>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-header">
@@ -31,6 +30,11 @@
     </button>
   </div>
 </header>
+<!-- Adsterra Top Banner (728x90 desktop) -->
+<div class="ad-container ad-728x90">
+  <div id="adsterra-728x90"></div>
+</div>
+
 <main>
   <div class="tool-page">
     <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Health</span><span class="breadcrumb-sep">›</span><span>Pregnancy Calculator</span></nav>
@@ -40,7 +44,7 @@
       <p>Find out how many weeks pregnant you are, which trimester you're in, and your estimated due date.</p>
     </div>
     <div class="calculator-widget">
-      <div class="notice info" role="note"><span>ℹ️</span><span>Results are estimates. Always consult your doctor for accurate pregnancy tracking.</span></div>
+      <div class="notice info" role="note"><span>??</span><span>Results are estimates. Always consult your doctor for accurate pregnancy tracking.</span></div>
       <div class="calc-inputs two-col">
         <div class="input-group">
           <label for="lmpDate">First Day of Last Period (LMP)</label>
@@ -53,7 +57,7 @@
           <span class="input-hint">Default: 28 days</span>
         </div>
       </div>
-      <button type="button" class="calc-btn" id="calcBtn">🤰 Calculate Pregnancy</button>
+      <button type="button" class="calc-btn" id="calcBtn">?? Calculate Pregnancy</button>
       <div class="result-panel" id="resultPanel" aria-live="polite" style="display:none">
         <div class="result-label">Gestational Age</div>
         <div class="result-main" id="weeks">—</div>
@@ -81,12 +85,18 @@
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="due-date.html" class="related-card">📅 Due Date Calculator</a>
-        <a href="conception.html" class="related-card">🌸 Conception Calculator</a>
-        <a href="bmi.html" class="related-card">⚖️ BMI Calculator</a>
+        <a href="due-date.html" class="related-card">?? Due Date Calculator</a>
+        <a href="conception.html" class="related-card">?? Conception Calculator</a>
+        <a href="bmi.html" class="related-card">?? BMI Calculator</a>
       </div>
     </div>
   </div>
+
+<!-- Adsterra In-Content (300x250) -->
+<div class="ad-container ad-300x250">
+  <span class="ad-label">Advertisement</span>
+  <div id="adsterra-300x250"></div>
+</div>
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
@@ -97,19 +107,19 @@
 </footer>
 <script>
 const milestones={
-  4:"💊 Start prenatal vitamins. Embryo is the size of a poppy seed.",
-  6:"💓 Heartbeat may be visible on ultrasound. Size of a lentil.",
-  8:"🧠 Brain and facial features forming. Size of a kidney bean.",
-  10:"🤏 All vital organs formed. Tiny fingers and toes visible.",
-  12:"👶 First trimester ends. Risk of miscarriage drops significantly.",
-  16:"🏃 Baby may start moving! Size of an avocado.",
-  20:"🩺 Mid-pregnancy anatomy scan. Size of a banana.",
-  24:"👂 Baby can hear sounds outside the womb. Viability milestone.",
-  28:"👁️ Third trimester begins. Baby opens eyes for first time.",
-  32:"🧠 Brain develops rapidly. Baby practices breathing movements.",
-  36:"🫁 Lungs nearly mature. Baby drops lower in preparation for birth.",
-  38:"✅ Full term! Baby could arrive any day now.",
-  40:"🎉 Due date! 50% of babies arrive this week."
+  4:"?? Start prenatal vitamins. Embryo is the size of a poppy seed.",
+  6:"?? Heartbeat may be visible on ultrasound. Size of a lentil.",
+  8:"?? Brain and facial features forming. Size of a kidney bean.",
+  10:"?? All vital organs formed. Tiny fingers and toes visible.",
+  12:"?? First trimester ends. Risk of miscarriage drops significantly.",
+  16:"?? Baby may start moving! Size of an avocado.",
+  20:"?? Mid-pregnancy anatomy scan. Size of a banana.",
+  24:"?? Baby can hear sounds outside the womb. Viability milestone.",
+  28:"??? Third trimester begins. Baby opens eyes for first time.",
+  32:"?? Brain develops rapidly. Baby practices breathing movements.",
+  36:"?? Lungs nearly mature. Baby drops lower in preparation for birth.",
+  38:"? Full term! Baby could arrive any day now.",
+  40:"?? Due date! 50% of babies arrive this week."
 };
 document.getElementById('calcBtn').addEventListener('click', function(){
   const lmp = new Date(document.getElementById('lmpDate').value);
@@ -159,5 +169,11 @@ function o(){n.classList.add('open');document.body.style.overflow='hidden';}
 function cl(){n.classList.remove('open');document.body.style.overflow='';}
 h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
 </script>
+<script src="../assets/ads/ads-loader.js" defer></script>
+
+<!-- Adsterra Mobile Sticky (320x50) -->
+<div class="ad-container ad-320x50 ad-320x50-sticky ad-mobile-only">
+  <div id="adsterra-320x50"></div>
+</div>
 </body>
 </html>

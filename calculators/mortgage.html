@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Mortgage Calculator – Monthly Payment & Amortization | CalcVerse</title>
+  <title>Mortgage Calculator | Monthly Payment & EMI 2026</title>
   <meta name="description" content="Free mortgage calculator. Calculate your monthly mortgage payment, total interest paid, and view full amortization schedule. Supports any loan term."/>
   <meta name="keywords" content="mortgage calculator, home loan calculator, monthly mortgage payment, mortgage amortization, home loan EMI calculator, house payment calculator"/>
   <meta name="robots" content="index, follow"/>
@@ -17,7 +17,6 @@
   </script>
   <link rel="stylesheet" href="../style.css"/>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-header">
@@ -33,6 +32,11 @@
     </button>
   </div>
 </header>
+<!-- Adsterra Top Banner (728x90 desktop) -->
+<div class="ad-container ad-728x90">
+  <div id="adsterra-728x90"></div>
+</div>
+
 <main>
   <div class="tool-page">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Finance</span><span class="breadcrumb-sep">›</span><span aria-current="page">Mortgage Calculator</span></nav>
@@ -44,7 +48,7 @@
     <div class="calculator-widget">
       <div class="calc-inputs two-col">
         <div class="input-group">
-          <label for="loanAmt">Loan Amount (₹ / $)</label>
+          <label for="loanAmt">Loan Amount (? / $)</label>
           <input type="number" id="loanAmt" class="input-field" placeholder="e.g. 5000000" min="10000" step="1000"/>
         </div>
         <div class="input-group">
@@ -60,7 +64,7 @@
           <input type="number" id="downPayment" class="input-field" placeholder="e.g. 500000" min="0" step="1000"/>
         </div>
       </div>
-      <button type="button" class="calc-btn" id="calcBtn">🏠 Calculate Mortgage</button>
+      <button type="button" class="calc-btn" id="calcBtn">?? Calculate Mortgage</button>
       <div class="result-panel" id="resultPanel" aria-live="polite" style="display:none">
         <div class="result-label">Monthly Payment</div>
         <div class="result-main" id="monthlyPayment">—</div>
@@ -101,12 +105,18 @@
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="emi.html" class="related-card">📅 EMI Calculator</a>
-        <a href="loan.html" class="related-card">💳 Loan Calculator</a>
-        <a href="interest.html" class="related-card">📈 Interest Calculator</a>
+        <a href="emi.html" class="related-card">?? EMI Calculator</a>
+        <a href="loan.html" class="related-card">?? Loan Calculator</a>
+        <a href="interest.html" class="related-card">?? Interest Calculator</a>
       </div>
     </div>
   </div>
+
+<!-- Adsterra In-Content (300x250) -->
+<div class="ad-container ad-300x250">
+  <span class="ad-label">Advertisement</span>
+  <div id="adsterra-300x250"></div>
+</div>
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
@@ -126,12 +136,12 @@ document.getElementById('calcBtn').addEventListener('click', function(){
   const M = P*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
   const totalPay = M*n;
   const totalInt = totalPay-P;
-  document.getElementById('monthlyPayment').textContent = '₹'+M.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',');
+  document.getElementById('monthlyPayment').textContent = '?'+M.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',');
   const grid = document.getElementById('resultGrid');
   grid.innerHTML = `
-    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Principal</div><div style="color:var(--cyan);font-weight:700">₹${P.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</div></div>
-    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Total Interest</div><div style="color:var(--pink);font-weight:700">₹${totalInt.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</div></div>
-    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Total Payment</div><div style="color:var(--green);font-weight:700">₹${totalPay.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Principal</div><div style="color:var(--cyan);font-weight:700">?${P.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Total Interest</div><div style="color:var(--pink);font-weight:700">?${totalInt.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Total Payment</div><div style="color:var(--green);font-weight:700">?${totalPay.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</div></div>
   `;
   const tbody = document.getElementById('scheduleBody');
   tbody.innerHTML='';
@@ -147,9 +157,9 @@ document.getElementById('calcBtn').addEventListener('click', function(){
     }
     const row=`<tr style="border-top:1px solid var(--border)">
       <td style="padding:8px;color:var(--text2)">Year ${y}</td>
-      <td style="padding:8px;text-align:center;color:var(--cyan)">₹${yPrincipal.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</td>
-      <td style="padding:8px;text-align:center;color:var(--pink)">₹${yInterest.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</td>
-      <td style="padding:8px;text-align:center">₹${Math.max(0,balance).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</td>
+      <td style="padding:8px;text-align:center;color:var(--cyan)">?${yPrincipal.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</td>
+      <td style="padding:8px;text-align:center;color:var(--pink)">?${yInterest.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</td>
+      <td style="padding:8px;text-align:center">?${Math.max(0,balance).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')}</td>
     </tr>`;
     tbody.insertAdjacentHTML('beforeend',row);
   }
@@ -176,5 +186,11 @@ function o(){n.classList.add('open');document.body.style.overflow='hidden';}
 function cl(){n.classList.remove('open');document.body.style.overflow='';}
 h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
 </script>
+<script src="../assets/ads/ads-loader.js" defer></script>
+
+<!-- Adsterra Mobile Sticky (320x50) -->
+<div class="ad-container ad-320x50 ad-320x50-sticky ad-mobile-only">
+  <div id="adsterra-320x50"></div>
+</div>
 </body>
 </html>

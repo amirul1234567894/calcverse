@@ -13,7 +13,6 @@
   </script>
   <link rel="stylesheet" href="../style.css"/>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-header">
@@ -29,6 +28,11 @@
     </button>
   </div>
 </header>
+<!-- Adsterra Top Banner (728x90 desktop) -->
+<div class="ad-container ad-728x90">
+  <div id="adsterra-728x90"></div>
+</div>
+
 <main>
   <div class="tool-page">
     <nav class="breadcrumb"><a href="../index.html">Home</a><span class="breadcrumb-sep">›</span><span>Finance</span><span class="breadcrumb-sep">›</span><span>Sales Tax Calculator</span></nav>
@@ -40,7 +44,7 @@
     <div class="calculator-widget">
       <div class="calc-inputs two-col">
         <div class="input-group">
-          <label for="price">Price (₹ / $)</label>
+          <label for="price">Price (? / $)</label>
           <input type="number" id="price" class="input-field" placeholder="e.g. 1000" min="0" step="0.01"/>
         </div>
         <div class="input-group">
@@ -56,7 +60,7 @@
           </div>
         </div>
       </div>
-      <button type="button" class="calc-btn" id="calcBtn">🧾 Calculate Tax</button>
+      <button type="button" class="calc-btn" id="calcBtn">?? Calculate Tax</button>
       <div class="result-panel" id="resultPanel" style="display:none" aria-live="polite">
         <div class="result-label">Total Amount</div>
         <div class="result-main" id="totalAmt">—</div>
@@ -74,11 +78,17 @@
       <h3>Related Calculators</h3>
       <div class="related-grid">
         <a href="percentage.html" class="related-card">% Percentage</a>
-        <a href="income-tax.html" class="related-card">📋 Income Tax</a>
-        <a href="loan.html" class="related-card">💳 Loan Calculator</a>
+        <a href="income-tax.html" class="related-card">?? Income Tax</a>
+        <a href="loan.html" class="related-card">?? Loan Calculator</a>
       </div>
     </div>
   </div>
+
+<!-- Adsterra In-Content (300x250) -->
+<div class="ad-container ad-300x250">
+  <span class="ad-label">Advertisement</span>
+  <div id="adsterra-300x250"></div>
+</div>
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
@@ -96,11 +106,11 @@ document.getElementById('calcBtn').addEventListener('click',function(){
   let preTax,taxAmt,total;
   if(incl){total=p;preTax=p/(1+r);taxAmt=p-preTax;}
   else{preTax=p;taxAmt=p*r;total=p+taxAmt;}
-  document.getElementById('totalAmt').textContent='₹'+total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',');
+  document.getElementById('totalAmt').textContent='?'+total.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',');
   document.getElementById('resultGrid').innerHTML=`
-    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Pre-Tax Price</div><div style="color:var(--cyan);font-weight:700">₹${preTax.toFixed(2)}</div></div>
-    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Tax Amount</div><div style="color:var(--pink);font-weight:700">₹${taxAmt.toFixed(2)}</div></div>
-    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Total Price</div><div style="color:var(--green);font-weight:700">₹${total.toFixed(2)}</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Pre-Tax Price</div><div style="color:var(--cyan);font-weight:700">?${preTax.toFixed(2)}</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Tax Amount</div><div style="color:var(--pink);font-weight:700">?${taxAmt.toFixed(2)}</div></div>
+    <div style="background:var(--surface);padding:1rem;border-radius:var(--radius)"><div style="color:var(--text2);font-size:0.8rem">Total Price</div><div style="color:var(--green);font-weight:700">?${total.toFixed(2)}</div></div>
   `;
   document.getElementById('resultPanel').style.display='block';
 });
@@ -125,5 +135,11 @@ function o(){n.classList.add('open');document.body.style.overflow='hidden';}
 function cl(){n.classList.remove('open');document.body.style.overflow='';}
 h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
 </script>
+<script src="../assets/ads/ads-loader.js" defer></script>
+
+<!-- Adsterra Mobile Sticky (320x50) -->
+<div class="ad-container ad-320x50 ad-320x50-sticky ad-mobile-only">
+  <div id="adsterra-320x50"></div>
+</div>
 </body>
 </html>

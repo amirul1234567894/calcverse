@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Free Interest Calculator – Simple & Compound Interest Online | CalcVerse</title>
+  <title>Interest Calculator | Simple & Compound Free Tool</title>
   <meta name="description" content="Calculate simple interest and compound interest on savings or loans. See interest earned over any period, with year-by-year growth breakdown."/>
   <meta name="keywords" content="interest calculator, compound interest calculator, simple interest calculator, savings interest calculator, interest rate calculator"/>
   <meta name="robots" content="index, follow"/>
@@ -14,7 +14,6 @@
   {"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Interest Calculator","url":"https://calc.autoflowa.in/calculators/interest","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Simple vs compound interest?","acceptedAnswer":{"@type":"Answer","text":"Simple interest is calculated on principal only. Compound interest is calculated on principal plus accumulated interest."}},{"@type":"Question","name":"How is compound interest calculated?","acceptedAnswer":{"@type":"Answer","text":"Formula: A equals P times (1 plus r divided by n) raised to nt, where P is principal, r is rate, n is frequency, t is time."}},{"@type":"Question","name":"What is compounding frequency?","acceptedAnswer":{"@type":"Answer","text":"How often interest is added to principal: yearly, half-yearly, quarterly, monthly, or daily."}},{"@type":"Question","name":"Which gives more returns?","acceptedAnswer":{"@type":"Answer","text":"Compound interest always gives more returns than simple interest over the same period."}},{"@type":"Question","name":"Can I calculate FD returns?","acceptedAnswer":{"@type":"Answer","text":"Yes, this calculator works for fixed deposits, savings, and investments using compound interest."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calc.autoflowa.in/"},{"@type":"ListItem","position":2,"name":"Finance","item":"https://calc.autoflowa.in/#calculators"},{"@type":"ListItem","position":3,"name":"Interest Calculator","item":"https://calc.autoflowa.in/calculators/interest"}]}]}
   </script>
   <link rel="stylesheet" href="../style.css"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510553016832156" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-header">
@@ -30,6 +29,11 @@
     </button>
   </div>
 </header>
+<!-- Adsterra Top Banner (728x90 desktop) -->
+<div class="ad-container ad-728x90">
+  <div id="adsterra-728x90"></div>
+</div>
+
 <main>
 <div class="tool-page">
   <nav class="breadcrumb">
@@ -47,7 +51,7 @@
   <div class="calc-inputs">
     <div class="calc-inputs two-col" style="margin:0">
       <div class="input-group">
-        <label for="principal">Principal Amount (₹)</label>
+        <label for="principal">Principal Amount (?)</label>
         <input type="number" id="principal" class="input-field" placeholder="e.g. 100000" min="1"/>
       </div>
       <div class="input-group">
@@ -78,7 +82,7 @@
       </select>
     </div>
   </div>
-  <button class="calc-btn" id="calcBtn">📈 Calculate Interest</button>
+  <button class="calc-btn" id="calcBtn">?? Calculate Interest</button>
   <div class="result-panel" id="resultPanel">
     <div class="result-label">Total Interest Earned</div>
     <div class="result-main" id="intResult">—</div>
@@ -86,7 +90,7 @@
   </div>
 </div>
 <script>
-const fmt=n=>'₹'+parseFloat(n).toLocaleString('en-IN',{maximumFractionDigits:2});
+const fmt=n=>'?'+parseFloat(n).toLocaleString('en-IN',{maximumFractionDigits:2});
 document.getElementById('type').addEventListener('change',function(){
   document.getElementById('compoundFreqWrap').style.display=this.value==='compound'?'flex':'none';
 });
@@ -120,7 +124,7 @@ document.getElementById('calcBtn').addEventListener('click',function(){
   <div class="formula-box">A = P × (1 + r/n)^(n×t)</div>
   <p>Where n = compounding frequency per year (12 for monthly, 4 for quarterly, etc.).</p>
   <h3>The Power of Compound Interest</h3>
-  <p>Einstein reportedly called compound interest "the eighth wonder of the world." A ₹1,00,000 investment at 8% compounded annually for 20 years grows to ₹4,66,096 — that's ₹3,66,096 in interest alone.</p>
+  <p>Einstein reportedly called compound interest "the eighth wonder of the world." A ?1,00,000 investment at 8% compounded annually for 20 years grows to ?4,66,096 — that's ?3,66,096 in interest alone.</p>
 </div>
 <div class="seo-section">
   <h2>Frequently Asked Questions</h2>
@@ -132,11 +136,17 @@ document.getElementById('calcBtn').addEventListener('click',function(){
 <div class="seo-section">
   <h2>Related Calculators</h2>
   <div class="related-grid">
-    <a href="emi.html" class="related-card"><span class="related-icon">💳</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">Monthly loan payment</div></div></a>
-    <a href="loan.html" class="related-card"><span class="related-icon">🏦</span><div><div class="related-name">Loan Calculator</div><div class="related-desc">Compare loan options</div></div></a>
+    <a href="emi.html" class="related-card"><span class="related-icon">??</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">Monthly loan payment</div></div></a>
+    <a href="loan.html" class="related-card"><span class="related-icon">??</span><div><div class="related-name">Loan Calculator</div><div class="related-desc">Compare loan options</div></div></a>
   </div>
 </div>
 
+</div>
+
+<!-- Adsterra In-Content (300x250) -->
+<div class="ad-container ad-300x250">
+  <span class="ad-label">Advertisement</span>
+  <div id="adsterra-300x250"></div>
 </div>
 </main>
 <footer class="site-footer">
@@ -168,5 +178,11 @@ function o(){n.classList.add('open');document.body.style.overflow='hidden';}
 function cl(){n.classList.remove('open');document.body.style.overflow='';}
 h.addEventListener('click',o);c.addEventListener('click',cl);n.addEventListener('click',function(e){if(e.target===n)cl();});
 </script>
+<script src="../assets/ads/ads-loader.js" defer></script>
+
+<!-- Adsterra Mobile Sticky (320x50) -->
+<div class="ad-container ad-320x50 ad-320x50-sticky ad-mobile-only">
+  <div id="adsterra-320x50"></div>
+</div>
 </body>
 </html>
