@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>BMR Calculator | Daily Calorie Needs Tool 2026</title>
-  <meta name="description" content="Calculate your Basal Metabolic Rate (BMR) and daily calorie needs. Find out exactly how many calories your body burns at rest using the Mifflin-St Jeor equation."/>
+  <meta name="description" content="Free BMR calculator with TDEE. Calculate basal metabolic rate, daily calorie needs for weight loss, maintenance, muscle gain. Mifflin-St Jeor formula. No signup."/>
   <meta name="keywords" content="BMR calculator, basal metabolic rate, daily calorie calculator, TDEE calculator, calories burned at rest"/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://calc.autoflowa.in/calculators/bmr"/>
@@ -114,20 +114,148 @@ document.getElementById('calcBtn').addEventListener('click',function(){
 </script>
 
 <div class="seo-section">
+  <h2>What Is a BMR Calculator?</h2>
+  <p>A BMR (Basal Metabolic Rate) calculator estimates the number of calories your body burns at complete rest to maintain essential life functions like breathing, blood circulation, cell production, and brain activity. Think of it as your body's "idle fuel consumption" &mdash; what you'd burn lying motionless in bed all day.</p>
+  <p>Understanding your BMR is foundational for weight loss, muscle gain, athletic performance, and general health. It forms the baseline from which Total Daily Energy Expenditure (TDEE) is calculated, factoring in your activity level. Fitness coaches, nutritionists, bodybuilders, and weight-loss seekers worldwide use BMR as the starting point for any calorie strategy.</p>
+  <p>For related health calculations, use our <a href="bmi.html">BMI Calculator</a> to assess weight category and <a href="age.html">Age Calculator</a> for precise age in days.</p>
+
   <h2>What Is Basal Metabolic Rate (BMR)?</h2>
-  <p>Your Basal Metabolic Rate is the number of calories your body needs to maintain basic physiological functions — breathing, circulation, cell production, and organ function — while completely at rest. BMR accounts for 60–70% of total daily energy expenditure for most people.</p>
-  <h3>The Mifflin-St Jeor Formula</h3>
-  <div class="formula-box">Men: BMR = (10 × weight kg) + (6.25 × height cm) - (5 × age) + 5<br>Women: BMR = (10 × weight kg) + (6.25 × height cm) - (5 × age) - 161</div>
-  <h3>TDEE vs BMR</h3>
-  <p>TDEE (Total Daily Energy Expenditure) = BMR × Activity Multiplier. This is the number of calories you actually need each day. Eating below your TDEE causes weight loss; eating above causes weight gain.</p>
-  <h3>How to Use Your BMR for Weight Management</h3>
+  <p>BMR represents the minimum calories your body needs to sustain vital functions while you're at complete rest. It accounts for approximately 60-75% of total daily calorie expenditure in sedentary individuals.</p>
+  <p>Several factors influence BMR:</p>
   <ul>
-    <li>To lose weight: eat 300–500 kcal below your TDEE</li>
-    <li>To gain muscle: eat 300–500 kcal above your TDEE with resistance training</li>
-    <li>To maintain weight: eat at your TDEE</li>
+    <li><strong>Age:</strong> BMR decreases approximately 1-2% per decade after age 20 due to muscle loss</li>
+    <li><strong>Gender:</strong> Men typically have 5-10% higher BMR than women due to greater muscle mass</li>
+    <li><strong>Body composition:</strong> Muscle burns more calories than fat at rest (3x more per pound)</li>
+    <li><strong>Height &amp; Weight:</strong> Larger bodies require more energy to maintain</li>
+    <li><strong>Genetics:</strong> Some people naturally have faster or slower metabolisms</li>
+    <li><strong>Hormones:</strong> Thyroid disorders can dramatically alter BMR</li>
+    <li><strong>Climate:</strong> Cold environments slightly increase BMR</li>
   </ul>
-</div>
-<div class="seo-section">
+
+  <h3>The Mifflin-St Jeor Formula (Most Accurate)</h3>
+  <p>The Mifflin-St Jeor equation, developed in 1990, is the most accurate BMR formula validated by modern research. It replaced the older Harris-Benedict equation:</p>
+  <p style="text-align:center;font-size:1.05em;padding:15px;background:rgba(255,255,255,0.05);border-radius:8px;margin:15px 0;"><strong>Men:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) &minus; (5 &times; age) + 5</p>
+  <p style="text-align:center;font-size:1.05em;padding:15px;background:rgba(255,255,255,0.05);border-radius:8px;margin:15px 0;"><strong>Women:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) &minus; (5 &times; age) &minus; 161</p>
+
+  <h3>Example Calculation</h3>
+  <p>A 30-year-old man weighing 75 kg and 175 cm tall:</p>
+  <p>BMR = (10 &times; 75) + (6.25 &times; 175) &minus; (5 &times; 30) + 5</p>
+  <p>BMR = 750 + 1093.75 &minus; 150 + 5 = <strong>1,698.75 calories/day</strong></p>
+  <p>This means his body burns about 1,700 calories daily even if he doesn't move at all.</p>
+
+  <h3>Other BMR Formulas</h3>
+  <table style="width:100%;border-collapse:collapse;margin:15px 0;">
+    <thead>
+      <tr style="background:rgba(255,255,255,0.08);">
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Formula</th>
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Year</th>
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Accuracy</th>
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Best For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Mifflin-St Jeor</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">1990</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Highest (within 10%)</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">General population</td></tr>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Harris-Benedict (Revised)</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">1984</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Good (within 15%)</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Historical reference</td></tr>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Katch-McArdle</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">1996</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Excellent (if lean mass known)</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Athletes, bodybuilders</td></tr>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Cunningham</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">1980</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Good for athletes</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">High muscle mass</td></tr>
+    </tbody>
+  </table>
+
+  <h2>BMR vs TDEE: Understanding the Difference</h2>
+  <p>BMR is what you burn at rest. TDEE (Total Daily Energy Expenditure) includes all activities. To get your actual daily calorie needs, multiply your BMR by an activity multiplier:</p>
+  <table style="width:100%;border-collapse:collapse;margin:15px 0;">
+    <thead>
+      <tr style="background:rgba(255,255,255,0.08);">
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Activity Level</th>
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Description</th>
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Multiplier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Sedentary</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Desk job, no exercise</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">BMR &times; 1.2</td></tr>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Lightly Active</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Light exercise 1-3 days/week</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">BMR &times; 1.375</td></tr>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Moderately Active</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Moderate exercise 3-5 days/week</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">BMR &times; 1.55</td></tr>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Very Active</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Hard exercise 6-7 days/week</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">BMR &times; 1.725</td></tr>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Extra Active</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Hard exercise + physical job</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">BMR &times; 1.9</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Example:</strong> The man from earlier (BMR 1,700) with moderate activity needs: 1,700 &times; 1.55 = <strong>2,635 calories/day</strong> to maintain weight.</p>
+
+  <h2>How to Use Your BMR for Weight Management</h2>
+
+  <h3>Weight Loss Strategy</h3>
+  <p>Create a calorie deficit below TDEE. Standard recommendations:</p>
+  <ul>
+    <li><strong>Mild deficit (500 cal/day):</strong> Lose 0.45 kg (1 lb) per week &mdash; sustainable long-term</li>
+    <li><strong>Moderate deficit (750 cal/day):</strong> Lose 0.7 kg (1.5 lb) per week &mdash; faster but harder</li>
+    <li><strong>Aggressive deficit (1000 cal/day):</strong> Lose 0.9 kg (2 lb) per week &mdash; not recommended long-term</li>
+  </ul>
+  <p>Never go below your BMR for extended periods. Eating less than BMR causes metabolic adaptation, muscle loss, and rebound weight gain.</p>
+
+  <h3>Weight Gain (Muscle Building)</h3>
+  <p>Create a calorie surplus above TDEE:</p>
+  <ul>
+    <li><strong>Lean bulk (250-300 cal/day surplus):</strong> Gain 0.25 kg per week with minimal fat</li>
+    <li><strong>Standard bulk (500 cal/day surplus):</strong> Gain 0.45 kg per week</li>
+    <li><strong>Aggressive bulk (750+ cal/day surplus):</strong> Faster gains with more fat accumulation</li>
+  </ul>
+
+  <h3>Weight Maintenance</h3>
+  <p>Simply eat at your TDEE. Monitor weight weekly. If trending up or down unexpectedly, adjust intake by 100-200 calories.</p>
+
+  <h2>Macronutrient Distribution Based on BMR</h2>
+  <p>Once you know your TDEE, plan macros (protein/carbs/fats):</p>
+  <table style="width:100%;border-collapse:collapse;margin:15px 0;">
+    <thead>
+      <tr style="background:rgba(255,255,255,0.08);">
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Goal</th>
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Protein</th>
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Carbs</th>
+        <th style="padding:10px;border:1px solid rgba(255,255,255,0.1);text-align:left;">Fats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Weight Loss</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">35-40%</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">30-35%</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">25-30%</td></tr>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Maintenance</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">25-30%</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">40-50%</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">25-30%</td></tr>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Muscle Gain</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">25-35%</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">45-55%</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">20-25%</td></tr>
+      <tr><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">Athletic Performance</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">20-25%</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">55-65%</td><td style="padding:8px;border:1px solid rgba(255,255,255,0.1);">15-25%</td></tr>
+    </tbody>
+  </table>
+  <p>Protein needs: 1.6-2.2 grams per kg of body weight for muscle building, 1.2-1.6 g/kg for general health.</p>
+
+  <h2>How to Increase Your BMR Naturally</h2>
+  <ul>
+    <li><strong>Build muscle:</strong> Each pound of muscle burns 6-10 calories/day at rest. Strength training 3-4 times weekly delivers measurable BMR increases over 6+ months.</li>
+    <li><strong>Eat enough protein:</strong> Higher thermic effect of food (TEF) &mdash; protein requires 20-30% of its calories to digest vs 5-10% for carbs/fats.</li>
+    <li><strong>Stay hydrated:</strong> Even mild dehydration reduces metabolism by 2-3%. Drink 35 ml per kg body weight daily.</li>
+    <li><strong>Get quality sleep:</strong> Sleep deprivation reduces BMR by 5-20% within just a few days.</li>
+    <li><strong>Eat regularly:</strong> Severe calorie restriction triggers "starvation mode" that lowers BMR.</li>
+    <li><strong>Manage stress:</strong> Chronic cortisol elevation slows metabolism and promotes fat storage.</li>
+    <li><strong>Cold exposure:</strong> Brief cold showers or cool environments stimulate brown fat activity.</li>
+    <li><strong>Green tea &amp; coffee:</strong> Caffeine boosts metabolism temporarily by 3-11%.</li>
+  </ul>
+
+  <h2>How to Use This BMR Calculator</h2>
+  <ol>
+    <li><strong>Enter your age</strong> in years</li>
+    <li><strong>Select your gender</strong> (male or female)</li>
+    <li><strong>Input your weight</strong> (kg or lbs)</li>
+    <li><strong>Enter your height</strong> (cm or inches)</li>
+    <li><strong>Choose activity level</strong> for TDEE calculation</li>
+    <li><strong>View results</strong> &mdash; BMR, TDEE, and calorie targets for different goals</li>
+  </ol>
+  <p>Use the BMR result as a starting point. Track weight weekly for 2-3 weeks, then adjust intake based on actual results. Individual metabolism varies up to 10-15% from formula estimates.</p>
+
+  <h2>Common BMR Mistakes</h2>
+  <ul>
+    <li><strong>Overestimating activity level:</strong> Most people underestimate sedentary time and overestimate exercise calories</li>
+    <li><strong>Relying solely on BMR:</strong> Real-world calorie needs vary &mdash; track and adjust</li>
+    <li><strong>Cutting calories too aggressively:</strong> Going below 1,200 (women) or 1,500 (men) is rarely sustainable</li>
+    <li><strong>Ignoring body composition:</strong> Muscular individuals need more calories than formulas suggest</li>
+    <li><strong>Not recalculating:</strong> Update BMR every 5-10 kg weight change or after major lifestyle shifts</li>
+    <li><strong>Trusting calorie counters blindly:</strong> Food labels can be off by 20-25%; exercise trackers often inflate burns</li>
+  </ul>
+
   <h2>Frequently Asked Questions</h2>
   <div class="faq-list">
     <details class="faq-item"><summary>Which BMR formula is most accurate?</summary><div class="faq-body">The Mifflin-St Jeor equation (used here) is considered the most accurate for most adults. The Katch-McArdle formula is more accurate if you know your body fat percentage.</div></details>
