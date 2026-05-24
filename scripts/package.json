@@ -1,11 +1,10 @@
-{
+﻿{
   "name": "calcverse-automation",
   "version": "1.0.0",
-  "description": "CalcVerse SEO automation - IndexNow ping, AI blog generation, Telegram notifications",
+  "description": "CalcVerse SEO automation - IndexNow ping for Bing/Yandex",
   "type": "module",
   "scripts": {
     "indexnow": "node indexnow-ping.js",
-    "blog": "node auto-blog-publish.js",
     "test": "node indexnow-ping.js --test"
   },
   "dependencies": {
