@@ -44,7 +44,7 @@
       <p>Find out how many weeks pregnant you are, which trimester you're in, and your estimated due date.</p>
     </div>
     <div class="calculator-widget">
-      <div class="notice info" role="note"><span>??</span><span>Results are estimates. Always consult your doctor for accurate pregnancy tracking.</span></div>
+      <div class="notice info" role="note"><span>&#9888;&#65039;</span><span>Results are estimates. Always consult your doctor for accurate pregnancy tracking.</span></div>
       <div class="calc-inputs two-col">
         <div class="input-group">
           <label for="lmpDate">First Day of Last Period (LMP)</label>
@@ -57,7 +57,7 @@
           <span class="input-hint">Default: 28 days</span>
         </div>
       </div>
-      <button type="button" class="calc-btn" id="calcBtn">?? Calculate Pregnancy</button>
+      <button type="button" class="calc-btn" id="calcBtn">&#128290; Calculate Pregnancy</button>
       <div class="result-panel" id="resultPanel" aria-live="polite" style="display:none">
         <div class="result-label">Gestational Age</div>
         <div class="result-main" id="weeks">—</div>
@@ -205,9 +205,9 @@
     <div class="related-calcs">
       <h3>Related Calculators</h3>
       <div class="related-grid">
-        <a href="due-date.html" class="related-card">?? Due Date Calculator</a>
-        <a href="conception.html" class="related-card">?? Conception Calculator</a>
-        <a href="bmi.html" class="related-card">?? BMI Calculator</a>
+        <a href="due-date.html" class="related-card">&#128119; Due Date Calculator</a>
+        <a href="conception.html" class="related-card">&#128119; Conception Calculator</a>
+        <a href="bmi.html" class="related-card">&#127939; BMI Calculator</a>
       </div>
     </div>
   </div>
@@ -227,19 +227,19 @@
 </footer>
 <script>
 const milestones={
-  4:"?? Start prenatal vitamins. Embryo is the size of a poppy seed.",
-  6:"?? Heartbeat may be visible on ultrasound. Size of a lentil.",
-  8:"?? Brain and facial features forming. Size of a kidney bean.",
-  10:"?? All vital organs formed. Tiny fingers and toes visible.",
-  12:"?? First trimester ends. Risk of miscarriage drops significantly.",
-  16:"?? Baby may start moving! Size of an avocado.",
-  20:"?? Mid-pregnancy anatomy scan. Size of a banana.",
-  24:"?? Baby can hear sounds outside the womb. Viability milestone.",
-  28:"??? Third trimester begins. Baby opens eyes for first time.",
-  32:"?? Brain develops rapidly. Baby practices breathing movements.",
-  36:"?? Lungs nearly mature. Baby drops lower in preparation for birth.",
+  4:"&#127793; Start prenatal vitamins. Embryo is the size of a poppy seed.",
+  6:"&#128147; Heartbeat may be visible on ultrasound. Size of a lentil.",
+  8:"&#129504; Brain and facial features forming. Size of a kidney bean.",
+  10:"&#128118; All vital organs formed. Tiny fingers and toes visible.",
+  12:"&#127881; First trimester ends. Risk of miscarriage drops significantly.",
+  16:"&#128119; Baby may start moving! Size of an avocado.",
+  20:"&#129382; Mid-pregnancy anatomy scan. Size of a banana.",
+  24:"&#128266; Baby can hear sounds outside the womb. Viability milestone.",
+  28:"&#128064; Third trimester begins. Baby opens eyes for first time.",
+  32:"&#129504; Brain develops rapidly. Baby practices breathing movements.",
+  36:"&#127925; Lungs nearly mature. Baby drops lower in preparation for birth.",
   38:"? Full term! Baby could arrive any day now.",
-  40:"?? Due date! 50% of babies arrive this week."
+  40:"&#127881; Due date! 50% of babies arrive this week."
 };
 document.getElementById('calcBtn').addEventListener('click', function(){
   const lmp = new Date(document.getElementById('lmpDate').value);
