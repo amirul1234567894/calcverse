@@ -1,4 +1,4 @@
-﻿{
+{
   "cleanUrls": true,
   "redirects": [
     { "source": "/how-to-calculate-bmi-correctly", "destination": "/blog/how-to-calculate-bmi-correctly", "permanent": true },
