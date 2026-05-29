@@ -1,5 +1,10 @@
-{
+﻿{
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/how-to-calculate-bmi-correctly", "destination": "/blog/how-to-calculate-bmi-correctly", "permanent": true },
+    { "source": "/age-calculator-by-date-of-birth", "destination": "/blog/age-calculator-by-date-of-birth", "permanent": true },
+    { "source": "/emi-calculator-explained", "destination": "/blog/emi-calculator-explained", "permanent": true }
+  ],
   "trailingSlash": false,
   "headers": [
     {
