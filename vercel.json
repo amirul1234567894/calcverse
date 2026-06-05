@@ -1,57 +1,26 @@
-﻿{
-    "cleanUrls":  true,
-    "trailingSlash":  false,
-    "headers":  [
-                    {
-                        "headers":  [
-                                        {
-                                            "key":  "Strict-Transport-Security",
-                                            "value":  "max-age=63072000; includeSubDomains; preload"
-                                        },
-                                        {
-                                            "key":  "X-Content-Type-Options",
-                                            "value":  "nosniff"
-                                        },
-                                        {
-                                            "key":  "X-Frame-Options",
-                                            "value":  "SAMEORIGIN"
-                                        },
-                                        {
-                                            "key":  "Referrer-Policy",
-                                            "value":  "strict-origin-when-cross-origin"
-                                        },
-                                        {
-                                            "key":  "Content-Security-Policy",
-                                            "value":  "default-src \u0027self\u0027; script-src \u0027self\u0027 \u0027unsafe-inline\u0027 \u0027unsafe-eval\u0027 https:; style-src \u0027self\u0027 \u0027unsafe-inline\u0027 https://fonts.googleapis.com; font-src \u0027self\u0027 data: https://fonts.gstatic.com; img-src \u0027self\u0027 data: blob: https: http:; connect-src \u0027self\u0027 https:; frame-src \u0027self\u0027 https:; object-src \u0027none\u0027;"
-                                        }
-                                    ],
-                        "source":  "/(.*)"
-                    },
-                    {
-                        "headers":  [
-                                        {
-                                            "key":  "Cache-Control",
-                                            "value":  "public, max-age=31536000, immutable"
-                                        }
-                                    ],
-                        "source":  "/assets/(.*)"
-                    }
-                ],
-    "redirects":  [
-                      {
-                          "destination":  "/blog/how-to-calculate-bmi-correctly",
-                          "permanent":  true,
-                          "source":  "/how-to-calculate-bmi-correctly"
-                      },
-                      {
-                          "destination":  "/blog/age-calculator-by-date-of-birth",
-                          "permanent":  true,
-                          "source":  "/age-calculator-by-date-of-birth"
-                      },
-                      {
-                          "destination":  "/blog/emi-calculator-explained",
-                          "permanent":  true,
-                          "source":  "/emi-calculator-explained"
-                      }
-                  ]
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/how-to-calculate-bmi-correctly", "destination": "/blog/how-to-calculate-bmi-correctly", "permanent": true },
+    { "source": "/age-calculator-by-date-of-birth", "destination": "/blog/age-calculator-by-date-of-birth", "permanent": true },
+    { "source": "/emi-calculator-explained", "destination": "/blog/emi-calculator-explained", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
 }
