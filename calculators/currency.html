@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Currency Converter | INR USD EUR GBP Exchange Rate 2026</title>
+  <meta name="description" content="Free currency converter India 2026. Convert INR to USD, EUR, GBP, AED, SGD and more. Reference exchange rates for Indian Rupee. No signup needed."/>
+  <meta name="keywords" content="currency converter India, INR to USD converter, dollar to rupee, currency exchange rate India 2026, forex calculator"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calc.autoflowa.in/calculators/currency"/>
+  <meta property="og:title" content="Currency Converter - INR USD EUR Exchange Rate"/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Currency Converter","url":"https://calc.autoflowa.in/calculators/currency","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is USD to INR rate today?","acceptedAnswer":{"@type":"Answer","text":"The USD to INR exchange rate fluctuates daily. In 2026, 1 USD is approximately 83 to 85 INR. Check your bank for the exact current rate."}},{"@type":"Question","name":"How to convert USD to INR?","acceptedAnswer":{"@type":"Answer","text":"Multiply the USD amount by the current exchange rate. If 1 USD equals 84 INR, then 100 USD equals 8400 INR. Our converter does this automatically."}},{"@type":"Question","name":"Where to get best forex rates in India?","acceptedAnswer":{"@type":"Answer","text":"Authorized Money Changers and banks offer better rates than airport kiosks. Compare rates across banks before exchanging large amounts."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calc.autoflowa.in/"},{"@type":"ListItem","position":2,"name":"Finance","item":"https://calc.autoflowa.in/#calculators"},{"@type":"ListItem","position":3,"name":"Currency Converter","item":"https://calc.autoflowa.in/calculators/currency"}]}]}
+  </script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo" aria-label="CalcVerse Home">
+      <div class="logo-mark">C</div>
+      <span class="logo-text">Calc<span>Verse</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">&rsaquo;</span>
+      <a href="../index.html#calculators">Finance</a>
+      <span class="breadcrumb-sep">&rsaquo;</span>
+      <span aria-current="page">Currency Converter</span>
+    </nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Finance Calculator</div>
+      <h1>Currency Converter</h1>
+      <p>Convert between Indian Rupee and major world currencies. Reference rates for INR, USD, EUR, GBP, AED, SGD and more.</p>
+    </div>
+    <div class="calculator-widget">
+      <div class="notice info" role="note">
+        <span>&#8505;&#65039;</span>
+        <span>Rates shown are approximate reference rates. Always verify with your bank before transacting.</span>
+      </div>
+      <div class="calc-inputs two-col" style="margin-top:16px">
+        <div class="input-group">
+          <label for="cAmt">Amount</label>
+          <input type="number" id="cAmt" class="input-field" placeholder="e.g. 100" min="0" value="100"/>
+        </div>
+        <div class="input-group">
+          <label for="cFrom">From Currency</label>
+          <select id="cFrom" class="input-field">
+            <option value="84.2" data-code="USD">USD - US Dollar</option>
+            <option value="91.5" data-code="EUR">EUR - Euro</option>
+            <option value="107.3" data-code="GBP">GBP - British Pound</option>
+            <option value="1" data-code="INR" selected>INR - Indian Rupee</option>
+            <option value="22.9" data-code="AED">AED - UAE Dirham</option>
+            <option value="63.1" data-code="SGD">SGD - Singapore Dollar</option>
+            <option value="62.4" data-code="CAD">CAD - Canadian Dollar</option>
+            <option value="55.8" data-code="AUD">AUD - Australian Dollar</option>
+            <option value="0.56" data-code="JPY">JPY - Japanese Yen</option>
+            <option value="11.6" data-code="CNY">CNY - Chinese Yuan</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-group" style="margin-top:12px">
+        <label for="cTo">To Currency</label>
+        <select id="cTo" class="input-field">
+          <option value="84.2" data-code="USD" selected>USD - US Dollar</option>
+          <option value="91.5" data-code="EUR">EUR - Euro</option>
+          <option value="107.3" data-code="GBP">GBP - British Pound</option>
+          <option value="1" data-code="INR">INR - Indian Rupee</option>
+          <option value="22.9" data-code="AED">AED - UAE Dirham</option>
+          <option value="63.1" data-code="SGD">SGD - Singapore Dollar</option>
+          <option value="62.4" data-code="CAD">CAD - Canadian Dollar</option>
+          <option value="55.8" data-code="AUD">AUD - Australian Dollar</option>
+          <option value="0.56" data-code="JPY">JPY - Japanese Yen</option>
+          <option value="11.6" data-code="CNY">CNY - Chinese Yuan</option>
+        </select>
+      </div>
+      <button class="calc-btn" id="currBtn">Convert Currency</button>
+      <div class="result-panel" id="cResult" style="display:none">
+        <div class="result-label">Conversion Result</div>
+        <div class="result-breakdown" id="cBreakdown"></div>
+      </div>
+    </div>
+    <div class="seo-section">
+      <h2>Indian Rupee Exchange Rates 2026</h2>
+      <p>The Indian Rupee (INR) is managed by the Reserve Bank of India (RBI). Exchange rates fluctuate daily based on trade, inflation, and monetary policy.</p>
+      <h3>Popular Currency Pairs with INR</h3>
+      <ul>
+        <li><strong>USD to INR:</strong> Most traded pair. 1 USD approximately 83 to 85 INR in 2026.</li>
+        <li><strong>AED to INR:</strong> Important for NRIs in UAE. UAE Dirham is pegged to USD.</li>
+        <li><strong>GBP to INR:</strong> For Indian students and professionals in UK.</li>
+        <li><strong>SGD to INR:</strong> For Indian diaspora in Singapore.</li>
+        <li><strong>EUR to INR:</strong> Key for trade with European Union.</li>
+      </ul>
+      <h3>Tips for Currency Exchange in India</h3>
+      <ul>
+        <li>Compare rates at multiple banks before exchanging</li>
+        <li>Authorized Money Changers often give better rates than banks</li>
+        <li>Avoid airport forex kiosks - they have the worst rates</li>
+        <li>Use forex cards for international travel for better rates</li>
+        <li>Above Rs. 7 lakh foreign remittance, TCS of 20% applies</li>
+      </ul>
+      <h2>Related Finance Calculators</h2>
+      <div class="related-grid">
+        <a href="emi.html" class="related-card"><span class="related-icon">&#128178;</span><div><div class="related-name">EMI Calculator</div><div class="related-desc">Loan EMI calculation</div></div></a>
+        <a href="gst.html" class="related-card"><span class="related-icon">&#128196;</span><div><div class="related-name">GST Calculator</div><div class="related-desc">Add or remove GST</div></div></a>
+        <a href="compound-interest.html" class="related-card"><span class="related-icon">&#128200;</span><div><div class="related-name">Compound Interest</div><div class="related-desc">FD and SIP returns</div></div></a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+      <p>Free calculators for health, finance, math, and everyday life.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Finance</h4>
+      <a href="../calculators/emi.html">EMI Calculator</a>
+      <a href="../calculators/loan.html">Loan Calculator</a>
+      <a href="../calculators/gst.html">GST Calculator</a>
+      <a href="../calculators/compound-interest.html">Compound Interest</a>
+    </div>
+    <div class="footer-col">
+      <h4>Health</h4>
+      <a href="../calculators/bmi.html">BMI Calculator</a>
+      <a href="../calculators/bmr.html">BMR Calculator</a>
+      <a href="../calculators/calorie.html">Calorie Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <a href="../calculators/age.html">Age Calculator</a>
+      <a href="../calculators/discount.html">Discount Calculator</a>
+      <a href="../calculators/tip.html">Tip Calculator</a>
+      <a href="../calculators/currency.html">Currency Converter</a>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 CalcVerse &middot; Free Online Calculators &middot; <a href="../index.html">Home</a></span>
+  </div>
+</footer>
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="../calculators/bmi.html">BMI Calculator</a>
+    <a href="../calculators/emi.html">EMI Calculator</a>
+    <a href="../calculators/age.html">Age Calculator</a>
+    <a href="../calculators/gst.html">GST Calculator</a>
+  </div>
+</div>
+<script>
+var h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+if(h&&n&&c){h.addEventListener('click',function(){n.classList.add('open');document.body.style.overflow='hidden';});c.addEventListener('click',function(){n.classList.remove('open');document.body.style.overflow='';});n.addEventListener('click',function(e){if(e.target===n){n.classList.remove('open');document.body.style.overflow='';}});}
+</script>
+<script>
+document.getElementById('currBtn').addEventListener('click', function(){
+  var amt = parseFloat(document.getElementById('cAmt').value) || 0;
+  var fromSel = document.getElementById('cFrom');
+  var toSel = document.getElementById('cTo');
+  var fromRate = parseFloat(fromSel.value);
+  var toRate = parseFloat(toSel.value);
+  var fromCode = fromSel.options[fromSel.selectedIndex].getAttribute('data-code');
+  var toCode = toSel.options[toSel.selectedIndex].getAttribute('data-code');
+  var inINR = amt * fromRate;
+  var result = inINR / toRate;
+  var rate = fromRate / toRate;
+  document.getElementById('cBreakdown').innerHTML =
+    '<div class="result-row"><span class="result-row-label">Amount</span><span class="result-row-value">' + amt + ' ' + fromCode + '</span></div>' +
+    '<div class="result-row"><span class="result-row-label">Exchange Rate</span><span class="result-row-value">1 ' + fromCode + ' = ' + rate.toFixed(4) + ' ' + toCode + '</span></div>' +
+    '<div class="result-row"><span class="result-row-label">Result</span><span class="result-row-value" style="color:#a855f7;font-size:1.5rem">' + result.toFixed(2) + ' ' + toCode + '</span></div>' +
+    '<div class="result-row" style="grid-column:1/-1"><span style="font-size:.8rem;color:var(--text2)">Reference rates only. Verify exact rate with your bank before transacting.</span></div>';
+  document.getElementById('cResult').style.display = 'block';
+});
+</script>
+</body>
+</html>

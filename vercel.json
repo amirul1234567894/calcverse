@@ -1,30 +1,61 @@
-{
-  "cleanUrls": true,
-  "redirects": [
-    { "source": "/how-to-calculate-bmi-correctly", "destination": "/blog/how-to-calculate-bmi-correctly", "permanent": true },
-    { "source": "/age-calculator-by-date-of-birth", "destination": "/blog/age-calculator-by-date-of-birth", "permanent": true },
-    { "source": "/emi-calculator-explained", "destination": "/blog/emi-calculator-explained", "permanent": true }
-  ],
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin-allow-popups" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https: http:; connect-src 'self' https:; frame-src 'self' https:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests" }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    }
-  ]
+﻿{
+    "cleanUrls":  true,
+    "trailingSlash":  false,
+    "headers":  [
+                    {
+                        "headers":  [
+                                        {
+                                            "key":  "X-Powered-By",
+                                            "value":  "CalcVerse"
+                                        },
+                                        {
+                                            "key":  "Strict-Transport-Security",
+                                            "value":  "max-age=63072000; includeSubDomains; preload"
+                                        },
+                                        {
+                                            "key":  "X-Content-Type-Options",
+                                            "value":  "nosniff"
+                                        },
+                                        {
+                                            "key":  "X-Frame-Options",
+                                            "value":  "SAMEORIGIN"
+                                        },
+                                        {
+                                            "key":  "Referrer-Policy",
+                                            "value":  "strict-origin-when-cross-origin"
+                                        },
+                                        {
+                                            "key":  "Content-Security-Policy",
+                                            "value":  "default-src \u0027self\u0027; script-src \u0027self\u0027 \u0027unsafe-inline\u0027 \u0027unsafe-eval\u0027 https:; style-src \u0027self\u0027 \u0027unsafe-inline\u0027 https://fonts.googleapis.com; font-src \u0027self\u0027 data: https://fonts.gstatic.com; img-src \u0027self\u0027 data: blob: https: http:; connect-src \u0027self\u0027 https:; frame-src \u0027self\u0027 https:; object-src \u0027none\u0027;"
+                                        }
+                                    ],
+                        "source":  "/(.*)"
+                    },
+                    {
+                        "headers":  [
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "public, max-age=31536000, immutable"
+                                        }
+                                    ],
+                        "source":  "/assets/(.*)"
+                    }
+                ],
+    "redirects":  [
+                      {
+                          "destination":  "/blog/how-to-calculate-bmi-correctly",
+                          "permanent":  true,
+                          "source":  "/how-to-calculate-bmi-correctly"
+                      },
+                      {
+                          "destination":  "/blog/age-calculator-by-date-of-birth",
+                          "permanent":  true,
+                          "source":  "/age-calculator-by-date-of-birth"
+                      },
+                      {
+                          "destination":  "/blog/emi-calculator-explained",
+                          "permanent":  true,
+                          "source":  "/emi-calculator-explained"
+                      }
+                  ]
 }

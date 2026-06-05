@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Calorie Calculator | Daily Calorie Needs for Weight Loss India 2026</title>
+  <meta name="description" content="Free calorie calculator India 2026. Calculate daily calorie needs for weight loss, maintenance, or muscle gain. Based on age, weight, height, activity level."/>
+  <meta name="keywords" content="calorie calculator, daily calorie calculator India, TDEE calculator, calorie calculator weight loss, how many calories per day India"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://calc.autoflowa.in/calculators/calorie"/>
+  <meta property="og:title" content="Calorie Calculator - Daily Calorie Needs India"/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Calorie Calculator","url":"https://calc.autoflowa.in/calculators/calorie","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many calories should I eat per day?","acceptedAnswer":{"@type":"Answer","text":"Average adult needs 1800 to 2500 calories daily. Women typically need 1600 to 2400 calories, men need 2000 to 3000 calories depending on age and activity level."}},{"@type":"Question","name":"How many calories to lose 1 kg per week?","acceptedAnswer":{"@type":"Answer","text":"1 kg of fat equals approximately 7700 calories. To lose 0.5 kg per week, create a daily deficit of 550 calories below your TDEE."}},{"@type":"Question","name":"What is TDEE?","acceptedAnswer":{"@type":"Answer","text":"TDEE stands for Total Daily Energy Expenditure. It is the total calories your body burns in a day including all activities and exercise."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calc.autoflowa.in/"},{"@type":"ListItem","position":2,"name":"Health","item":"https://calc.autoflowa.in/#calculators"},{"@type":"ListItem","position":3,"name":"Calorie Calculator","item":"https://calc.autoflowa.in/calculators/calorie"}]}]}
+  </script>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo" aria-label="CalcVerse Home">
+      <div class="logo-mark">C</div>
+      <span class="logo-text">Calc<span>Verse</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+  <div class="tool-page">
+    <nav class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">&rsaquo;</span>
+      <a href="../index.html#calculators">Health</a>
+      <span class="breadcrumb-sep">&rsaquo;</span>
+      <span aria-current="page">Calorie Calculator</span>
+    </nav>
+    <div class="tool-header">
+      <div class="tool-category-tag">Health Calculator</div>
+      <h1>Calorie Calculator</h1>
+      <p>Calculate your daily calorie needs based on your age, gender, weight, height, and activity level. Get targets for weight loss or gain.</p>
+    </div>
+    <div class="calculator-widget">
+      <div class="calc-inputs two-col">
+        <div class="input-group">
+          <label for="calAge">Age (years)</label>
+          <input type="number" id="calAge" class="input-field" placeholder="e.g. 28" min="15" max="80"/>
+        </div>
+        <div class="input-group">
+          <label for="calGender">Gender</label>
+          <select id="calGender" class="input-field">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-inputs two-col" style="margin-top:12px">
+        <div class="input-group">
+          <label for="calHeight">Height (cm)</label>
+          <input type="number" id="calHeight" class="input-field" placeholder="e.g. 170" min="100" max="250"/>
+        </div>
+        <div class="input-group">
+          <label for="calWeight">Weight (kg)</label>
+          <input type="number" id="calWeight" class="input-field" placeholder="e.g. 65" min="20" max="250"/>
+        </div>
+      </div>
+      <div class="input-group" style="margin-top:12px">
+        <label for="calAct">Activity Level</label>
+        <select id="calAct" class="input-field">
+          <option value="1.2">Sedentary - desk job, no exercise</option>
+          <option value="1.375">Lightly Active - exercise 1 to 3 days per week</option>
+          <option value="1.55" selected>Moderately Active - exercise 3 to 5 days per week</option>
+          <option value="1.725">Very Active - exercise 6 to 7 days per week</option>
+          <option value="1.9">Extra Active - physical job plus daily training</option>
+        </select>
+      </div>
+      <button class="calc-btn" id="calBtn">Calculate Calories</button>
+      <div class="result-panel" id="calResult" style="display:none">
+        <div class="result-label">Your Daily Calorie Needs</div>
+        <div class="result-breakdown" id="calBreakdown"></div>
+      </div>
+    </div>
+    <div class="seo-section">
+      <h2>How Many Calories Do You Need Per Day?</h2>
+      <p>This calculator uses the Mifflin-St Jeor equation, widely considered the most accurate formula for estimating Basal Metabolic Rate (BMR). Your TDEE is BMR multiplied by your activity factor.</p>
+      <h3>Calorie Goals by Objective</h3>
+      <ul>
+        <li><strong>Weight Maintenance:</strong> Eat at your TDEE level</li>
+        <li><strong>Gradual Weight Loss:</strong> TDEE minus 300 to 500 calories - lose 0.3 to 0.5 kg per week</li>
+        <li><strong>Faster Weight Loss:</strong> TDEE minus 500 to 750 calories - lose 0.5 to 0.8 kg per week</li>
+        <li><strong>Muscle Building:</strong> TDEE plus 200 to 400 calories with strength training</li>
+      </ul>
+      <h3>Indian Food Calorie Reference</h3>
+      <ul>
+        <li>1 Roti or chapati: 80 calories</li>
+        <li>1 cup cooked rice: 200 calories</li>
+        <li>Dal 1 cup: 150 calories</li>
+        <li>1 Idli: 40 calories</li>
+        <li>1 Samosa: 150 to 200 calories</li>
+        <li>Paneer 100g: 265 calories</li>
+      </ul>
+      <h2>Related Health Calculators</h2>
+      <div class="related-grid">
+        <a href="bmi.html" class="related-card"><span class="related-icon">&#129340;</span><div><div class="related-name">BMI Calculator</div><div class="related-desc">Body mass index check</div></div></a>
+        <a href="bmr.html" class="related-card"><span class="related-icon">&#127939;</span><div><div class="related-name">BMR Calculator</div><div class="related-desc">Base metabolic rate</div></div></a>
+        <a href="pregnancy.html" class="related-card"><span class="related-icon">&#129337;</span><div><div class="related-name">Pregnancy Calculator</div><div class="related-desc">Week by week tracking</div></div></a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo"><div class="logo-mark">C</div><span class="logo-text">Calc<span>Verse</span></span></a>
+      <p>Free calculators for health, finance, math, and everyday life.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Finance</h4>
+      <a href="../calculators/emi.html">EMI Calculator</a>
+      <a href="../calculators/loan.html">Loan Calculator</a>
+      <a href="../calculators/gst.html">GST Calculator</a>
+      <a href="../calculators/compound-interest.html">Compound Interest</a>
+    </div>
+    <div class="footer-col">
+      <h4>Health</h4>
+      <a href="../calculators/bmi.html">BMI Calculator</a>
+      <a href="../calculators/bmr.html">BMR Calculator</a>
+      <a href="../calculators/calorie.html">Calorie Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <a href="../calculators/age.html">Age Calculator</a>
+      <a href="../calculators/discount.html">Discount Calculator</a>
+      <a href="../calculators/tip.html">Tip Calculator</a>
+      <a href="../calculators/currency.html">Currency Converter</a>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 CalcVerse &middot; Free Online Calculators &middot; <a href="../index.html">Home</a></span>
+  </div>
+</footer>
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-inner">
+    <button class="mobile-nav-close" id="mobileClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <a href="../index.html">Home</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="../calculators/bmi.html">BMI Calculator</a>
+    <a href="../calculators/emi.html">EMI Calculator</a>
+    <a href="../calculators/age.html">Age Calculator</a>
+    <a href="../calculators/gst.html">GST Calculator</a>
+  </div>
+</div>
+<script>
+var h=document.getElementById('hamburger'),n=document.getElementById('mobileNav'),c=document.getElementById('mobileClose');
+if(h&&n&&c){h.addEventListener('click',function(){n.classList.add('open');document.body.style.overflow='hidden';});c.addEventListener('click',function(){n.classList.remove('open');document.body.style.overflow='';});n.addEventListener('click',function(e){if(e.target===n){n.classList.remove('open');document.body.style.overflow='';}});}
+</script>
+<script>
+document.getElementById('calBtn').addEventListener('click', function(){
+  var age = parseFloat(document.getElementById('calAge').value);
+  var gender = document.getElementById('calGender').value;
+  var h = parseFloat(document.getElementById('calHeight').value);
+  var w = parseFloat(document.getElementById('calWeight').value);
+  var act = parseFloat(document.getElementById('calAct').value);
+  if(!age || !h || !w){ alert('Please fill all fields'); return; }
+  var bmr = gender === 'male' ? (10*w + 6.25*h - 5*age + 5) : (10*w + 6.25*h - 5*age - 161);
+  var tdee = bmr * act;
+  document.getElementById('calBreakdown').innerHTML =
+    '<div class="result-row"><span class="result-row-label">BMR (Base Metabolism)</span><span class="result-row-value">' + Math.round(bmr) + ' cal/day</span></div>' +
+    '<div class="result-row"><span class="result-row-label">Maintenance (TDEE)</span><span class="result-row-value" style="color:#10d98c">' + Math.round(tdee) + ' cal/day</span></div>' +
+    '<div class="result-row"><span class="result-row-label">Weight Loss (-500 cal)</span><span class="result-row-value" style="color:#60a5fa">' + Math.round(tdee-500) + ' cal/day</span></div>' +
+    '<div class="result-row"><span class="result-row-label">Fast Loss (-750 cal)</span><span class="result-row-value" style="color:#f43f8e">' + Math.round(tdee-750) + ' cal/day</span></div>' +
+    '<div class="result-row"><span class="result-row-label">Weight Gain (+300 cal)</span><span class="result-row-value" style="color:#f5a623">' + Math.round(tdee+300) + ' cal/day</span></div>';
+  document.getElementById('calResult').style.display = 'block';
+});
+</script>
+</body>
+</html>

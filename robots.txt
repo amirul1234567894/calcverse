@@ -1,6 +1,16 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
-
-Disallow: /assets/
+Disallow: /assets/ads/
+Disallow: /_backup_adsterra_migration_20260524_101734/
+Disallow: /_backup_char_restore_20260516_014848/
+Disallow: /_backup_encoding_fix_20260516_013735/
+Disallow: /_backup_fake_ratings_20260516_020506/
+Disallow: /_backup_loan_emoji_20260516_015310/
+Disallow: /scripts/
+Disallow: /*.backup$
+Disallow: /*.before-fix$
+Disallow: /*.before-schema$
 
 Sitemap: https://calc.autoflowa.in/sitemap.xml
+Sitemap: https://calc.autoflowa.in/sitemap-calculators.xml
+Sitemap: https://calc.autoflowa.in/sitemap-blog.xml
